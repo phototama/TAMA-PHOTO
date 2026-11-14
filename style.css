@@ -1597,3 +1597,271 @@ body {
         width: min(280px, 70vw);
     }
 }
+
+
+
+/* ===================================
+   HALAMAN TENTANG KAMI
+=================================== */
+
+.about-content {
+    max-width: 900px;
+    margin: 35px auto 70px;
+    padding: 35px;
+    background: #ffffff;
+    border: 1px solid #e5eaf1;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(15, 35, 65, 0.06);
+}
+
+.about-content h3 {
+    color: #1d4ed8;
+    font-size: 21px;
+    margin: 28px 0 12px;
+}
+
+.about-content h3:first-child {
+    margin-top: 0;
+}
+
+.about-content p {
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 22px;
+}
+
+.section-tag {
+    display: inline-block;
+    padding: 7px 14px;
+    margin-bottom: 12px;
+    border-radius: 30px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.nav a.active {
+    color: #2563eb;
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .about-content {
+        margin: 25px 15px 45px;
+        padding: 23px;
+    }
+
+    .about-content h3 {
+        font-size: 19px;
+    }
+
+    .about-content p {
+        font-size: 14px;
+    }
+}
+
+
+
+/* ===================================
+   HALAMAN KONTAK TAMA PHOTO
+=================================== */
+
+.contact-section {
+    padding-top: 35px;
+    padding-bottom: 70px;
+}
+
+/* INFORMASI LOKASI */
+
+.contact-location {
+    max-width: 900px;
+    margin: 30px auto 45px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #eff6ff;
+    border: 1px solid #dbeafe;
+    border-radius: 15px;
+}
+
+.contact-location > span {
+    font-size: 30px;
+}
+
+.contact-location strong {
+    display: block;
+    color: #1e40af;
+    font-size: 15px;
+}
+
+.contact-location p {
+    color: #64748b;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* JUDUL KELOMPOK */
+
+.contact-group-title {
+    max-width: 1050px;
+    margin: 35px auto 20px;
+    color: #1e293b;
+    font-size: 21px;
+}
+
+/* GRID KARTU */
+
+.contact-grid {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* KARTU KONTAK */
+
+.contact-card {
+    padding: 28px 22px;
+    background: #ffffff;
+    border: 1px solid #e5eaf1;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(15, 35, 65, 0.06);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 32px rgba(15, 35, 65, 0.11);
+}
+
+/* KARTU OWNER */
+
+.owner-card {
+    max-width: 340px;
+    margin: 0 auto;
+    border: 2px solid #bfdbfe;
+}
+
+/* IKON */
+
+.contact-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eff6ff;
+    border-radius: 18px;
+    font-size: 30px;
+}
+
+/* LABEL */
+
+.contact-label {
+    display: inline-block;
+    padding: 5px 12px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* NAMA DAN NOMOR */
+
+.contact-card h3 {
+    color: #1e293b;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+/* TOMBOL WHATSAPP */
+
+.contact-button {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 16px;
+    background: #16a34a;
+    color: #ffffff;
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.contact-button:hover {
+    background: #15803d;
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVE MOBILE */
+
+@media (max-width: 768px) {
+
+    .contact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .contact-group-title {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .owner-card {
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        padding: 25px 20px;
+    }
+
+    .contact-location {
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 17px;
+    }
+
+    .contact-group-title {
+        font-size: 19px;
+    }
+
+}
+
+
+/* LOKASI KECIL DI HEADER HOMEPAGE */
+
+.brand-location {
+    display: block;
+    margin-top: 4px;
+    color: #64748b;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
