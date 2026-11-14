@@ -4,12 +4,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Layanan cetak berbagai jenis kartu di TAMA PHOTO.">
     <title>Cetak Kartu - TAMA PHOTO</title>
+
     <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .card-page {
+            padding-bottom: 70px;
+        }
+
+        .card-hero {
+            padding: 65px 20px;
+            color: white;
+            text-align: center;
+            background: linear-gradient(135deg, #123b70, #1768b5);
+        }
+
+        .card-hero h2 {
+            margin-bottom: 14px;
+            font-size: clamp(28px, 5vw, 42px);
+        }
+
+        .card-hero p {
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.7;
+            color: #e5efff;
+        }
+
+        .card-container {
+            width: min(1100px, 92%);
+            margin: 40px auto;
+        }
+
+        .card-intro {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .card-intro h2 {
+            color: #163e70;
+            margin-bottom: 10px;
+        }
+
+        .card-intro p {
+            color: #667085;
+            line-height: 1.7;
+        }
+
+        .card-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px;
+            margin: 28px 0 40px;
+        }
+
+        .card-type {
+            padding: 22px 16px;
+            text-align: center;
+            background: #fff;
+            border: 1px solid #e4eaf2;
+            border-radius: 14px;
+            box-shadow: 0 5px 18px rgba(20, 50, 90, 0.05);
+            transition: 0.25s ease;
+        }
+
+        .card-type:hover {
+            transform: translateY(-5px);
+            border-color: #2d75c7;
+            box-shadow: 0 10px 25px rgba(20, 70, 130, 0.12);
+        }
+
+        .card-type .card-icon {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 30px;
+        }
+
+        .card-type h3 {
+            margin: 0;
+            color: #183e6c;
+            font-size: 16px;
+        }
+
+        .card-quality {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            padding: 25px;
+            margin-bottom: 35px;
+            background: #edf5ff;
+            border: 1px solid #d6e8fc;
+            border-radius: 16px;
+        }
+
+        .quality-icon {
+            display: grid;
+            flex-shrink: 0;
+            width: 58px;
+            height: 58px;
+            place-items: center;
+            color: white;
+            background: #1768b5;
+            border-radius: 14px;
+            font-size: 28px;
+        }
+
+        .card-quality h3 {
+            margin: 0 0 7px;
+            color: #164477;
+        }
+
+        .card-quality p {
+            margin: 0;
+            color: #52677f;
+            line-height: 1.7;
+        }
+
+        .card-form-wrapper {
+            padding: 30px;
+            background: #fff;
+            border: 1px solid #e6eaf0;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(20, 40, 70, 0.07);
+        }
+
+        .card-form-heading {
+            margin-bottom: 25px;
+        }
+
+        .card-form-heading h2 {
+            margin-bottom: 8px;
+            color: #163e70;
+        }
+
+        .card-form-heading p {
+            color: #667085;
+            line-height: 1.6;
+        }
+
+        .card-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .card-form label {
+            display: block;
+            margin-bottom: 8px;
+            color: #263b53;
+            font-weight: 600;
+        }
+
+        .card-form input,
+        .card-form select,
+        .card-form textarea {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #d5dce5;
+            border-radius: 9px;
+            background: #fff;
+            color: #263445;
+            font: inherit;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .card-form input:focus,
+        .card-form select:focus,
+        .card-form textarea:focus {
+            border-color: #2878c8;
+            box-shadow: 0 0 0 3px rgba(40, 120, 200, 0.12);
+        }
+
+        .card-form textarea {
+            min-height: 105px;
+            resize: vertical;
+        }
+
+        .card-form .form-note {
+            margin-top: 7px;
+            color: #78869a;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .card-payment-notice {
+            padding: 18px;
+            margin: 25px 0;
+            background: #fff8e8;
+            border: 1px solid #f3dfad;
+            border-radius: 12px;
+        }
+
+        .card-payment-notice h3 {
+            margin: 0 0 8px;
+            color: #8a5a0a;
+            font-size: 16px;
+        }
+
+        .card-payment-notice p {
+            margin: 0;
+            color: #765d31;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .card-submit-button {
+            display: block;
+            width: 100%;
+            padding: 16px 22px;
+            border: none;
+            border-radius: 11px;
+            background: linear-gradient(135deg, #20b866, #128747);
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 5px 14px rgba(18, 135, 71, 0.2);
+            transition: 0.25s ease;
+        }
+
+        .card-submit-button:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #159e55, #08763a);
+            box-shadow: 0 8px 20px rgba(18, 135, 71, 0.3);
+        }
+
+        .card-submit-button:active {
+            transform: scale(0.98);
+        }
+
+        @media (max-width: 600px) {
+            .card-hero {
+                padding: 48px 18px;
+            }
+
+            .card-form-wrapper {
+                padding: 21px 17px;
+            }
+
+            .card-quality {
+                align-items: flex-start;
+                gap: 14px;
+                padding: 18px;
+            }
+
+            .quality-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 23px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <!-- HEADER -->
     <header class="header">
         <div class="container header-content">
             <a href="../index.html" class="brand">
@@ -29,73 +279,88 @@
         </div>
     </header>
 
-    <!-- KONTEN UTAMA -->
-    <main class="container">
+    <main class="card-page">
 
-        <section class="page-hero">
-            <span class="section-tag">LAYANAN DIGITAL PRINTING</span>
-            <h2>Jasa Cetak Kartu</h2>
+        <section class="card-hero">
+            <h2>Layanan Cetak Kartu</h2>
             <p>
-                Cetak berbagai jenis kartu dengan hasil rapi,
-                berkualitas, dan sesuai kebutuhan Anda.
+                Cetak berbagai kebutuhan kartu dengan hasil rapi,
+                tampilan profesional, dan bahan berkualitas untuk
+                menunjang kebutuhan pribadi maupun administrasi Anda.
             </p>
         </section>
 
-        <section class="service-layout">
+        <div class="card-container">
 
-            <!-- INFORMASI LAYANAN -->
-            <div class="service-info">
-                <h2>Tentang Layanan</h2>
-
+            <section class="card-intro">
+                <h2>Berbagai Jenis Kartu</h2>
                 <p>
-                    TAMA PHOTO menyediakan layanan cetak kartu
-                    untuk berbagai kebutuhan pribadi, bisnis,
-                    organisasi, maupun instansi.
+                    TAMA PHOTO melayani pencetakan berbagai jenis kartu
+                    sesuai kebutuhan Anda.
                 </p>
+            </section>
 
-                <h3>Jenis Kartu yang Bisa Dipesan</h3>
+            <section class="card-types">
 
-                <ul>
-                    <li>Kartu nama</li>
-                    <li>ID Card / Kartu Identitas</li>
-                    <li>Kartu anggota</li>
-                    <li>Kartu pelajar</li>
-                    <li>Kartu ucapan</li>
-                    <li>Kartu lainnya sesuai kebutuhan</li>
-                </ul>
+                <div class="card-type">
+                    <span class="card-icon">🏥</span>
+                    <h3>Kartu BPJS</h3>
+                </div>
 
-                <h3>Informasi Pemesanan</h3>
+                <div class="card-type">
+                    <span class="card-icon">📄</span>
+                    <h3>Kartu NPWP</h3>
+                </div>
 
-                <ul>
-                    <li>Jenis dan ukuran kartu</li>
-                    <li>Jenis bahan yang diinginkan</li>
-                    <li>Jumlah kartu yang akan dicetak</li>
-                    <li>Desain kartu</li>
-                    <li>Finishing tambahan jika diperlukan</li>
-                </ul>
+                <div class="card-type">
+                    <span class="card-icon">💉</span>
+                    <h3>Sertifikat Vaksin</h3>
+                </div>
 
-                <p>
-                    Jika belum memiliki desain, Anda dapat
-                    berkonsultasi terlebih dahulu dengan tim kami.
-                </p>
-            </div>
+                <div class="card-type">
+                    <span class="card-icon">⛽</span>
+                    <h3>Kartu Pertamina</h3>
+                </div>
 
-            <!-- FORM PEMESANAN -->
-            <div class="order-form">
+                <div class="card-type">
+                    <span class="card-icon">🪪</span>
+                    <h3>ID Card</h3>
+                </div>
 
-                <h2>Formulir Pemesanan Cetak Kartu</h2>
-                <p>Silakan lengkapi detail pesanan Anda.</p>
+            </section>
 
-                <form id="cetakKartuOrderForm">
+            <section class="card-quality">
+                <div class="quality-icon">✦</div>
+                <div>
+                    <h3>Bahan Berkualitas Seperti Kartu ATM</h3>
+                    <p>
+                        Menggunakan bahan kartu berkualitas dengan
+                        karakteristik seperti kartu ATM, sehingga
+                        menghasilkan kartu yang kokoh, rapi, dan
+                        nyaman digunakan. Detail bahan dan hasil akhir
+                        dapat dikonfirmasi kepada admin.
+                    </p>
+                </div>
+            </section>
 
-                    <h3>Data Pemesan</h3>
+            <section class="card-form-wrapper">
+
+                <div class="card-form-heading">
+                    <h2>Formulir Pemesanan</h2>
+                    <p>
+                        Lengkapi informasi berikut agar admin kami
+                        dapat membantu memproses pesanan Anda.
+                    </p>
+                </div>
+
+                <form id="cetakKartuOrderForm" class="card-form">
 
                     <div class="form-group">
                         <label for="kartuCustomerName">Nama Pemesan</label>
                         <input
                             type="text"
                             id="kartuCustomerName"
-                            placeholder="Masukkan nama lengkap"
+                            placeholder="Masukkan nama Anda"
                             required
                         >
                     </div>
@@ -118,135 +383,75 @@
                             <option value="Melcem">Melcem</option>
                             <option value="Bengkong">Bengkong</option>
                         </select>
+                        <p class="form-note">
+                            Silakan pilih cabang yang paling dekat dengan
+                            lokasi Anda dan dapat Anda kunjungi secara langsung.
+                        </p>
                     </div>
-
-                    <hr>
-
-                    <h3>Detail Cetak Kartu</h3>
 
                     <div class="form-group">
                         <label for="kartuType">Jenis Kartu</label>
                         <select id="kartuType" required>
                             <option value="">-- Pilih Jenis Kartu --</option>
-                            <option value="Kartu Nama">Kartu Nama</option>
-                            <option value="ID Card / Kartu Identitas">ID Card / Kartu Identitas</option>
-                            <option value="Kartu Anggota">Kartu Anggota</option>
-                            <option value="Kartu Pelajar">Kartu Pelajar</option>
-                            <option value="Kartu Ucapan">Kartu Ucapan</option>
-                            <option value="Kartu Lainnya">Kartu Lainnya</option>
+                            <option value="BPJS">Kartu BPJS</option>
+                            <option value="NPWP">Kartu NPWP</option>
+                            <option value="Sertifikat Vaksin">Sertifikat Vaksin</option>
+                            <option value="Kartu Pertamina">Kartu Pertamina</option>
+                            <option value="ID Card">ID Card</option>
+                            <option value="Lainnya">Jenis Kartu Lainnya</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="kartuSize">Ukuran Kartu</label>
-                        <select id="kartuSize" required>
-                            <option value="">-- Pilih Ukuran --</option>
-                            <option value="Standar Kartu Nama">Standar Kartu Nama</option>
-                            <option value="Standar ID Card">Standar ID Card</option>
-                            <option value="A6">A6</option>
-                            <option value="A5">A5</option>
-                            <option value="Ukuran Khusus">Ukuran Khusus</option>
-                            <option value="Konsultasi Ukuran">Konsultasi Ukuran</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="kartuCustomSize">Ukuran Khusus (Jika Ada)</label>
-                        <input
-                            type="text"
-                            id="kartuCustomSize"
-                            placeholder="Contoh: 9 x 5,5 cm"
-                        >
-                    </div>
-
-                    <div class="form-group">
-                        <label for="kartuMaterial">Jenis Bahan</label>
-                        <select id="kartuMaterial" required>
-                            <option value="">-- Pilih Bahan --</option>
-                            <option value="Art Carton">Art Carton</option>
-                            <option value="PVC">PVC</option>
-                            <option value="Ivory">Ivory</option>
-                            <option value="Laminasi">Bahan dengan Laminasi</option>
-                            <option value="Konsultasi Bahan">Konsultasi Bahan</option>
-                            <option value="Bahan Lainnya">Bahan Lainnya</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="kartuQuantity">Jumlah Cetak</label>
+                        <label for="kartuQuantity">Jumlah Kartu</label>
                         <input
                             type="number"
                             id="kartuQuantity"
                             min="1"
-                            placeholder="Contoh: 100"
+                            placeholder="Masukkan jumlah kartu"
                             required
                         >
-                    </div>
-
-                    <div class="form-group">
-                        <label for="kartuPrintSide">Sisi Cetak</label>
-                        <select id="kartuPrintSide" required>
-                            <option value="">-- Pilih Sisi Cetak --</option>
-                            <option value="Satu Sisi">Satu Sisi</option>
-                            <option value="Dua Sisi">Dua Sisi</option>
-                            <option value="Konsultasi">Konsultasi Terlebih Dahulu</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="kartuFinishing">Finishing</label>
-                        <select id="kartuFinishing" required>
-                            <option value="">-- Pilih Finishing --</option>
-                            <option value="Tanpa Finishing">Tanpa Finishing</option>
-                            <option value="Laminasi Glossy">Laminasi Glossy</option>
-                            <option value="Laminasi Doff">Laminasi Doff</option>
-                            <option value="Potong Sudut">Potong Sudut</option>
-                            <option value="Konsultasi Finishing">Konsultasi Finishing</option>
-                        </select>
-                    </div>
-
-                    <hr>
-
-                    <h3>Informasi Desain</h3>
-
-                    <div class="form-group">
-                        <label for="kartuDesign">Status Desain</label>
-                        <select id="kartuDesign" required>
-                            <option value="">-- Pilih Status Desain --</option>
-                            <option value="Sudah Memiliki Desain">Sudah Memiliki Desain</option>
-                            <option value="Membutuhkan Jasa Desain">Membutuhkan Jasa Desain</option>
-                            <option value="Ingin Konsultasi">Ingin Konsultasi</option>
-                        </select>
                     </div>
 
                     <div class="form-group">
                         <label for="kartuNotes">Catatan Tambahan</label>
                         <textarea
                             id="kartuNotes"
-                            rows="4"
-                            placeholder="Tuliskan detail atau permintaan khusus pesanan Anda"
+                            placeholder="Tuliskan detail kebutuhan atau permintaan khusus Anda..."
                         ></textarea>
+                    </div>
+
+                    <div class="card-payment-notice">
+                        <h3>Informasi Pembayaran</h3>
+                        <p>
+                            Harga akan diinformasikan oleh admin setelah
+                            detail pesanan diperiksa. Pengerjaan dimulai
+                            setelah pelanggan menyetujui harga dan pembayaran
+                            diterima serta dikonfirmasi oleh admin.
+                        </p>
                     </div>
 
                     <button
                         type="button"
                         id="sendCetakKartuOrder"
-                        class="btn-primary"
+                        class="card-submit-button"
                     >
                         Pesan Melalui WhatsApp
                     </button>
 
                 </form>
-            </div>
+            </section>
 
-        </section>
-
+        </div>
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 TAMA PHOTO. All Rights Reserved.</p>
+        <div class="container footer-content">
+            <div>
+                <h3>TAMA PHOTO</h3>
+                <p>Digital Printing & Services</p>
+            </div>
+            <p>© 2026 TAMA PHOTO. All Rights Reserved.</p>
         </div>
     </footer>
 

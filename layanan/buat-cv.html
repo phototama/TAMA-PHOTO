@@ -4,16 +4,384 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jasa Pembuatan CV - TAMA PHOTO</title>
+
+    <meta name="description" content="Jasa pembuatan CV profesional dan menarik di TAMA PHOTO.">
+
+    <title>Jasa Pembuatan CV | TAMA PHOTO</title>
+
     <link rel="stylesheet" href="../style.css">
+
+    <style>
+        /* ==============================
+           CV PAGE DESIGN
+        ============================== */
+
+        .cv-page {
+            padding: 45px 0 80px;
+        }
+
+        .cv-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 55px 35px;
+            margin-bottom: 35px;
+            border-radius: 22px;
+            color: white;
+            background: linear-gradient(135deg, #102b50, #1764a5);
+            box-shadow: 0 15px 35px rgba(16, 43, 80, 0.18);
+        }
+
+        .cv-hero::before {
+            content: "CV";
+            position: absolute;
+            right: 35px;
+            bottom: -55px;
+            font-size: 190px;
+            font-weight: 900;
+            color: rgba(255,255,255,0.06);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .cv-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 650px;
+        }
+
+        .cv-hero-label {
+            display: inline-block;
+            padding: 7px 14px;
+            margin-bottom: 17px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .cv-hero h2 {
+            margin: 0 0 15px;
+            color: white;
+            font-size: clamp(30px, 5vw, 43px);
+            line-height: 1.2;
+        }
+
+        .cv-hero p {
+            max-width: 560px;
+            margin: 0;
+            color: rgba(255,255,255,0.85);
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .cv-breadcrumb {
+            margin-bottom: 22px;
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .cv-breadcrumb a {
+            color: #1764a5;
+            text-decoration: none;
+        }
+
+        .cv-benefits {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-bottom: 35px;
+        }
+
+        .cv-benefit {
+            padding: 23px;
+            background: white;
+            border: 1px solid #e5eaf0;
+            border-radius: 16px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.035);
+        }
+
+        .cv-benefit-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            border-radius: 13px;
+            background: #eaf3ff;
+            font-size: 23px;
+        }
+
+        .cv-benefit h3 {
+            margin: 0 0 9px;
+            color: #183653;
+            font-size: 16px;
+        }
+
+        .cv-benefit p {
+            margin: 0;
+            color: #64748b;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .cv-main-grid {
+            display: grid;
+            grid-template-columns: 0.85fr 1.4fr;
+            gap: 25px;
+            align-items: start;
+        }
+
+        .cv-info-card,
+        .cv-form-card {
+            padding: 28px;
+            background: white;
+            border: 1px solid #e5eaf0;
+            border-radius: 19px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.045);
+        }
+
+        .cv-info-card h2,
+        .cv-form-card h2 {
+            margin: 0 0 12px;
+            color: #183653;
+            font-size: 22px;
+        }
+
+        .cv-info-card > p,
+        .cv-form-card > p {
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .cv-info-block {
+            margin-top: 25px;
+        }
+
+        .cv-info-block h3 {
+            margin-bottom: 12px;
+            color: #244665;
+            font-size: 16px;
+        }
+
+        .cv-info-block ul {
+            padding-left: 20px;
+            color: #526477;
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .cv-form-section-title {
+            margin: 28px 0 17px;
+            padding-bottom: 11px;
+            border-bottom: 1px solid #e8edf3;
+            color: #183653;
+            font-size: 17px;
+        }
+
+        .cv-form-card .form-group {
+            margin-bottom: 18px;
+        }
+
+        .cv-form-card label {
+            display: block;
+            margin-bottom: 8px;
+            color: #334155;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .cv-form-card input,
+        .cv-form-card select,
+        .cv-form-card textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 13px 14px;
+            border: 1px solid #d9e1ea;
+            border-radius: 10px;
+            background: #fbfdff;
+            color: #26384b;
+            font-family: inherit;
+            font-size: 14px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .cv-form-card input:focus,
+        .cv-form-card select:focus,
+        .cv-form-card textarea:focus {
+            outline: none;
+            border-color: #2478c2;
+            box-shadow: 0 0 0 3px rgba(36,120,194,0.12);
+        }
+
+        .cv-form-card textarea {
+            resize: vertical;
+            line-height: 1.6;
+        }
+
+        .cv-form-card small {
+            display: block;
+            margin-top: 7px;
+            color: #8190a1;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        .cv-payment-box {
+            margin-top: 25px;
+            padding: 22px;
+            border: 1px solid #f0d9a7;
+            border-radius: 14px;
+            background: #fffaf0;
+        }
+
+        .cv-payment-box h3 {
+            margin: 0 0 13px;
+            color: #805817;
+            font-size: 17px;
+        }
+
+        .cv-payment-box p {
+            margin: 0 0 12px;
+            color: #705b35;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .cv-payment-box ul {
+            padding-left: 20px;
+            margin: 0;
+            color: #705b35;
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        .cv-payment-highlight {
+            margin-top: 15px !important;
+            padding: 13px;
+            border-radius: 9px;
+            background: #fff0cf;
+            color: #744b0a !important;
+            font-weight: 700;
+        }
+
+        /* TOMBOL WHATSAPP */
+        .cv-submit-button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 11px;
+            width: 100%;
+            min-height: 58px;
+            margin-top: 24px;
+            padding: 15px 20px;
+            overflow: hidden;
+            border: none;
+            border-radius: 13px;
+            background: linear-gradient(135deg, #159b63, #087b4b);
+            color: white;
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 800;
+            letter-spacing: 0.2px;
+            cursor: pointer;
+            box-shadow: 0 7px 18px rgba(8,123,75,0.22);
+            transition: transform 0.25s ease,
+                        box-shadow 0.25s ease,
+                        filter 0.25s ease;
+        }
+
+        .cv-submit-button:hover {
+            transform: translateY(-3px);
+            filter: brightness(1.07);
+            box-shadow: 0 11px 24px rgba(8,123,75,0.3);
+        }
+
+        .cv-submit-button:active {
+            transform: translateY(0) scale(0.985);
+        }
+
+        .cv-submit-button .cv-button-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 29px;
+            height: 29px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.18);
+            font-size: 17px;
+        }
+
+        .cv-disclaimer {
+            margin-top: 14px;
+            color: #8491a1;
+            font-size: 12px;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        @media (max-width: 850px) {
+            .cv-main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .cv-page {
+                padding: 25px 0 55px;
+            }
+
+            .cv-hero {
+                padding: 38px 23px;
+                border-radius: 16px;
+            }
+
+            .cv-hero::before {
+                right: 10px;
+                font-size: 130px;
+            }
+
+            .cv-benefits {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .cv-benefit {
+                display: flex;
+                gap: 15px;
+                align-items: center;
+                padding: 17px;
+            }
+
+            .cv-benefit-icon {
+                flex-shrink: 0;
+                margin: 0;
+            }
+
+            .cv-info-card,
+            .cv-form-card {
+                padding: 21px 17px;
+            }
+
+            .cv-submit-button {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
     <!-- HEADER -->
     <header class="header">
         <div class="container header-content">
+
             <a href="../index.html" class="brand">
                 <div class="brand-logo">TP</div>
+
                 <div class="brand-text">
                     <h1>TAMA PHOTO</h1>
                     <p>Digital Printing & Services</p>
@@ -26,235 +394,522 @@
                 <a href="../tentang.html">Tentang Kami</a>
                 <a href="../kontak.html">Kontak</a>
             </nav>
+
         </div>
     </header>
 
-    <!-- KONTEN UTAMA -->
-    <main class="container">
 
-        <section class="page-hero">
-            <span class="section-tag">LAYANAN DIGITAL</span>
-            <h2>Jasa Pembuatan CV</h2>
-            <p>
-                Buat CV profesional dan menarik untuk membantu
-                meningkatkan peluang mendapatkan pekerjaan.
-            </p>
+    <!-- KONTEN UTAMA -->
+    <main class="container cv-page">
+
+        <!-- BREADCRUMB -->
+        <div class="cv-breadcrumb">
+            <a href="../index.html">Beranda</a>
+            <span> › </span>
+            <span>Jasa Pembuatan CV</span>
+        </div>
+
+
+        <!-- HERO -->
+        <section class="cv-hero">
+
+            <div class="cv-hero-content">
+
+                <span class="cv-hero-label">
+                    LAYANAN DIGITAL TAMA PHOTO
+                </span>
+
+                <h2>Bangun Kesan Profesional Melalui CV Anda.</h2>
+
+                <p>
+                    Kami membantu menyusun informasi diri, pendidikan,
+                    dan pengalaman kerja menjadi CV yang rapi,
+                    profesional, serta siap digunakan untuk melamar pekerjaan.
+                </p>
+
+            </div>
+
         </section>
 
-        <section class="service-layout">
+
+        <!-- KEUNGGULAN -->
+        <section class="cv-benefits">
+
+            <div class="cv-benefit">
+
+                <div class="cv-benefit-icon">📄</div>
+
+                <div>
+                    <h3>CV Profesional</h3>
+
+                    <p>
+                        Informasi disusun secara rapi dan mudah dibaca
+                        oleh pihak perusahaan.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="cv-benefit">
+
+                <div class="cv-benefit-icon">✍️</div>
+
+                <div>
+                    <h3>Penyusunan Informasi</h3>
+
+                    <p>
+                        Data diri, pendidikan, pengalaman, dan keahlian
+                        ditata dengan lebih terstruktur.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="cv-benefit">
+
+                <div class="cv-benefit-icon">📁</div>
+
+                <div>
+                    <h3>File Digital</h3>
+
+                    <p>
+                        Hasil CV digital siap digunakan untuk kebutuhan
+                        melamar pekerjaan.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- AREA UTAMA -->
+        <section class="cv-main-grid">
+
 
             <!-- INFORMASI LAYANAN -->
-            <div class="service-info">
+            <div class="cv-info-card">
+
                 <h2>Tentang Layanan</h2>
 
                 <p>
-                    TAMA PHOTO menyediakan layanan pembuatan CV
-                    atau Curriculum Vitae dengan desain yang rapi,
-                    profesional, dan mudah dibaca.
+                    TAMA PHOTO menyediakan layanan pembuatan
+                    Curriculum Vitae dengan tampilan yang rapi,
+                    profesional, dan disesuaikan dengan kebutuhan Anda.
                 </p>
 
-                <h3>Informasi yang Perlu Disiapkan</h3>
 
-                <ul>
-                    <li>Data diri dan informasi kontak</li>
-                    <li>Riwayat pendidikan</li>
-                    <li>Pengalaman kerja</li>
-                    <li>Keahlian dan kemampuan</li>
-                    <li>Foto diri (jika diperlukan)</li>
-                </ul>
+                <div class="cv-info-block">
 
-                <h3>Yang Akan Didapatkan</h3>
+                    <h3>Informasi yang Perlu Disiapkan</h3>
 
-                <ul>
-                    <li>Desain CV yang rapi dan profesional</li>
-                    <li>Penataan informasi yang mudah dibaca</li>
-                    <li>File CV digital</li>
-                    <li>Format siap digunakan untuk melamar kerja</li>
-                </ul>
+                    <ul>
+                        <li>Data diri dan informasi kontak</li>
+                        <li>Riwayat pendidikan</li>
+                        <li>Pengalaman kerja</li>
+                        <li>Keahlian dan kemampuan</li>
+                        <li>Foto diri jika diperlukan</li>
+                        <li>Sertifikat atau informasi pendukung lainnya</li>
+                    </ul>
 
-                <p>
-                    Silakan isi formulir pemesanan dengan informasi
-                    yang lengkap agar proses pembuatan CV lebih mudah.
-                </p>
+                </div>
+
+
+                <div class="cv-info-block">
+
+                    <h3>Yang Akan Didapatkan</h3>
+
+                    <ul>
+                        <li>CV dengan susunan informasi yang rapi</li>
+                        <li>Tampilan profesional dan mudah dibaca</li>
+                        <li>Penyesuaian desain melalui konsultasi</li>
+                        <li>File CV digital</li>
+                        <li>Format siap digunakan untuk melamar kerja</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="cv-info-block">
+
+                    <h3>Bagaimana Prosesnya?</h3>
+
+                    <ul>
+                        <li>Isi formulir pemesanan.</li>
+                        <li>Admin memeriksa informasi yang diberikan.</li>
+                        <li>Admin mengonfirmasi harga layanan.</li>
+                        <li>Pelanggan menyetujui harga dan melakukan pembayaran.</li>
+                        <li>Pengerjaan dimulai setelah pembayaran diverifikasi.</li>
+                    </ul>
+
+                </div>
+
             </div>
 
+
             <!-- FORM PEMESANAN -->
-            <div class="order-form">
+            <div class="cv-form-card">
 
                 <h2>Formulir Pemesanan CV</h2>
-                <p>Lengkapi informasi berikut untuk memesan layanan.</p>
+
+                <p>
+                    Lengkapi data berikut dengan benar agar admin
+                    dapat memahami kebutuhan pembuatan CV Anda.
+                </p>
+
 
                 <form id="buatCvOrderForm">
 
-                    <h3>Data Pemesan</h3>
+                    <!-- DATA PEMESAN -->
+                    <h3 class="cv-form-section-title">
+                        👤 Informasi Pemesan
+                    </h3>
+
 
                     <div class="form-group">
-                        <label for="cvCustomerName">Nama Pemesan</label>
+
+                        <label for="cvCustomerName">
+                            Nama Pemesan *
+                        </label>
+
                         <input
                             type="text"
                             id="cvCustomerName"
                             placeholder="Masukkan nama lengkap"
                             required
                         >
+
                     </div>
 
+
                     <div class="form-group">
-                        <label for="cvCustomerPhone">Nomor WhatsApp</label>
+
+                        <label for="cvCustomerPhone">
+                            Nomor WhatsApp *
+                        </label>
+
                         <input
                             type="tel"
                             id="cvCustomerPhone"
                             placeholder="Contoh: 081234567890"
                             required
                         >
+
                     </div>
 
+
                     <div class="form-group">
-                        <label for="orderBranch">Pilih Cabang TAMA PHOTO</label>
+
+                        <label for="orderBranch">
+                            Pilih Cabang TAMA PHOTO *
+                        </label>
+
                         <select id="orderBranch" required>
-                            <option value="">-- Pilih Cabang --</option>
-                            <option value="Sengkuang">Sengkuang</option>
-                            <option value="Melcem">Melcem</option>
-                            <option value="Bengkong">Bengkong</option>
+
+                            <option value="">
+                                -- Pilih Cabang --
+                            </option>
+
+                            <option value="Sengkuang">
+                                TAMA PHOTO Sengkuang
+                            </option>
+
+                            <option value="Melcem">
+                                TAMA PHOTO Melcem
+                            </option>
+
+                            <option value="Bengkong">
+                                TAMA PHOTO Bengkong
+                            </option>
+
                         </select>
+
+                        <small>
+                            Pilih cabang yang paling dekat dan dapat
+                            Anda kunjungi secara langsung.
+                        </small>
+
                     </div>
 
-                    <hr>
 
-                    <h3>Informasi CV</h3>
+                    <!-- INFORMASI CV -->
+                    <h3 class="cv-form-section-title">
+                        📄 Informasi untuk CV
+                    </h3>
+
 
                     <div class="form-group">
-                        <label for="cvFullName">Nama Lengkap untuk CV</label>
+
+                        <label for="cvFullName">
+                            Nama Lengkap untuk CV *
+                        </label>
+
                         <input
                             type="text"
                             id="cvFullName"
-                            placeholder="Nama lengkap"
+                            placeholder="Masukkan nama lengkap"
                             required
                         >
+
                     </div>
 
+
                     <div class="form-group">
-                        <label for="cvBirth">Tempat dan Tanggal Lahir</label>
+
+                        <label for="cvBirth">
+                            Tempat dan Tanggal Lahir
+                        </label>
+
                         <input
                             type="text"
                             id="cvBirth"
                             placeholder="Contoh: Batam, 15 Januari 2000"
                         >
+
                     </div>
 
+
                     <div class="form-group">
-                        <label for="cvAddress">Alamat</label>
+
+                        <label for="cvAddress">
+                            Alamat *
+                        </label>
+
                         <textarea
                             id="cvAddress"
                             rows="3"
                             placeholder="Masukkan alamat tempat tinggal"
                             required
                         ></textarea>
+
                     </div>
 
+
                     <div class="form-group">
-                        <label for="cvEmail">Email</label>
+
+                        <label for="cvEmail">
+                            Email
+                        </label>
+
                         <input
                             type="email"
                             id="cvEmail"
                             placeholder="Contoh: nama@email.com"
                         >
+
                     </div>
 
+
                     <div class="form-group">
-                        <label for="cvEducation">Riwayat Pendidikan</label>
+
+                        <label for="cvEducation">
+                            Riwayat Pendidikan *
+                        </label>
+
                         <textarea
                             id="cvEducation"
                             rows="4"
                             placeholder="Contoh:&#10;SMK Negeri 1 Batam - 2017-2020&#10;Jurusan Multimedia"
                             required
                         ></textarea>
+
                     </div>
 
+
                     <div class="form-group">
-                        <label for="cvExperience">Pengalaman Kerja</label>
+
+                        <label for="cvExperience">
+                            Pengalaman Kerja
+                        </label>
+
                         <textarea
                             id="cvExperience"
                             rows="4"
                             placeholder="Tuliskan pengalaman kerja, nama perusahaan, dan periode kerja. Jika belum ada, tulis Belum Ada."
                         ></textarea>
+
                     </div>
 
+
                     <div class="form-group">
-                        <label for="cvSkills">Keahlian</label>
+
+                        <label for="cvSkills">
+                            Keahlian *
+                        </label>
+
                         <textarea
                             id="cvSkills"
                             rows="3"
                             placeholder="Contoh: Microsoft Office, Photoshop, Komunikasi"
                             required
                         ></textarea>
+
                     </div>
 
+
                     <div class="form-group">
-                        <label for="cvAdditional">Informasi Tambahan</label>
+
+                        <label for="cvAdditional">
+                            Informasi Tambahan
+                        </label>
+
                         <textarea
                             id="cvAdditional"
                             rows="3"
                             placeholder="Contoh: Sertifikat, bahasa, organisasi, atau informasi lainnya"
                         ></textarea>
+
                     </div>
 
-                    <hr>
 
-                    <h3>Preferensi Desain</h3>
+                    <!-- FOTO -->
+                    <h3 class="cv-form-section-title">
+                        📸 Foto untuk CV
+                    </h3>
 
-                    <div class="form-group">
-                        <label for="cvDesign">Pilihan Desain CV</label>
-                        <select id="cvDesign" required>
-                            <option value="">-- Pilih Desain --</option>
-                            <option value="Formal dan Profesional">Formal dan Profesional</option>
-                            <option value="Minimalis">Minimalis</option>
-                            <option value="Modern">Modern</option>
-                            <option value="Kreatif">Kreatif</option>
-                            <option value="Menyesuaikan Rekomendasi">Menyesuaikan Rekomendasi</option>
-                        </select>
-                    </div>
 
                     <div class="form-group">
-                        <label for="cvPhoto">Foto untuk CV</label>
+
+                        <label for="cvPhoto">
+                            Apakah CV Menggunakan Foto? *
+                        </label>
+
                         <select id="cvPhoto" required>
-                            <option value="">-- Pilih Jawaban --</option>
-                            <option value="Akan mengirim foto">Akan mengirim foto</option>
-                            <option value="Tidak menggunakan foto">Tidak menggunakan foto</option>
-                            <option value="Konsultasi terlebih dahulu">Konsultasi terlebih dahulu</option>
+
+                            <option value="">
+                                -- Pilih Jawaban --
+                            </option>
+
+                            <option value="Akan mengirim foto">
+                                Akan mengirim foto
+                            </option>
+
+                            <option value="Tidak menggunakan foto">
+                                Tidak menggunakan foto
+                            </option>
+
+                            <option value="Konsultasi terlebih dahulu">
+                                Konsultasi terlebih dahulu
+                            </option>
+
                         </select>
+
                     </div>
 
+
+                    <!-- CATATAN -->
+                    <h3 class="cv-form-section-title">
+                        📝 Informasi Tambahan
+                    </h3>
+
+
                     <div class="form-group">
-                        <label for="cvNotes">Catatan Tambahan</label>
+
+                        <label for="cvNotes">
+                            Catatan Tambahan
+                        </label>
+
                         <textarea
                             id="cvNotes"
                             rows="3"
-                            placeholder="Tuliskan permintaan khusus jika ada"
+                            placeholder="Tuliskan permintaan khusus atau informasi tambahan jika ada..."
                         ></textarea>
+
                     </div>
 
+
+                    <!-- KETENTUAN PEMBAYARAN -->
+                    <div class="cv-payment-box">
+
+                        <h3>💳 Ketentuan Pembayaran</h3>
+
+                        <p>
+                            Sebelum pengerjaan dimulai, admin akan
+                            memeriksa kebutuhan Anda dan mengonfirmasi
+                            total harga layanan.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Pelanggan harus menyetujui harga
+                                yang telah dikonfirmasi admin.
+                            </li>
+
+                            <li>
+                                Pembayaran wajib dilakukan terlebih
+                                dahulu setelah terjadi kesepakatan.
+                            </li>
+
+                            <li>
+                                Admin akan memverifikasi pembayaran
+                                yang telah diterima.
+                            </li>
+
+                        </ul>
+
+                        <p class="cv-payment-highlight">
+                            ⚠️ PENTING: Pengerjaan CV tidak akan dimulai
+                            sebelum pembayaran diterima dan diverifikasi
+                            oleh admin.
+                        </p>
+
+                    </div>
+
+
+                    <!-- TOMBOL WHATSAPP -->
                     <button
                         type="button"
                         id="sendBuatCvOrder"
-                        class="btn-primary"
+                        class="cv-submit-button"
                     >
-                        Pesan Melalui WhatsApp
+
+                        <span class="cv-button-icon">↗</span>
+
+                        <span>Kirim Pemesanan ke WhatsApp</span>
+
                     </button>
 
+
+                    <p class="cv-disclaimer">
+                        Pengiriman formulir merupakan pengajuan pemesanan.
+                        Pengerjaan baru dilakukan setelah harga disepakati
+                        dan pembayaran diverifikasi admin.
+                        Jangan pernah memberikan PIN, password,
+                        atau kode OTP kepada siapa pun.
+                    </p>
+
                 </form>
+
             </div>
 
         </section>
 
     </main>
 
+
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 TAMA PHOTO. All Rights Reserved.</p>
+
+        <div class="container footer-content">
+
+            <div>
+                <h3>TAMA PHOTO</h3>
+                <p>Digital Printing & Services</p>
+            </div>
+
+            <p>
+                © 2026 TAMA PHOTO. All Rights Reserved.
+            </p>
+
         </div>
+
     </footer>
 
+
+    <!-- JAVASCRIPT -->
     <script src="../script.js"></script>
 
 </body>

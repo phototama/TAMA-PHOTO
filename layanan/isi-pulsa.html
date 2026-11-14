@@ -4,9 +4,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Layanan isi pulsa berbagai operator di TAMA PHOTO.">
     <title>Isi Pulsa - TAMA PHOTO</title>
+
     <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .pulsa-submit {
+            display: block;
+            width: 100%;
+            padding: 16px 22px;
+            border: none;
+            border-radius: 11px;
+            background: linear-gradient(135deg, #20b866, #128747);
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 5px 14px rgba(18, 135, 71, 0.2);
+            transition: 0.25s ease;
+        }
+
+        .pulsa-submit:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #159e55, #08763a);
+            box-shadow: 0 8px 20px rgba(18, 135, 71, 0.3);
+        }
+
+        .pulsa-submit:active {
+            transform: scale(0.98);
+        }
+
+        .pulsa-note {
+            margin-top: 7px;
+            color: #78869a;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .pulsa-info-box {
+            padding: 17px;
+            margin: 20px 0;
+            background: #edf5ff;
+            border: 1px solid #d6e8fc;
+            border-radius: 11px;
+        }
+
+        .pulsa-info-box strong {
+            display: block;
+            margin-bottom: 8px;
+            color: #164477;
+        }
+
+        .pulsa-info-box p {
+            margin: 0;
+            color: #52677f;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .pulsa-payment-box {
+            padding: 18px;
+            margin: 22px 0;
+            background: #fff7e8;
+            border: 1px solid #f1d49b;
+            border-left: 5px solid #e69b24;
+            border-radius: 11px;
+        }
+
+        .pulsa-payment-box h3 {
+            margin: 0 0 10px;
+            color: #8a530b;
+            font-size: 17px;
+        }
+
+        .pulsa-payment-box p {
+            margin: 0;
+            color: #765629;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .pulsa-payment-box ul {
+            margin: 12px 0 0;
+            padding-left: 20px;
+            color: #765629;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+    </style>
 </head>
+
 <body>
 
     <!-- HEADER -->
@@ -37,7 +125,8 @@
             <h2>Isi Pulsa</h2>
             <p>
                 Isi pulsa berbagai operator dengan mudah.
-                Masukkan nomor tujuan dan pilih nominal yang dibutuhkan.
+                Pilih operator, masukkan nomor tujuan,
+                dan tentukan nominal yang dibutuhkan.
             </p>
         </section>
 
@@ -45,11 +134,13 @@
 
             <!-- INFORMASI LAYANAN -->
             <div class="service-info">
+
                 <h2>Tentang Layanan</h2>
 
                 <p>
                     TAMA PHOTO menyediakan layanan pengisian pulsa
-                    untuk berbagai operator seluler.
+                    untuk berbagai operator seluler dengan proses
+                    pemesanan yang mudah dan praktis.
                 </p>
 
                 <h3>Operator yang Tersedia</h3>
@@ -63,7 +154,7 @@
                     <li>Smartfren</li>
                 </ul>
 
-                <h3>Nominal Pulsa</h3>
+                <h3>Pilihan Nominal Pulsa</h3>
 
                 <ul>
                     <li>Rp5.000</li>
@@ -76,21 +167,55 @@
                     <li>Nominal lainnya sesuai ketersediaan</li>
                 </ul>
 
-                <h3>Informasi Penting</h3>
+                <h3>Informasi Pemesanan</h3>
 
                 <ul>
                     <li>Pastikan nomor tujuan sudah benar.</li>
                     <li>Pilih operator sesuai nomor telepon.</li>
-                    <li>Periksa nominal sebelum melakukan pemesanan.</li>
+                    <li>Periksa kembali nominal pulsa.</li>
                     <li>Konfirmasi harga dan ketersediaan kepada petugas.</li>
                 </ul>
+
+                <div class="pulsa-info-box">
+                    <strong>Perhatian: Periksa Nomor Tujuan</strong>
+                    <p>
+                        Pastikan nomor telepon dan operator sudah sesuai
+                        sebelum pesanan dikonfirmasi. Kesalahan nomor
+                        dapat menyebabkan pulsa terkirim ke nomor
+                        yang tidak dimaksud.
+                    </p>
+                </div>
+
+                <div class="pulsa-payment-box">
+                    <h3>Ketentuan Pembayaran</h3>
+
+                    <p>
+                        <strong>Pembayaran wajib dilakukan terlebih dahulu
+                        sebelum pesanan diproses.</strong> TAMA PHOTO
+                        tidak akan memproses pengisian pulsa sebelum
+                        pembayaran diterima dan diverifikasi oleh petugas.
+                    </p>
+
+                    <ul>
+                        <li>Pelanggan mengirimkan detail pesanan.</li>
+                        <li>Petugas mengonfirmasi harga dan ketersediaan pulsa.</li>
+                        <li>Pelanggan melakukan pembayaran sesuai nominal yang dikonfirmasi.</li>
+                        <li>Petugas memverifikasi pembayaran yang diterima.</li>
+                        <li>Pengisian pulsa diproses setelah pembayaran terverifikasi.</li>
+                    </ul>
+                </div>
+
             </div>
 
             <!-- FORM PEMESANAN -->
             <div class="order-form">
 
                 <h2>Formulir Isi Pulsa</h2>
-                <p>Lengkapi informasi berikut untuk melakukan pemesanan.</p>
+
+                <p>
+                    Lengkapi informasi berikut untuk melakukan
+                    pemesanan pulsa.
+                </p>
 
                 <form id="isiPulsaOrderForm">
 
@@ -107,7 +232,9 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="pulsaCustomerPhone">Nomor WhatsApp Pemesan</label>
+                        <label for="pulsaCustomerPhone">
+                            Nomor WhatsApp Pemesan
+                        </label>
                         <input
                             type="tel"
                             id="pulsaCustomerPhone"
@@ -124,6 +251,11 @@
                             <option value="Melcem">Melcem</option>
                             <option value="Bengkong">Bengkong</option>
                         </select>
+
+                        <p class="pulsa-note">
+                            Pilih cabang yang paling dekat dengan lokasi
+                            Anda dan dapat Anda kunjungi secara langsung.
+                        </p>
                     </div>
 
                     <hr>
@@ -151,6 +283,10 @@
                             placeholder="Masukkan nomor yang akan diisi pulsa"
                             required
                         >
+                        <p class="pulsa-note">
+                            Periksa kembali nomor sebelum melanjutkan
+                            pemesanan.
+                        </p>
                     </div>
 
                     <div class="form-group">
@@ -169,32 +305,52 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="pulsaCustomNominal">Nominal Lainnya (Jika Ada)</label>
+                        <label for="pulsaCustomNominal">
+                            Nominal Lainnya (Jika Ada)
+                        </label>
                         <input
                             type="text"
                             id="pulsaCustomNominal"
                             placeholder="Contoh: Rp75.000"
                         >
+                        <p class="pulsa-note">
+                            Isi jika nominal yang Anda inginkan
+                            tidak tersedia pada pilihan di atas.
+                        </p>
                     </div>
 
                     <div class="form-group">
-                        <label for="pulsaNotes">Catatan Tambahan</label>
+                        <label for="pulsaNotes">
+                            Catatan Tambahan (Opsional)
+                        </label>
                         <textarea
                             id="pulsaNotes"
-                            rows="3"
-                            placeholder="Tuliskan informasi tambahan jika ada"
+                            rows="4"
+                            placeholder="Tuliskan informasi tambahan jika ada..."
                         ></textarea>
+                    </div>
+
+                    <div class="pulsa-payment-box">
+                        <h3>Wajib Bayar Sebelum Diproses</h3>
+                        <p>
+                            Setelah pesanan dikirim, silakan tunggu
+                            konfirmasi harga dari petugas. Pembayaran
+                            harus diselesaikan terlebih dahulu.
+                            Pesanan hanya akan diproses setelah
+                            pembayaran diterima dan diverifikasi.
+                        </p>
                     </div>
 
                     <button
                         type="button"
                         id="sendIsiPulsaOrder"
-                        class="btn-primary"
+                        class="pulsa-submit"
                     >
-                        Pesan Melalui WhatsApp
+                        Lanjutkan ke WhatsApp
                     </button>
 
                 </form>
+
             </div>
 
         </section>

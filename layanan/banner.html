@@ -4,12 +4,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="Layanan cetak banner TAMA PHOTO Batam. Pesan banner berkualitas dengan pilihan cabang terdekat.">
-
+    <meta name="description" content="Layanan cetak banner TAMA PHOTO Batam.">
     <title>Cetak Banner | TAMA PHOTO</title>
-
     <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .banner-page {
+            padding: 30px 0 70px;
+        }
+
+        .banner-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 40px;
+            padding: 35px 0;
+        }
+
+        .banner-hero h2 {
+            color: #172b4d;
+            font-size: clamp(30px, 5vw, 44px);
+            line-height: 1.2;
+            margin: 12px 0;
+        }
+
+        .banner-hero p {
+            color: #64748b;
+            line-height: 1.8;
+        }
+
+        .banner-label {
+            color: #1765c1;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .banner-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 260px;
+            perspective: 1000px;
+        }
+
+        .banner-visual-card {
+            position: relative;
+            width: 100%;
+            max-width: 390px;
+            height: 210px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #2378d5, #0b2e62);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            overflow: hidden;
+            box-shadow: 15px 20px 40px rgba(15,50,100,.22);
+            transform: rotateY(-10deg) rotateX(4deg);
+            transition: .4s ease;
+        }
+
+        .banner-visual-card:hover {
+            transform: rotateY(0) rotateX(0) translateY(-5px);
+        }
+
+        .banner-visual-card::before,
+        .banner-visual-card::after {
+            content: "";
+            position: absolute;
+            border: 22px solid rgba(255,255,255,.08);
+            border-radius: 50%;
+        }
+
+        .banner-visual-card::before {
+            width: 170px;
+            height: 170px;
+            top: -90px;
+            right: -30px;
+        }
+
+        .banner-visual-card::after {
+            width: 120px;
+            height: 120px;
+            bottom: -65px;
+            left: -30px;
+        }
+
+        .banner-visual-card span,
+        .banner-visual-card strong,
+        .banner-visual-card small {
+            position: relative;
+            z-index: 1;
+        }
+
+        .banner-visual-card span {
+            font-size: 12px;
+            letter-spacing: 4px;
+        }
+
+        .banner-visual-card strong {
+            font-size: 40px;
+            letter-spacing: 5px;
+            margin: 8px 0;
+        }
+
+        .banner-visual-card small {
+            font-size: 11px;
+            letter-spacing: 3px;
+        }
+
+        .banner-order-section {
+            max-width: 760px;
+            margin: 25px auto;
+        }
+
+        .banner-order-section form {
+            background: #fff;
+            padding: 30px;
+            border: 1px solid #e5eaf1;
+            border-radius: 16px;
+            box-shadow: 0 8px 28px rgba(0,0,0,.05);
+        }
+
+        .order-heading {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .order-heading h2 {
+            color: #172b4d;
+            margin-bottom: 10px;
+        }
+
+        .order-heading p {
+            color: #718096;
+            line-height: 1.7;
+        }
+
+        .banner-order-section .form-group {
+            margin-bottom: 19px;
+        }
+
+        .banner-order-section label {
+            display: block;
+            color: #334155;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .banner-order-section input,
+        .banner-order-section select,
+        .banner-order-section textarea {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #dce3ed;
+            border-radius: 9px;
+            background: white;
+            color: #334155;
+            font-family: inherit;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .banner-order-section input:focus,
+        .banner-order-section select:focus,
+        .banner-order-section textarea:focus {
+            border-color: #2674d9;
+            box-shadow: 0 0 0 3px rgba(38,116,217,.1);
+        }
+
+        .banner-order-section textarea {
+            resize: vertical;
+        }
+
+        .banner-form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .banner-branch-box {
+            background: #f3f7fd;
+            border: 1px solid #dce8f8;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 24px 0;
+        }
+
+        .banner-branch-box h3 {
+            color: #172b4d;
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .banner-branch-box p {
+            color: #64748b;
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .banner-branch-box .form-group {
+            margin-bottom: 0;
+        }
+
+        .payment-notice {
+            background: #fff9ed;
+            border: 1px solid #f0dfbd;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+
+        .payment-notice h3 {
+            color: #93601a;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .payment-notice p {
+            color: #725f43;
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .payment-notice p:last-child {
+            margin-bottom: 0;
+        }
+
+        .banner-submit-button {
+            width: 100%;
+            padding: 16px 20px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #25d366, #16a34a);
+            color: white;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 7px 18px rgba(22,163,74,.2);
+            transition: .25s ease;
+        }
+
+        .banner-submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 22px rgba(22,163,74,.25);
+        }
+
+        .banner-disclaimer {
+            text-align: center;
+            color: #718096;
+            font-size: 12px;
+            line-height: 1.6;
+            margin-top: 13px;
+        }
+
+        @media (max-width: 768px) {
+            .banner-hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 15px;
+            }
+
+            .banner-visual {
+                min-height: 220px;
+            }
+
+            .banner-visual-card {
+                max-width: 320px;
+                height: 180px;
+            }
+
+            .banner-form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .banner-order-section form {
+                padding: 20px 16px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -17,10 +296,8 @@
     <!-- HEADER -->
     <header class="header">
         <div class="container header-content">
-
             <a href="../index.html" class="brand">
                 <div class="brand-logo">TP</div>
-
                 <div class="brand-text">
                     <h1>TAMA PHOTO</h1>
                     <p>Digital Printing & Services</p>
@@ -33,14 +310,11 @@
                 <a href="../tentang.html">Tentang Kami</a>
                 <a href="../kontak.html">Kontak</a>
             </nav>
-
         </div>
     </header>
 
-
-    <!-- HALAMAN DETAIL LAYANAN -->
+    <!-- KONTEN HALAMAN -->
     <main class="detail-page">
-
         <div class="container">
 
             <!-- BREADCRUMB -->
@@ -50,118 +324,90 @@
                 <span>Cetak Banner</span>
             </div>
 
-
-            <!-- INFORMASI LAYANAN -->
-            <section class="detail-intro">
-
-                <div class="detail-intro-icon">
-                    🖼️
-                </div>
-
+            <!-- HERO -->
+            <section class="banner-hero">
                 <div>
-                    <span class="section-label">
-                        LAYANAN PRINTING
-                    </span>
+                    <span class="banner-label">LAYANAN DIGITAL PRINTING</span>
 
-                    <h2>Cetak Banner</h2>
+                    <h2>Cetak Banner Berkualitas untuk Berbagai Kebutuhan</h2>
 
                     <p>
-                        Cetak banner berkualitas untuk kebutuhan promosi,
-                        usaha, acara, dan berbagai keperluan lainnya.
-                        Tersedia berbagai pilihan ukuran dan finishing.
+                        TAMA PHOTO melayani pencetakan banner untuk kebutuhan
+                        promosi usaha, acara, kegiatan, dan berbagai keperluan
+                        lainnya. Tentukan ukuran dan jumlah pesanan Anda,
+                        kemudian konsultasikan kebutuhan lebih lanjut
+                        bersama admin kami.
                     </p>
                 </div>
 
+                <div class="banner-visual">
+                    <div class="banner-visual-card">
+                        <span>TAMA PHOTO</span>
+                        <strong>PRINT</strong>
+                        <small>YOUR IDEAS</small>
+                    </div>
+                </div>
             </section>
 
-
-            <!-- FORMULIR PEMESANAN -->
+            <!-- FORMULIR -->
             <section class="banner-order-section">
 
                 <div class="order-heading">
-                    <h2>Formulir Pemesanan</h2>
-
+                    <h2>Formulir Pemesanan Banner</h2>
                     <p>
-                        Lengkapi informasi berikut agar admin kami
-                        dapat membantu menghitung harga pesanan Anda.
+                        Lengkapi informasi berikut agar admin kami dapat
+                        membantu menghitung harga pesanan Anda.
                     </p>
                 </div>
-
 
                 <form id="bannerOrderForm">
 
                     <!-- DATA PELANGGAN -->
                     <div class="form-group">
-
-                        <label for="customerName">
-                            Nama Pemesan
-                        </label>
-
+                        <label for="customerName">Nama Pemesan *</label>
                         <input
                             type="text"
                             id="customerName"
                             placeholder="Masukkan nama lengkap Anda"
                             required
                         >
-
                     </div>
 
-
                     <div class="form-group">
-
-                        <label for="customerPhone">
-                            Nomor WhatsApp
-                        </label>
-
+                        <label for="customerPhone">Nomor WhatsApp *</label>
                         <input
                             type="tel"
                             id="customerPhone"
                             placeholder="Contoh: 081234567890"
                             required
                         >
-
                     </div>
-
 
                     <!-- PILIH CABANG -->
-                    <div class="form-group">
+                    <div class="banner-branch-box">
+                        <h3>📍 Pilih Cabang TAMA PHOTO *</h3>
 
-                        <label for="orderBranch">
-                            Pilih Cabang TAMA PHOTO
-                        </label>
-
-                        <select id="orderBranch" required>
-
-                            <option value="">
-                                Pilih cabang terdekat
-                            </option>
-
-                            <option value="Sengkuang">
-                                TAMA PHOTO Sengkuang
-                            </option>
-
-                            <option value="Melcem">
-                                TAMA PHOTO Melcem
-                            </option>
-
-                            <option value="Bengkong">
-                                TAMA PHOTO Bengkong
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                    <!-- UKURAN BANNER -->
-                    <div class="form-row">
+                        <p>
+                            Pilih cabang yang paling dekat dengan lokasi Anda
+                            dan dapat Anda kunjungi secara langsung.
+                        </p>
 
                         <div class="form-group">
+                            <label for="orderBranch">Cabang Tujuan</label>
 
-                            <label for="bannerWidth">
-                                Lebar Banner (cm)
-                            </label>
+                            <select id="orderBranch" required>
+                                <option value="">-- Pilih Cabang Tujuan --</option>
+                                <option value="Sengkuang">TAMA PHOTO Sengkuang</option>
+                                <option value="Melcem">TAMA PHOTO Melcem</option>
+                                <option value="Bengkong">TAMA PHOTO Bengkong</option>
+                            </select>
+                        </div>
+                    </div>
 
+                    <!-- UKURAN -->
+                    <div class="banner-form-row">
+                        <div class="form-group">
+                            <label for="bannerWidth">Lebar Banner (cm) *</label>
                             <input
                                 type="number"
                                 id="bannerWidth"
@@ -169,16 +415,10 @@
                                 placeholder="Contoh: 300"
                                 required
                             >
-
                         </div>
 
-
                         <div class="form-group">
-
-                            <label for="bannerHeight">
-                                Tinggi Banner (cm)
-                            </label>
-
+                            <label for="bannerHeight">Tinggi Banner (cm) *</label>
                             <input
                                 type="number"
                                 id="bannerHeight"
@@ -186,19 +426,12 @@
                                 placeholder="Contoh: 100"
                                 required
                             >
-
                         </div>
-
                     </div>
 
-
-                    <!-- JUMLAH PESANAN -->
+                    <!-- JUMLAH -->
                     <div class="form-group">
-
-                        <label for="bannerQuantity">
-                            Jumlah Banner
-                        </label>
-
+                        <label for="bannerQuantity">Jumlah Banner *</label>
                         <input
                             type="number"
                             id="bannerQuantity"
@@ -206,168 +439,90 @@
                             value="1"
                             required
                         >
-
                     </div>
 
-
-                    <!-- JENIS BAHAN -->
-                    <div class="form-group">
-
-                        <label for="bannerMaterial">
-                            Jenis Bahan
-                        </label>
-
-                        <input
-                            type="text"
-                            id="bannerMaterial"
-                            placeholder="Isi jika sudah tahu, atau tanyakan rekomendasi"
-                        >
-
-                    </div>
-
-
-                    <!-- FINISHING -->
-                    <div class="form-group">
-
-                        <label for="bannerFinishing">
-                            Finishing
-                        </label>
-
-                        <select id="bannerFinishing" required>
-
-                            <option value="">
-                                Pilih finishing
-                            </option>
-
-                            <option value="Tanpa finishing">
-                                Tanpa finishing
-                            </option>
-
-                            <option value="Mata ayam">
-                                Mata ayam
-                            </option>
-
-                            <option value="Lipat atau selongsong">
-                                Lipat atau selongsong
-                            </option>
-
-                            <option value="Belum tahu, minta rekomendasi">
-                                Belum tahu, minta rekomendasi
-                            </option>
-
-                        </select>
-
-                    </div>
-
+                    <!-- FIELD LAMA UNTUK KOMPATIBILITAS JS -->
+                    <input type="hidden" id="bannerMaterial" value="Dikonfirmasi dengan admin">
+                    <input type="hidden" id="bannerFinishing" value="Dikonfirmasi dengan admin">
 
                     <!-- STATUS DESAIN -->
                     <div class="form-group">
-
-                        <label for="bannerDesign">
-                            Apakah desain sudah tersedia?
-                        </label>
+                        <label for="bannerDesign">Apakah desain sudah tersedia? *</label>
 
                         <select id="bannerDesign" required>
-
-                            <option value="">
-                                Pilih jawaban
-                            </option>
-
-                            <option value="Desain sudah tersedia">
-                                Sudah ada desain
-                            </option>
-
-                            <option value="Membutuhkan jasa desain">
-                                Membutuhkan jasa desain
-                            </option>
-
+                            <option value="">Pilih jawaban</option>
+                            <option value="Desain sudah tersedia">Sudah ada desain</option>
+                            <option value="Membutuhkan jasa desain">Membutuhkan jasa desain</option>
                         </select>
-
                     </div>
 
-
-                    <!-- CATATAN TAMBAHAN -->
+                    <!-- CATATAN -->
                     <div class="form-group">
-
-                        <label for="bannerNotes">
-                            Catatan Tambahan
-                        </label>
-
+                        <label for="bannerNotes">Catatan Tambahan</label>
                         <textarea
                             id="bannerNotes"
                             rows="4"
                             placeholder="Tuliskan permintaan khusus jika ada..."
                         ></textarea>
-
                     </div>
 
-
-                    <!-- KETENTUAN PEMESANAN -->
+                    <!-- KETENTUAN PEMBAYARAN -->
                     <div class="payment-notice">
-
-                        <h3>🛡️ Ketentuan Pemesanan</h3>
+                        <h3>💳 Ketentuan Pembayaran</h3>
 
                         <p>
-                            Harga akan dikonfirmasi oleh admin berdasarkan
-                            ukuran, bahan, jumlah, dan finishing yang dipilih.
+                            Harga pesanan akan dikonfirmasi oleh admin
+                            berdasarkan ukuran dan jumlah banner yang dipesan.
                         </p>
 
                         <p>
                             Pembayaran dilakukan setelah harga disepakati.
-                            Pesanan mulai diproses setelah pembayaran
-                            diterima dan diverifikasi.
+                            Setiap pesanan wajib melakukan pembayaran terlebih
+                            dahulu sebelum proses pengerjaan dimulai.
                         </p>
 
                         <p>
-                            Jika desain sudah tersedia, silakan kirim
-                            file desain langsung melalui percakapan WhatsApp.
+                            Pesanan akan diproses setelah pembayaran diterima
+                            dan dikonfirmasi oleh admin TAMA PHOTO.
                         </p>
 
+                        <p>
+                            Jika desain sudah tersedia, silakan kirim file
+                            desain langsung melalui percakapan WhatsApp.
+                        </p>
                     </div>
 
-
-                    <!-- TOMBOL KIRIM -->
+                    <!-- TOMBOL WHATSAPP -->
                     <button
                         type="button"
                         id="sendBannerOrder"
-                        class="order-submit-button"
+                        class="banner-submit-button"
                     >
                         💬 Kirim Pesanan via WhatsApp
                     </button>
 
-
-                    <p class="form-disclaimer">
-                        Setelah menekan tombol, Anda akan diarahkan
-                        ke WhatsApp cabang yang telah dipilih.
+                    <p class="banner-disclaimer">
+                        Setelah menekan tombol, Anda akan diarahkan ke
+                        WhatsApp cabang yang telah dipilih.
                     </p>
 
                 </form>
-
             </section>
 
         </div>
-
     </main>
-
 
     <!-- FOOTER -->
     <footer class="footer">
-
         <div class="container footer-content">
-
             <div>
                 <h3>TAMA PHOTO</h3>
                 <p>Digital Printing & Services</p>
             </div>
 
-            <p>
-                © 2026 TAMA PHOTO. All Rights Reserved.
-            </p>
-
+            <p>© 2026 TAMA PHOTO. All Rights Reserved.</p>
         </div>
-
     </footer>
-
 
     <!-- JAVASCRIPT -->
     <script src="../script.js"></script>

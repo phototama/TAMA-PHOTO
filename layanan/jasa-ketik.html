@@ -6,21 +6,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jasa Ketik - TAMA PHOTO</title>
     <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .ketik-section {
+            padding: 50px 20px;
+            background: #f5f7fb;
+        }
+
+        .ketik-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .ketik-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .ketik-header h1 {
+            color: #163b70;
+            margin-bottom: 12px;
+        }
+
+        .ketik-header p {
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        .ketik-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .ketik-info {
+            padding: 16px 18px;
+            margin-bottom: 25px;
+            background: #eef5ff;
+            border-left: 4px solid #2875d0;
+            border-radius: 8px;
+            color: #294b75;
+            line-height: 1.7;
+        }
+
+        .ketik-info strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .ketik-group {
+            margin-bottom: 20px;
+        }
+
+        .ketik-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #26364a;
+            font-weight: 600;
+        }
+
+        .ketik-group input,
+        .ketik-group select,
+        .ketik-group textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #d5dce6;
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: inherit;
+            box-sizing: border-box;
+            background: #fff;
+        }
+
+        .ketik-group input:focus,
+        .ketik-group select:focus,
+        .ketik-group textarea:focus {
+            outline: none;
+            border-color: #2875d0;
+            box-shadow: 0 0 0 3px rgba(40, 117, 208, 0.1);
+        }
+
+        .ketik-group textarea {
+            min-height: 110px;
+            resize: vertical;
+        }
+
+        .ketik-hint {
+            display: block;
+            margin-top: 7px;
+            color: #718096;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .ketik-reference {
+            padding: 16px 18px;
+            margin: 10px 0 25px;
+            background: #fff8e8;
+            border: 1px solid #f2d99e;
+            border-radius: 8px;
+            color: #74551b;
+            line-height: 1.7;
+        }
+
+        .ketik-reference strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .ketik-submit {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background: #20a957;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .ketik-submit:hover {
+            background: #168746;
+        }
+
+        @media (max-width: 600px) {
+            .ketik-section {
+                padding: 30px 14px;
+            }
+
+            .ketik-card {
+                padding: 20px 16px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <!-- HEADER -->
     <header class="header">
-        <div class="container header-content">
-            <a href="../index.html" class="brand">
-                <div class="brand-logo">TP</div>
-                <div class="brand-text">
-                    <h1>TAMA PHOTO</h1>
-                    <p>Digital Printing & Services</p>
-                </div>
-            </a>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">TAMA PHOTO</a>
+            </div>
 
-            <nav class="navigation">
+            <nav class="nav">
                 <a href="../index.html">Beranda</a>
                 <a href="../produk.html">Produk</a>
                 <a href="../tentang.html">Tentang Kami</a>
@@ -29,89 +161,39 @@
         </div>
     </header>
 
-    <!-- KONTEN UTAMA -->
-    <main class="container">
+    <main class="ketik-section">
+        <div class="ketik-container">
 
-        <section class="page-hero">
-            <span class="section-tag">LAYANAN DIGITAL</span>
-            <h2>Jasa Pengetikan</h2>
-            <p>
-                Membantu kebutuhan pengetikan dokumen dengan
-                hasil rapi, terstruktur, dan mudah dibaca.
-            </p>
-        </section>
-
-        <section class="service-layout">
-
-            <!-- INFORMASI LAYANAN -->
-            <div class="service-info">
-                <h2>Tentang Layanan</h2>
-
+            <div class="ketik-header">
+                <h1>Jasa Ketik</h1>
                 <p>
-                    TAMA PHOTO menyediakan layanan pengetikan
-                    untuk berbagai kebutuhan pribadi, pendidikan,
-                    pekerjaan, maupun administrasi.
-                </p>
-
-                <h3>Jenis Dokumen</h3>
-
-                <ul>
-                    <li>Tugas sekolah dan kuliah</li>
-                    <li>Makalah dan laporan</li>
-                    <li>Surat resmi dan surat pribadi</li>
-                    <li>Proposal dan dokumen administrasi</li>
-                    <li>Pengetikan ulang dari tulisan tangan</li>
-                    <li>Pengetikan ulang dari foto atau PDF</li>
-                </ul>
-
-                <h3>Layanan Pengetikan</h3>
-
-                <ul>
-                    <li>Pengetikan dokumen baru</li>
-                    <li>Pengetikan ulang dokumen</li>
-                    <li>Perapian format dan paragraf</li>
-                    <li>Pengaturan margin dan halaman</li>
-                    <li>Pembuatan tabel sederhana</li>
-                    <li>Penyusunan dokumen sesuai contoh</li>
-                </ul>
-
-                <h3>Format Hasil</h3>
-
-                <ul>
-                    <li>Microsoft Word (.docx)</li>
-                    <li>PDF</li>
-                    <li>Word dan PDF</li>
-                    <li>Cetak dokumen jika diperlukan</li>
-                </ul>
-
-                <p>
-                    Silakan berikan informasi pekerjaan secara
-                    lengkap agar kami dapat memperkirakan proses
-                    dan biaya pengerjaan.
+                    Butuh bantuan mengetik dokumen, tugas, atau berbagai
+                    jenis tulisan? Silakan isi formulir pemesanan di bawah ini.
                 </p>
             </div>
 
-            <!-- FORM PEMESANAN -->
-            <div class="order-form">
+            <div class="ketik-card">
 
-                <h2>Formulir Pemesanan Jasa Ketik</h2>
-                <p>Lengkapi detail pekerjaan yang ingin diketik.</p>
+                <div class="ketik-info">
+                    <strong>Informasi Pemesanan</strong>
+                    Silakan isi detail dokumen yang ingin diketik.
+                    Admin akan menghubungi Anda untuk menginformasikan
+                    harga dan proses pengerjaan.
+                </div>
 
                 <form id="jasaKetikOrderForm">
 
-                    <h3>Data Pemesan</h3>
-
-                    <div class="form-group">
+                    <div class="ketik-group">
                         <label for="ketikCustomerName">Nama Pemesan</label>
                         <input
                             type="text"
                             id="ketikCustomerName"
-                            placeholder="Masukkan nama lengkap"
+                            placeholder="Masukkan nama Anda"
                             required
                         >
                     </div>
 
-                    <div class="form-group">
+                    <div class="ketik-group">
                         <label for="ketikCustomerPhone">Nomor WhatsApp</label>
                         <input
                             type="tel"
@@ -121,7 +203,7 @@
                         >
                     </div>
 
-                    <div class="form-group">
+                    <div class="ketik-group">
                         <label for="orderBranch">Pilih Cabang TAMA PHOTO</label>
                         <select id="orderBranch" required>
                             <option value="">-- Pilih Cabang --</option>
@@ -129,41 +211,38 @@
                             <option value="Melcem">Melcem</option>
                             <option value="Bengkong">Bengkong</option>
                         </select>
+                        <small class="ketik-hint">
+                            Silakan pilih cabang TAMA PHOTO yang paling dekat
+                            dengan lokasi Anda dan dapat Anda kunjungi secara langsung.
+                        </small>
                     </div>
 
-                    <hr>
-
-                    <h3>Detail Pekerjaan</h3>
-
-                    <div class="form-group">
+                    <div class="ketik-group">
                         <label for="ketikDocumentType">Jenis Dokumen</label>
                         <select id="ketikDocumentType" required>
                             <option value="">-- Pilih Jenis Dokumen --</option>
-                            <option value="Tugas Sekolah">Tugas Sekolah</option>
-                            <option value="Tugas Kuliah">Tugas Kuliah</option>
                             <option value="Makalah">Makalah</option>
+                            <option value="Skripsi">Skripsi</option>
+                            <option value="Tugas Sekolah / Kuliah">Tugas Sekolah / Kuliah</option>
+                            <option value="Surat">Surat</option>
                             <option value="Laporan">Laporan</option>
-                            <option value="Surat Resmi">Surat Resmi</option>
-                            <option value="Proposal">Proposal</option>
-                            <option value="Dokumen Administrasi">Dokumen Administrasi</option>
                             <option value="Dokumen Lainnya">Dokumen Lainnya</option>
                         </select>
                     </div>
 
-                    <div class="form-group">
-                        <label for="ketikSource">Sumber Materi</label>
+                    <div class="ketik-group">
+                        <label for="ketikSource">Sumber Dokumen</label>
                         <select id="ketikSource" required>
-                            <option value="">-- Pilih Sumber Materi --</option>
+                            <option value="">-- Pilih Sumber Dokumen --</option>
                             <option value="Tulisan Tangan">Tulisan Tangan</option>
-                            <option value="Foto atau Gambar">Foto atau Gambar</option>
+                            <option value="Foto / Gambar">Foto / Gambar</option>
                             <option value="File PDF">File PDF</option>
-                            <option value="File Dokumen">File Dokumen</option>
-                            <option value="Materi Teks">Materi Teks</option>
-                            <option value="Pengetikan dari Awal">Pengetikan dari Awal</option>
+                            <option value="File Word">File Word</option>
+                            <option value="Lainnya">Lainnya</option>
                         </select>
                     </div>
 
-                    <div class="form-group">
+                    <div class="ketik-group">
                         <label for="ketikPage">Perkiraan Jumlah Halaman</label>
                         <input
                             type="number"
@@ -174,68 +253,64 @@
                         >
                     </div>
 
-                    <div class="form-group">
-                        <label for="ketikFormat">Format Hasil</label>
+                    <div class="ketik-group">
+                        <label for="ketikFormat">Format Hasil Dokumen</label>
                         <select id="ketikFormat" required>
-                            <option value="">-- Pilih Format Hasil --</option>
-                            <option value="Word (.docx)">Word (.docx)</option>
+                            <option value="">-- Pilih Format --</option>
+                            <option value="Microsoft Word">Microsoft Word</option>
                             <option value="PDF">PDF</option>
                             <option value="Word dan PDF">Word dan PDF</option>
-                            <option value="Cetak Dokumen">Cetak Dokumen</option>
-                            <option value="File Digital dan Cetak">File Digital dan Cetak</option>
+                            <option value="Menyesuaikan">Menyesuaikan</option>
                         </select>
                     </div>
 
-                    <div class="form-group">
+                    <div class="ketik-group">
                         <label for="ketikDeadline">Target Penyelesaian</label>
                         <select id="ketikDeadline" required>
                             <option value="">-- Pilih Target Waktu --</option>
                             <option value="Secepatnya">Secepatnya</option>
-                            <option value="1 Hari">1 Hari</option>
-                            <option value="2-3 Hari">2-3 Hari</option>
-                            <option value="Fleksibel">Fleksibel</option>
+                            <option value="Menyesuaikan">Menyesuaikan</option>
                         </select>
                     </div>
 
-                    <hr>
-
-                    <h3>Informasi Tambahan</h3>
-
-                    <div class="form-group">
-                        <label for="ketikDescription">Detail Pekerjaan</label>
+                    <div class="ketik-group">
+                        <label for="ketikDescription">Deskripsi Pekerjaan</label>
                         <textarea
                             id="ketikDescription"
-                            rows="5"
-                            placeholder="Jelaskan materi, format pengetikan, atau ketentuan khusus yang diperlukan"
+                            placeholder="Jelaskan dokumen yang ingin diketik atau instruksi khusus lainnya..."
                             required
                         ></textarea>
                     </div>
 
-                    <div class="form-group">
-                        <label for="ketikNotes">Catatan Tambahan</label>
+                    <div class="ketik-reference">
+                        <strong>Punya Contoh Dokumen atau Foto Referensi?</strong>
+                        Jika tersedia, Anda bisa langsung mengirimkan contoh
+                        dokumen atau foto melalui chat WhatsApp setelah menekan
+                        tombol pemesanan. Tidak perlu mengunggah file melalui
+                        website ini.
+                    </div>
+
+                    <div class="ketik-group">
+                        <label for="ketikNotes">Catatan Tambahan (Opsional)</label>
                         <textarea
                             id="ketikNotes"
-                            rows="3"
-                            placeholder="Tuliskan permintaan tambahan jika ada"
+                            placeholder="Tambahkan catatan jika ada..."
                         ></textarea>
                     </div>
 
                     <button
                         type="button"
                         id="sendJasaKetikOrder"
-                        class="btn-primary"
+                        class="ketik-submit"
                     >
                         Pesan Melalui WhatsApp
                     </button>
 
                 </form>
             </div>
-
-        </section>
-
+        </div>
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 TAMA PHOTO. All Rights Reserved.</p>

@@ -320,24 +320,28 @@ sendWhatsAppOrder(
 
 
 
+
 sendWhatsAppOrder(
     "editPasFotoOrderForm",
     "orderBranch",
     "sendEditPasFotoOrder",
-    "Jasa Edit Pas Foto",
+    "Edit Pas Foto",
     [
         { id: "pasFotoCustomerName", label: "Nama Pemesan" },
         { id: "pasFotoCustomerPhone", label: "Nomor WhatsApp" },
+        { id: "pasFotoGender", label: "Jenis Kelamin" },
+        { id: "pasFotoClothing", label: "Pilihan Pakaian" },
         { id: "pasFotoSize", label: "Ukuran Pas Foto" },
         { id: "pasFotoCustomSize", label: "Ukuran Khusus" },
         { id: "pasFotoBackground", label: "Warna Background" },
-        { id: "pasFotoEditing", label: "Jenis Editing" },
+        { id: "pasFotoEditing", label: "Permintaan Editing" },
         { id: "pasFotoQuantity", label: "Jumlah Orang / Foto" },
         { id: "pasFotoOutput", label: "Format Hasil" },
         { id: "pasFotoPrintQuantity", label: "Jumlah Cetak" },
         { id: "pasFotoNotes", label: "Catatan Tambahan" }
     ]
 );
+
 
 
 

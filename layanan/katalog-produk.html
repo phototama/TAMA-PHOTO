@@ -7,7 +7,219 @@
     <meta name="description" content="Katalog produk TAMA PHOTO: ATK, materai, perlengkapan lamaran, perlengkapan sekolah, alat listrik, dan bingkai foto.">
     <title>Katalog Produk - TAMA PHOTO</title>
     <link rel="stylesheet" href="../style.css">
+
+    <style>
+        /* KATALOG PRODUK */
+        .katalog-products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin: 35px 0 55px;
+        }
+
+        .katalog-card {
+            background: #fff;
+            border: 1px solid #e8edf3;
+            border-radius: 16px;
+            padding: 28px 22px;
+            text-align: center;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .katalog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .katalog-card-icon {
+            width: 65px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 17px;
+            border-radius: 18px;
+            font-size: 30px;
+            background: #f0f5ff;
+        }
+
+        .katalog-card h3 {
+            margin-bottom: 10px;
+            color: #1d3557;
+            font-size: 18px;
+        }
+
+        .katalog-card p {
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* INFORMASI PEMBELIAN */
+        .katalog-info {
+            background: #f0f6ff;
+            border: 1px solid #dce9fb;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 55px;
+        }
+
+        .katalog-info h2 {
+            color: #1d3557;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .katalog-info ul {
+            padding-left: 22px;
+            margin: 0;
+        }
+
+        .katalog-info li {
+            color: #475569;
+            line-height: 1.8;
+            margin-bottom: 7px;
+        }
+
+        /* MENU CABANG */
+        .katalog-branch-section {
+            margin-bottom: 65px;
+        }
+
+        .katalog-branch-heading {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .katalog-branch-heading h2 {
+            color: #1d3557;
+            font-size: 27px;
+            margin: 10px 0;
+        }
+
+        .katalog-branch-heading p {
+            color: #64748b;
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .katalog-branch-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .katalog-branch-card {
+            background: #fff;
+            border: 1px solid #e5eaf0;
+            border-radius: 16px;
+            padding: 25px 20px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .katalog-branch-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .katalog-branch-icon {
+            width: 58px;
+            height: 58px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #edf5ff;
+            color: #2563eb;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .katalog-branch-card h3 {
+            color: #1d3557;
+            font-size: 19px;
+            margin-bottom: 8px;
+        }
+
+        .katalog-branch-card p {
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .katalog-wa-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            width: 100%;
+            max-width: 230px;
+            padding: 12px 18px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #20c968, #0da956);
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(16, 185, 95, 0.2);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .katalog-wa-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 17px rgba(16, 185, 95, 0.3);
+        }
+
+        .katalog-wa-button:active {
+            transform: scale(0.97);
+        }
+
+        .katalog-branch-reminder {
+            text-align: center;
+            color: #64748b;
+            font-size: 13px;
+            line-height: 1.7;
+            margin-top: 22px;
+        }
+
+        @media (max-width: 768px) {
+            .katalog-products {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px;
+            }
+
+            .katalog-card {
+                padding: 22px 15px;
+            }
+
+            .katalog-branch-list {
+                grid-template-columns: 1fr;
+                max-width: 430px;
+                margin: 0 auto;
+            }
+
+            .katalog-branch-heading h2 {
+                font-size: 23px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .katalog-products {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
     <!-- HEADER -->
@@ -57,173 +269,177 @@
 
 
             <!-- KATEGORI PRODUK -->
-            <section class="scan-benefits">
+            <section class="katalog-products">
 
-                <div class="scan-benefit-item">
-                    <div class="service-icon icon-orange">✏️</div>
+                <div class="katalog-card">
+                    <div class="katalog-card-icon">✏️</div>
                     <h3>Alat Tulis Kantor</h3>
-                    <p>Berbagai perlengkapan ATK untuk kebutuhan sekolah, kantor, dan sehari-hari.</p>
+                    <p>
+                        Berbagai perlengkapan ATK untuk kebutuhan sekolah,
+                        kantor, dan kegiatan sehari-hari.
+                    </p>
                 </div>
 
-                <div class="scan-benefit-item">
-                    <div class="service-icon icon-purple">📑</div>
+                <div class="katalog-card">
+                    <div class="katalog-card-icon">📑</div>
                     <h3>Materai</h3>
-                    <p>Penyediaan materai untuk berbagai kebutuhan dokumen.</p>
+                    <p>
+                        Penyediaan materai untuk berbagai kebutuhan
+                        dokumen dan administrasi.
+                    </p>
                 </div>
 
-                <div class="scan-benefit-item">
-                    <div class="service-icon icon-pink">📁</div>
+                <div class="katalog-card">
+                    <div class="katalog-card-icon">📁</div>
                     <h3>Perlengkapan Lamaran</h3>
-                    <p>Map dan perlengkapan untuk kebutuhan melamar pekerjaan.</p>
+                    <p>
+                        Map dan berbagai perlengkapan untuk
+                        kebutuhan melamar pekerjaan.
+                    </p>
                 </div>
 
-                <div class="scan-benefit-item">
-                    <div class="service-icon icon-blue">🎒</div>
+                <div class="katalog-card">
+                    <div class="katalog-card-icon">🎒</div>
                     <h3>Perlengkapan Sekolah</h3>
-                    <p>Berbagai kebutuhan perlengkapan sekolah untuk pelajar.</p>
+                    <p>
+                        Berbagai kebutuhan perlengkapan sekolah
+                        untuk pelajar.
+                    </p>
                 </div>
 
-                <div class="scan-benefit-item">
-                    <div class="service-icon icon-green">💡</div>
+                <div class="katalog-card">
+                    <div class="katalog-card-icon">💡</div>
                     <h3>Alat Listrik</h3>
-                    <p>Berbagai kebutuhan perlengkapan listrik.</p>
+                    <p>
+                        Berbagai perlengkapan dan kebutuhan
+                        alat listrik.
+                    </p>
                 </div>
 
-                <div class="scan-benefit-item">
-                    <div class="service-icon icon-blue">🖼️</div>
+                <div class="katalog-card">
+                    <div class="katalog-card-icon">🖼️</div>
                     <h3>Bingkai Foto</h3>
-                    <p>Berbagai pilihan bingkai untuk foto dan hiasan.</p>
+                    <p>
+                        Berbagai pilihan bingkai untuk foto,
+                        pajangan, dan hiasan.
+                    </p>
                 </div>
 
-                <div class="scan-benefit-item">
-                    <div class="service-icon icon-orange">📦</div>
-                    <h3>Lainnya</h3>
-                    <p>Produk dan perlengkapan lainnya yang ingin Anda tanyakan.</p>
+                <div class="katalog-card">
+                    <div class="katalog-card-icon">📦</div>
+                    <h3>Produk Lainnya</h3>
+                    <p>
+                        Ada produk lain yang ingin Anda cari?
+                        Silakan tanyakan langsung kepada cabang kami.
+                    </p>
                 </div>
 
             </section>
 
 
-            <!-- FORM PEMESANAN -->
-            <section class="banner-order-section">
+            <!-- INFORMASI PEMBELIAN -->
+            <section class="katalog-info">
+                <h2>📌 Informasi Pembelian Produk</h2>
 
-                <div class="order-heading">
-                    <span class="section-label">PERMINTAAN PRODUK</span>
-                    <h2>Tanyakan Produk yang Anda Cari</h2>
+                <ul>
+                    <li>Silakan hubungi cabang untuk menanyakan ketersediaan barang dan harga.</li>
+                    <li>Admin akan memeriksa ketersediaan produk yang Anda cari.</li>
+                    <li>Pembayaran dilakukan setelah harga dan ketersediaan barang disepakati.</li>
+                    <li>Barang dapat diambil langsung di cabang yang Anda pilih.</li>
+                    <li>Saat ini belum tersedia layanan pengantaran.</li>
+                </ul>
+            </section>
+
+
+            <!-- PILIH CABANG -->
+            <section class="katalog-branch-section">
+
+                <div class="katalog-branch-heading">
+                    <span class="section-label">HUBUNGI KAMI</span>
+
+                    <h2>Pilih Cabang TAMA PHOTO</h2>
+
                     <p>
-                        Tuliskan nama barang yang Anda butuhkan.
-                        Admin akan membantu memeriksa ketersediaan
-                        dan memberikan informasi harga.
+                        Silakan pilih cabang TAMA PHOTO yang paling dekat
+                        dengan lokasi Anda. Hubungi melalui WhatsApp untuk
+                        menanyakan produk, ketersediaan barang, dan harga.
                     </p>
                 </div>
 
 
-                <form id="katalogProdukForm">
+                <div class="katalog-branch-list">
 
-                    <h3 class="form-section-title">
-                        📝 Informasi Produk
-                    </h3>
+                    <!-- CABANG MELCEM -->
+                    <div class="katalog-branch-card">
+                        <div class="katalog-branch-icon">📍</div>
 
-                    <div class="form-group">
-                        <label for="namaPelanggan">Nama Anda *</label>
-                        <input
-                            type="text"
-                            id="namaPelanggan"
-                            placeholder="Masukkan nama Anda"
-                            required
+                        <h3>TAMA PHOTO Melcem</h3>
+
+                        <p>
+                            Hubungi admin cabang Melcem untuk
+                            informasi produk dan pemesanan.
+                        </p>
+
+                        <a
+                            href="https://wa.me/6281275309280"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="katalog-wa-button"
                         >
+                            💬 WhatsApp Melcem
+                        </a>
                     </div>
 
-                    <div class="form-group">
-                        <label for="kategoriProduk">Kategori Produk *</label>
-                        <select id="kategoriProduk" required>
-                            <option value="">Pilih kategori produk</option>
-                            <option value="Alat Tulis Kantor">Alat Tulis Kantor</option>
-                            <option value="Materai">Materai</option>
-                            <option value="Perlengkapan Lamaran">Perlengkapan Lamaran</option>
-                            <option value="Perlengkapan Sekolah">Perlengkapan Sekolah</option>
-                            <option value="Alat Listrik">Alat Listrik</option>
-                            <option value="Bingkai Foto">Bingkai Foto</option>
-                            <option value="Lainnya">Lainnya</option>
-                        </select>
-                    </div>
 
-                    <div class="form-group">
-                        <label for="namaBarang">Nama Barang yang Dicari *</label>
-                        <input
-                            type="text"
-                            id="namaBarang"
-                            placeholder="Contoh: Pulpen hitam, map lamaran, bingkai 4R"
-                            required
+                    <!-- CABANG BENGKONG -->
+                    <div class="katalog-branch-card">
+                        <div class="katalog-branch-icon">📍</div>
+
+                        <h3>TAMA PHOTO Bengkong</h3>
+
+                        <p>
+                            Hubungi admin cabang Bengkong untuk
+                            informasi produk dan pemesanan.
+                        </p>
+
+                        <a
+                            href="https://wa.me/6282172355465"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="katalog-wa-button"
                         >
+                            💬 WhatsApp Bengkong
+                        </a>
                     </div>
 
-                    <div class="form-group">
-                        <label for="spesifikasiBarang">
-                            Merek / Ukuran / Spesifikasi
-                        </label>
-                        <input
-                            type="text"
-                            id="spesifikasiBarang"
-                            placeholder="Opsional, isi jika ada merek atau spesifikasi tertentu"
+
+                    <!-- CABANG SENGKUANG -->
+                    <div class="katalog-branch-card">
+                        <div class="katalog-branch-icon">📍</div>
+
+                        <h3>TAMA PHOTO Sengkuang</h3>
+
+                        <p>
+                            Hubungi admin cabang Sengkuang untuk
+                            informasi produk dan pemesanan.
+                        </p>
+
+                        <a
+                            href="https://wa.me/6281275309281"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="katalog-wa-button"
                         >
+                            💬 WhatsApp Sengkuang
+                        </a>
                     </div>
 
-                    <div class="form-group">
-                        <label for="jumlahBarang">Jumlah Barang *</label>
-                        <input
-                            type="number"
-                            id="jumlahBarang"
-                            min="1"
-                            step="1"
-                            placeholder="Masukkan jumlah barang"
-                            required
-                        >
-                    </div>
+                </div>
 
-
-                    <!-- PILIH CABANG -->
-                    <h3 class="form-section-title">
-                        📍 Pilih Cabang TAMA PHOTO
-                    </h3>
-
-                    <div class="form-group">
-                        <label for="cabangTama">Cabang Tujuan *</label>
-                        <select id="cabangTama" required>
-                            <option value="">Pilih cabang</option>
-                            <option value="melcem">TAMA PHOTO Melcem</option>
-                            <option value="bengkong">TAMA PHOTO Bengkong</option>
-                            <option value="sengkuang">TAMA PHOTO Sengkuang</option>
-                        </select>
-                    </div>
-
-
-                    <!-- INFORMASI PEMESANAN -->
-                    <div class="payment-notice">
-                        <strong>📌 Informasi Pemesanan</strong>
-                        <ul>
-                            <li>Admin akan memeriksa ketersediaan barang dan menginformasikan harganya.</li>
-                            <li>Pembayaran dilakukan setelah harga dan ketersediaan disepakati.</li>
-                            <li>Barang dapat diambil langsung di cabang yang dipilih.</li>
-                            <li>Saat ini belum tersedia layanan pengantaran.</li>
-                        </ul>
-                    </div>
-
-
-                    <!-- TOMBOL WHATSAPP -->
-                    <button
-                        type="submit"
-                        class="order-submit-button"
-                    >
-                        💬 Tanyakan Melalui WhatsApp
-                    </button>
-
-                    <p class="form-disclaimer">
-                        Pastikan informasi barang dan cabang sudah benar
-                        sebelum melanjutkan ke WhatsApp.
-                    </p>
-
-                </form>
+                <p class="katalog-branch-reminder">
+                    Pastikan Anda memilih cabang yang paling dekat
+                    dan dapat Anda kunjungi untuk mengambil barang.
+                </p>
 
             </section>
 
@@ -237,68 +453,6 @@
             <p>&copy; 2026 TAMA PHOTO. Semua Hak Dilindungi.</p>
         </div>
     </footer>
-
-
-    <!-- WHATSAPP FORM SCRIPT -->
-    <script>
-        const katalogProdukForm = document.getElementById("katalogProdukForm");
-
-        katalogProdukForm.addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            if (!katalogProdukForm.reportValidity()) {
-                return;
-            }
-
-            const nama = document.getElementById("namaPelanggan").value.trim();
-            const kategori = document.getElementById("kategoriProduk").value;
-            const barang = document.getElementById("namaBarang").value.trim();
-            const spesifikasi = document.getElementById("spesifikasiBarang").value.trim();
-            const jumlah = document.getElementById("jumlahBarang").value;
-            const cabang = document.getElementById("cabangTama").value;
-
-            const daftarCabang = {
-                melcem: {
-                    nama: "TAMA PHOTO Melcem",
-                    nomor: "6281275309280"
-                },
-                bengkong: {
-                    nama: "TAMA PHOTO Bengkong",
-                    nomor: "6282172355465"
-                },
-                sengkuang: {
-                    nama: "TAMA PHOTO Sengkuang",
-                    nomor: "6281275309281"
-                }
-            };
-
-            const tujuan = daftarCabang[cabang];
-
-            if (!tujuan) {
-                alert("Silakan pilih cabang TAMA PHOTO terlebih dahulu.");
-                return;
-            }
-
-            const pesan =
-`Halo ${tujuan.nama}, saya ingin menanyakan ketersediaan produk.
-
-Nama: ${nama}
-Kategori: ${kategori}
-Nama barang: ${barang}
-Merek / Spesifikasi: ${spesifikasi || "-"}
-Jumlah: ${jumlah}
-
-Mohon informasikan ketersediaan barang dan harganya.
-
-Terima kasih.`;
-
-            const linkWhatsApp =
-                "https://wa.me/" + tujuan.nomor +
-                "?text=" + encodeURIComponent(pesan);
-
-            window.open(linkWhatsApp, "_blank");
-        });
-    </script>
 
 </body>
 </html>

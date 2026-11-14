@@ -27,7 +27,6 @@
         </div>
     </header>
 
-
     <!-- KONTEN UTAMA -->
     <main class="detail-page">
         <div class="container">
@@ -38,7 +37,6 @@
                 <span> / </span>
                 <span>Top Up E-Wallet</span>
             </div>
-
 
             <!-- INTRO -->
             <section class="detail-intro">
@@ -54,7 +52,6 @@
                     Pilih platform dan masukkan nominal yang Anda inginkan.
                 </p>
             </section>
-
 
             <!-- KEUNGGULAN LAYANAN -->
             <section class="scan-benefits">
@@ -79,7 +76,6 @@
 
             </section>
 
-
             <!-- FORM PEMESANAN -->
             <section class="banner-order-section">
 
@@ -91,7 +87,6 @@
                         memeriksa dan memproses permintaan top up Anda.
                     </p>
                 </div>
-
 
                 <form id="topUpEwalletForm">
 
@@ -119,6 +114,16 @@
                         >
                     </div>
 
+                    <!-- PILIH CABANG -->
+                    <div class="form-group">
+                        <label for="orderBranch">Pilih Cabang TAMA PHOTO *</label>
+                        <select id="orderBranch" required>
+                            <option value="">Pilih cabang tujuan</option>
+                            <option value="Sengkuang">Sengkuang</option>
+                            <option value="Melcem">Melcem</option>
+                            <option value="Bengkong">Bengkong</option>
+                        </select>
+                    </div>
 
                     <h3 class="form-section-title">
                         💳 Detail Top Up
@@ -182,7 +187,6 @@
                         ></textarea>
                     </div>
 
-
                     <!-- INFORMASI PEMBAYARAN -->
                     <div class="payment-notice">
                         <strong>💰 Ketentuan Pembayaran</strong>
@@ -195,7 +199,6 @@
                             <li>Informasi hasil transaksi akan disampaikan setelah proses selesai.</li>
                         </ul>
                     </div>
-
 
                     <!-- TOMBOL WHATSAPP -->
                     <button
@@ -217,7 +220,6 @@
         </div>
     </main>
 
-
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
@@ -225,10 +227,24 @@
         </div>
     </footer>
 
-
     <!-- WHATSAPP SCRIPT -->
     <script>
         const topUpEwalletForm = document.getElementById("topUpEwalletForm");
+
+        const tamaBranches = {
+            "Sengkuang": {
+                name: "TAMA PHOTO Sengkuang",
+                phone: "6281275309281"
+            },
+            "Melcem": {
+                name: "TAMA PHOTO Melcem",
+                phone: "6281275309280"
+            },
+            "Bengkong": {
+                name: "TAMA PHOTO Bengkong",
+                phone: "6282172355465"
+            }
+        };
 
         topUpEwalletForm.addEventListener("submit", function(event) {
             event.preventDefault();
@@ -239,11 +255,20 @@
 
             const nama = document.getElementById("ewalletCustomerName").value.trim();
             const nomorPelanggan = document.getElementById("ewalletCustomerPhone").value.trim();
+            const cabangValue = document.getElementById("orderBranch").value;
             const platform = document.getElementById("ewalletPlatform").value;
             const nomorTujuan = document.getElementById("ewalletAccountNumber").value.trim();
             const namaAkun = document.getElementById("ewalletAccountName").value.trim();
             const nominal = document.getElementById("ewalletAmount").value;
             const catatan = document.getElementById("ewalletNotes").value.trim();
+
+            const selectedBranch = tamaBranches[cabangValue];
+
+            if (!selectedBranch) {
+                alert("Silakan pilih cabang TAMA PHOTO terlebih dahulu.");
+                document.getElementById("orderBranch").focus();
+                return;
+            }
 
             const formatRupiah = new Intl.NumberFormat("id-ID", {
                 style: "currency",
@@ -252,11 +277,14 @@
             }).format(Number(nominal));
 
             const pesan =
-`Halo TAMA PHOTO, saya ingin melakukan top up e-wallet.
+`Halo ${selectedBranch.name}, saya ingin melakukan top up e-wallet.
 
 INFORMASI PELANGGAN
 Nama: ${nama}
 Nomor WhatsApp: ${nomorPelanggan}
+
+CABANG TUJUAN
+${selectedBranch.name}
 
 DETAIL TOP UP
 Platform: ${platform}
@@ -272,10 +300,8 @@ Saya akan melakukan pembayaran setelah menyetujui total pembayaran yang diinform
 
 Terima kasih.`;
 
-            const nomorAdmin = "6281372855888";
-
             const linkWhatsApp =
-                "https://wa.me/" + nomorAdmin +
+                "https://wa.me/" + selectedBranch.phone +
                 "?text=" + encodeURIComponent(pesan);
 
             window.open(linkWhatsApp, "_blank");
