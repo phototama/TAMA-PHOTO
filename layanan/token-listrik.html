@@ -4,354 +4,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Layanan pembelian token listrik PLN prabayar di TAMA PHOTO.">
-    <title>Token Listrik | TAMA PHOTO</title>
-
+    <title>Token Listrik - TAMA PHOTO</title>
     <link rel="stylesheet" href="../style.css">
 </head>
-
 <body>
 
     <!-- HEADER -->
     <header class="header">
-        <div class="container header-container">
-
-            <a href="../index.html" class="logo">
-                <span class="logo-icon">📸</span>
-                <span>TAMA PHOTO</span>
+        <div class="container header-content">
+            <a href="../index.html" class="brand">
+                <div class="brand-logo">TP</div>
+                <div class="brand-text">
+                    <h1>TAMA PHOTO</h1>
+                    <p>Digital Printing & Services</p>
+                </div>
             </a>
 
-            <nav class="nav-menu">
+            <nav class="navigation">
                 <a href="../index.html">Beranda</a>
-                <a href="../index.html#layanan">Produk</a>
+                <a href="../produk.html">Produk</a>
                 <a href="../tentang.html">Tentang Kami</a>
                 <a href="../kontak.html">Kontak</a>
             </nav>
-
         </div>
     </header>
 
-
     <!-- KONTEN UTAMA -->
-    <main class="detail-page">
+    <main class="container">
 
-        <div class="container">
+        <section class="page-hero">
+            <span class="section-tag">LAYANAN PEMBAYARAN</span>
+            <h2>Pembelian Token Listrik</h2>
+            <p>
+                Isi ulang token listrik prabayar dengan praktis
+                melalui layanan TAMA PHOTO.
+            </p>
+        </section>
 
-            <!-- BREADCRUMB -->
-            <div class="detail-breadcrumb">
-                <a href="../index.html">Beranda</a>
-                <span> / </span>
-                <span>Token Listrik</span>
+        <section class="service-layout">
+
+            <!-- INFORMASI LAYANAN -->
+            <div class="service-info">
+                <h2>Tentang Layanan</h2>
+
+                <p>
+                    TAMA PHOTO menyediakan layanan pembelian token
+                    listrik prabayar PLN untuk membantu memenuhi
+                    kebutuhan listrik rumah maupun tempat usaha.
+                </p>
+
+                <h3>Informasi yang Dibutuhkan</h3>
+
+                <ul>
+                    <li>Nomor meter atau ID pelanggan PLN</li>
+                    <li>Nama pemilik pelanggan</li>
+                    <li>Nominal token yang ingin dibeli</li>
+                    <li>Nomor WhatsApp pemesan</li>
+                </ul>
+
+                <h3>Pilihan Nominal Token</h3>
+
+                <ul>
+                    <li>Rp20.000</li>
+                    <li>Rp50.000</li>
+                    <li>Rp100.000</li>
+                    <li>Rp200.000</li>
+                    <li>Rp500.000</li>
+                    <li>Rp1.000.000</li>
+                </ul>
+
+                <h3>Informasi Penting</h3>
+
+                <p>
+                    Pastikan nomor meter atau ID pelanggan sudah benar
+                    sebelum melakukan pemesanan.
+                </p>
+
+                <p>
+                    Nominal pembayaran dan ketersediaan transaksi
+                    akan dikonfirmasi oleh petugas TAMA PHOTO.
+                </p>
             </div>
 
-
-            <!-- INTRO -->
-            <section class="detail-intro">
-
-                <div class="detail-intro-icon">⚡</div>
-
-                <div>
-                    <span class="section-label">LAYANAN TRANSAKSI</span>
-
-                    <h1>Token Listrik</h1>
-
-                    <p>
-                        Layanan pembelian token listrik PLN prabayar.
-                        Masukkan nomor meter atau ID pelanggan
-                        dan pilih nominal token sesuai kebutuhan Anda.
-                    </p>
-                </div>
-
-            </section>
-
-
-            <!-- KEUNGGULAN -->
-            <section class="scan-benefits">
-
-                <div class="scan-benefit-item">
-                    <div class="detail-intro-icon">🔌</div>
-
-                    <h3>Token PLN</h3>
-
-                    <p>
-                        Pembelian token listrik untuk
-                        pelanggan PLN prabayar.
-                    </p>
-                </div>
-
-
-                <div class="scan-benefit-item">
-                    <div class="detail-intro-icon">💰</div>
-
-                    <h3>Beragam Nominal</h3>
-
-                    <p>
-                        Pilih nominal token sesuai
-                        kebutuhan listrik Anda.
-                    </p>
-                </div>
-
-
-                <div class="scan-benefit-item">
-                    <div class="detail-intro-icon">✅</div>
-
-                    <h3>Konfirmasi Admin</h3>
-
-                    <p>
-                        Admin memeriksa nomor pelanggan
-                        dan total pembayaran sebelum transaksi.
-                    </p>
-                </div>
-
-            </section>
-
-
             <!-- FORM PEMESANAN -->
-            <section class="banner-order-section">
+            <div class="order-form">
 
-                <div class="order-heading">
-
-                    <span class="section-label">FORM PEMESANAN</span>
-
-                    <h2>Form Pembelian Token Listrik</h2>
-
-                    <p>
-                        Lengkapi data berikut dengan benar
-                        agar pembelian token dapat diproses.
-                    </p>
-
-                </div>
-
+                <h2>Formulir Pembelian Token Listrik</h2>
+                <p>Lengkapi data berikut untuk pemesanan token.</p>
 
                 <form id="tokenListrikOrderForm">
 
-                    <!-- DATA PEMESAN -->
-                    <h3 class="form-section-title">
-                        👤 Informasi Pemesan
-                    </h3>
-
-                    <div class="form-row">
-
-                        <div class="form-group">
-
-                            <label for="tokenListrikCustomerName">
-                                Nama Pemesan *
-                            </label>
-
-                            <input
-                                type="text"
-                                id="tokenListrikCustomerName"
-                                placeholder="Masukkan nama Anda"
-                                required
-                            >
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="tokenListrikCustomerPhone">
-                                Nomor WhatsApp *
-                            </label>
-
-                            <input
-                                type="tel"
-                                id="tokenListrikCustomerPhone"
-                                placeholder="Contoh: 081234567890"
-                                required
-                            >
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- DETAIL TOKEN -->
-                    <h3 class="form-section-title">
-                        ⚡ Detail Token Listrik
-                    </h3>
-
+                    <h3>Data Pemesan</h3>
 
                     <div class="form-group">
-
-                        <label for="tokenListrikCustomerId">
-                            ID Pelanggan / Nomor Meter *
-                        </label>
-
+                        <label for="tokenCustomerName">Nama Pemesan</label>
                         <input
                             type="text"
-                            id="tokenListrikCustomerId"
-                            placeholder="Masukkan ID pelanggan atau nomor meter"
+                            id="tokenCustomerName"
+                            placeholder="Masukkan nama lengkap"
                             required
                         >
-
                     </div>
 
+                    <div class="form-group">
+                        <label for="tokenCustomerPhone">Nomor WhatsApp</label>
+                        <input
+                            type="tel"
+                            id="tokenCustomerPhone"
+                            placeholder="Contoh: 081234567890"
+                            required
+                        >
+                    </div>
 
                     <div class="form-group">
+                        <label for="orderBranch">Pilih Cabang TAMA PHOTO</label>
+                        <select id="orderBranch" required>
+                            <option value="">-- Pilih Cabang --</option>
+                            <option value="Sengkuang">Sengkuang</option>
+                            <option value="Melcem">Melcem</option>
+                            <option value="Bengkong">Bengkong</option>
+                        </select>
+                    </div>
 
-                        <label for="tokenListrikName">
-                            Nama Pelanggan PLN
-                        </label>
+                    <hr>
 
+                    <h3>Data Pelanggan PLN</h3>
+
+                    <div class="form-group">
+                        <label for="tokenCustomerId">Nomor Meter / ID Pelanggan</label>
                         <input
                             type="text"
-                            id="tokenListrikName"
-                            placeholder="Masukkan nama pelanggan jika diketahui"
+                            id="tokenCustomerId"
+                            placeholder="Masukkan nomor meter atau ID pelanggan"
+                            required
                         >
-
                     </div>
 
+                    <div class="form-group">
+                        <label for="tokenAccountName">Nama Pelanggan PLN</label>
+                        <input
+                            type="text"
+                            id="tokenAccountName"
+                            placeholder="Nama sesuai data PLN"
+                            required
+                        >
+                    </div>
 
                     <div class="form-group">
-
-                        <label for="tokenListrikAmount">
-                            Nominal Token *
-                        </label>
-
-                        <select id="tokenListrikAmount" required>
-
-                            <option value="">
-                                Pilih nominal token
-                            </option>
-
-                            <option value="Rp20.000">
-                                Rp20.000
-                            </option>
-
-                            <option value="Rp50.000">
-                                Rp50.000
-                            </option>
-
-                            <option value="Rp100.000">
-                                Rp100.000
-                            </option>
-
-                            <option value="Rp200.000">
-                                Rp200.000
-                            </option>
-
-                            <option value="Rp500.000">
-                                Rp500.000
-                            </option>
-
-                            <option value="Rp1.000.000">
-                                Rp1.000.000
-                            </option>
-
-                            <option value="Nominal lainnya">
-                                Nominal lainnya
-                            </option>
-
+                        <label for="tokenNominal">Nominal Token</label>
+                        <select id="tokenNominal" required>
+                            <option value="">-- Pilih Nominal --</option>
+                            <option value="Rp20.000">Rp20.000</option>
+                            <option value="Rp50.000">Rp50.000</option>
+                            <option value="Rp100.000">Rp100.000</option>
+                            <option value="Rp200.000">Rp200.000</option>
+                            <option value="Rp500.000">Rp500.000</option>
+                            <option value="Rp1.000.000">Rp1.000.000</option>
+                            <option value="Nominal Lainnya">Nominal Lainnya</option>
                         </select>
-
                     </div>
-
-
-                    <!-- CATATAN -->
-                    <h3 class="form-section-title">
-                        📝 Informasi Tambahan
-                    </h3>
-
 
                     <div class="form-group">
+                        <label for="tokenCustomNominal">Nominal Lainnya (Opsional)</label>
+                        <input
+                            type="number"
+                            id="tokenCustomNominal"
+                            min="1"
+                            placeholder="Isi jika memilih nominal lainnya"
+                        >
+                    </div>
 
-                        <label for="tokenListrikNotes">
-                            Catatan Tambahan
-                        </label>
-
+                    <div class="form-group">
+                        <label for="tokenNotes">Catatan Tambahan</label>
                         <textarea
-                            id="tokenListrikNotes"
+                            id="tokenNotes"
                             rows="4"
-                            placeholder="Tuliskan nominal lain atau informasi tambahan jika diperlukan..."
+                            placeholder="Tuliskan informasi tambahan jika diperlukan"
                         ></textarea>
-
                     </div>
 
-
-                    <!-- INFORMASI PEMBAYARAN -->
-                    <div class="payment-notice">
-
-                        <strong>
-                            💳 Informasi Pemesanan dan Pembayaran
-                        </strong>
-
-                        <ul>
-
-                            <li>
-                                Pastikan ID pelanggan atau nomor meter
-                                sudah benar sebelum mengirim pesanan.
-                            </li>
-
-                            <li>
-                                Admin akan memeriksa data pelanggan,
-                                ketersediaan token, dan total harga
-                                beserta biaya layanan.
-                            </li>
-
-                            <li>
-                                Pembayaran dilakukan setelah pelanggan
-                                menyetujui total biaya.
-                            </li>
-
-                            <li>
-                                Token hanya diproses setelah pembayaran
-                                diterima dan diverifikasi admin.
-                            </li>
-
-                            <li>
-                                Setelah transaksi berhasil, kode token
-                                akan diberikan kepada pelanggan.
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-
-                    <!-- TOMBOL WHATSAPP -->
                     <button
                         type="button"
                         id="sendTokenListrikOrder"
-                        class="order-submit-button"
+                        class="btn-primary"
                     >
-                        📲 Kirim Pesanan Melalui WhatsApp
+                        Pesan Melalui WhatsApp
                     </button>
 
-
-                    <p class="form-disclaimer">
-                        Periksa kembali ID pelanggan atau nomor meter
-                        sebelum melakukan pembayaran. Kesalahan data
-                        dapat menyebabkan token terkirim ke pelanggan
-                        yang tidak sesuai.
-                    </p>
-
                 </form>
+            </div>
 
-            </section>
-
-        </div>
+        </section>
 
     </main>
 
-
     <!-- FOOTER -->
     <footer class="footer">
-
         <div class="container">
-
-            <p>
-                © 2026 TAMA PHOTO. Semua Hak Dilindungi.
-            </p>
-
-            <p>
-                Layanan Digital Printing dan Kebutuhan Anda.
-            </p>
-
+            <p>&copy; 2026 TAMA PHOTO. All Rights Reserved.</p>
         </div>
-
     </footer>
-
 
     <script src="../script.js"></script>
 

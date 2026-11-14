@@ -1,30 +1,19 @@
 
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta
-        name="description"
-        content="Layanan cetak kartu NPWP, BPJS, dan sertifikat vaksin TAMA PHOTO."
-    >
-
-    <title>Cetak Kartu | TAMA PHOTO</title>
-
+    <title>Cetak Kartu - TAMA PHOTO</title>
     <link rel="stylesheet" href="../style.css">
 </head>
-
 <body>
 
     <!-- HEADER -->
     <header class="header">
         <div class="container header-content">
-
             <a href="../index.html" class="brand">
                 <div class="brand-logo">TP</div>
-
                 <div class="brand-text">
                     <h1>TAMA PHOTO</h1>
                     <p>Digital Printing & Services</p>
@@ -37,270 +26,230 @@
                 <a href="../tentang.html">Tentang Kami</a>
                 <a href="../kontak.html">Kontak</a>
             </nav>
-
         </div>
     </header>
 
+    <!-- KONTEN UTAMA -->
+    <main class="container">
 
-    <!-- MAIN CONTENT -->
-    <main class="detail-page">
+        <section class="page-hero">
+            <span class="section-tag">LAYANAN DIGITAL PRINTING</span>
+            <h2>Jasa Cetak Kartu</h2>
+            <p>
+                Cetak berbagai jenis kartu dengan hasil rapi,
+                berkualitas, dan sesuai kebutuhan Anda.
+            </p>
+        </section>
 
-        <div class="container">
+        <section class="service-layout">
 
-            <!-- BREADCRUMB -->
-            <div class="detail-breadcrumb">
-                <a href="../index.html">Beranda</a>
-                <span> / </span>
-                <span>Cetak Kartu</span>
+            <!-- INFORMASI LAYANAN -->
+            <div class="service-info">
+                <h2>Tentang Layanan</h2>
+
+                <p>
+                    TAMA PHOTO menyediakan layanan cetak kartu
+                    untuk berbagai kebutuhan pribadi, bisnis,
+                    organisasi, maupun instansi.
+                </p>
+
+                <h3>Jenis Kartu yang Bisa Dipesan</h3>
+
+                <ul>
+                    <li>Kartu nama</li>
+                    <li>ID Card / Kartu Identitas</li>
+                    <li>Kartu anggota</li>
+                    <li>Kartu pelajar</li>
+                    <li>Kartu ucapan</li>
+                    <li>Kartu lainnya sesuai kebutuhan</li>
+                </ul>
+
+                <h3>Informasi Pemesanan</h3>
+
+                <ul>
+                    <li>Jenis dan ukuran kartu</li>
+                    <li>Jenis bahan yang diinginkan</li>
+                    <li>Jumlah kartu yang akan dicetak</li>
+                    <li>Desain kartu</li>
+                    <li>Finishing tambahan jika diperlukan</li>
+                </ul>
+
+                <p>
+                    Jika belum memiliki desain, Anda dapat
+                    berkonsultasi terlebih dahulu dengan tim kami.
+                </p>
             </div>
 
+            <!-- FORM PEMESANAN -->
+            <div class="order-form">
 
-            <!-- SERVICE INTRO -->
-            <section class="detail-intro">
-
-                <div class="detail-intro-icon">
-                    🪪
-                </div>
-
-                <div>
-                    <span class="section-label">LAYANAN PRINTING</span>
-
-                    <h2>Cetak Kartu</h2>
-
-                    <p>
-                        Layanan cetak kartu NPWP, BPJS, dan sertifikat
-                        vaksin menggunakan bahan kartu plastik
-                        berkualitas seperti kartu ATM.
-                    </p>
-                </div>
-
-            </section>
-
-
-            <!-- ORDER FORM -->
-            <section class="banner-order-section">
-
-                <div class="order-heading">
-                    <span class="section-label">PEMESANAN</span>
-
-                    <h2>Formulir Pesanan Cetak Kartu</h2>
-
-                    <p>
-                        Lengkapi informasi pesanan dan kirimkan
-                        detailnya kepada admin melalui WhatsApp.
-                    </p>
-                </div>
-
+                <h2>Formulir Pemesanan Cetak Kartu</h2>
+                <p>Silakan lengkapi detail pesanan Anda.</p>
 
                 <form id="cetakKartuOrderForm">
 
-                    <!-- DATA PEMESAN -->
-                    <h3>Informasi Pemesan</h3>
-
-                    <div class="form-row">
-
-                        <div class="form-group">
-                            <label for="cetakKartuCustomerName">
-                                Nama Pemesan
-                            </label>
-
-                            <input
-                                type="text"
-                                id="cetakKartuCustomerName"
-                                placeholder="Masukkan nama Anda"
-                                required
-                            >
-                        </div>
-
-                        <div class="form-group">
-                            <label for="cetakKartuCustomerPhone">
-                                Nomor WhatsApp
-                            </label>
-
-                            <input
-                                type="tel"
-                                id="cetakKartuCustomerPhone"
-                                placeholder="Contoh: 081234567890"
-                                required
-                            >
-                        </div>
-
-                    </div>
-
-
-                    <!-- JENIS KARTU -->
-                    <h3>Detail Kartu</h3>
+                    <h3>Data Pemesan</h3>
 
                     <div class="form-group">
-                        <label for="cetakKartuType">
-                            Jenis Kartu
-                        </label>
-
-                        <select id="cetakKartuType" required>
-                            <option value="">Pilih jenis kartu</option>
-                            <option value="Kartu NPWP">Kartu NPWP</option>
-                            <option value="Kartu BPJS">Kartu BPJS</option>
-                            <option value="Kartu Sertifikat Vaksin">
-                                Kartu Sertifikat Vaksin
-                            </option>
-                        </select>
-                    </div>
-
-
-                    <!-- JUMLAH -->
-                    <div class="form-group">
-                        <label for="cetakKartuQuantity">
-                            Jumlah Kartu
-                        </label>
-
+                        <label for="kartuCustomerName">Nama Pemesan</label>
                         <input
-                            type="number"
-                            id="cetakKartuQuantity"
-                            min="1"
-                            value="1"
+                            type="text"
+                            id="kartuCustomerName"
+                            placeholder="Masukkan nama lengkap"
                             required
                         >
                     </div>
 
-
-                    <!-- BAHAN -->
                     <div class="form-group">
-                        <label for="cetakKartuMaterial">
-                            Bahan Kartu
-                        </label>
-
+                        <label for="kartuCustomerPhone">Nomor WhatsApp</label>
                         <input
-                            type="text"
-                            id="cetakKartuMaterial"
-                            value="Kartu Plastik PVC seperti kartu ATM"
-                            readonly
+                            type="tel"
+                            id="kartuCustomerPhone"
+                            placeholder="Contoh: 081234567890"
+                            required
                         >
-
-                        <small>
-                            Menggunakan bahan kartu plastik seperti kartu ATM.
-                        </small>
                     </div>
 
-
-                    <!-- FILE KARTU -->
                     <div class="form-group">
-                        <label for="cetakKartuFile">
-                            File atau Data Kartu
-                        </label>
-
-                        <select id="cetakKartuFile" required>
-                            <option value="">Pilih ketersediaan file</option>
-                            <option value="Sudah memiliki file siap cetak">
-                                Sudah memiliki file siap cetak
-                            </option>
-                            <option value="Memiliki foto atau dokumen asli">
-                                Memiliki foto atau dokumen asli
-                            </option>
-                            <option value="Membutuhkan bantuan pengaturan desain">
-                                Membutuhkan bantuan pengaturan desain
-                            </option>
+                        <label for="orderBranch">Pilih Cabang TAMA PHOTO</label>
+                        <select id="orderBranch" required>
+                            <option value="">-- Pilih Cabang --</option>
+                            <option value="Sengkuang">Sengkuang</option>
+                            <option value="Melcem">Melcem</option>
+                            <option value="Bengkong">Bengkong</option>
                         </select>
                     </div>
 
+                    <hr>
 
-                    <!-- CATATAN -->
+                    <h3>Detail Cetak Kartu</h3>
+
                     <div class="form-group">
-                        <label for="cetakKartuNotes">
-                            Catatan Tambahan
-                        </label>
+                        <label for="kartuType">Jenis Kartu</label>
+                        <select id="kartuType" required>
+                            <option value="">-- Pilih Jenis Kartu --</option>
+                            <option value="Kartu Nama">Kartu Nama</option>
+                            <option value="ID Card / Kartu Identitas">ID Card / Kartu Identitas</option>
+                            <option value="Kartu Anggota">Kartu Anggota</option>
+                            <option value="Kartu Pelajar">Kartu Pelajar</option>
+                            <option value="Kartu Ucapan">Kartu Ucapan</option>
+                            <option value="Kartu Lainnya">Kartu Lainnya</option>
+                        </select>
+                    </div>
 
+                    <div class="form-group">
+                        <label for="kartuSize">Ukuran Kartu</label>
+                        <select id="kartuSize" required>
+                            <option value="">-- Pilih Ukuran --</option>
+                            <option value="Standar Kartu Nama">Standar Kartu Nama</option>
+                            <option value="Standar ID Card">Standar ID Card</option>
+                            <option value="A6">A6</option>
+                            <option value="A5">A5</option>
+                            <option value="Ukuran Khusus">Ukuran Khusus</option>
+                            <option value="Konsultasi Ukuran">Konsultasi Ukuran</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kartuCustomSize">Ukuran Khusus (Jika Ada)</label>
+                        <input
+                            type="text"
+                            id="kartuCustomSize"
+                            placeholder="Contoh: 9 x 5,5 cm"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kartuMaterial">Jenis Bahan</label>
+                        <select id="kartuMaterial" required>
+                            <option value="">-- Pilih Bahan --</option>
+                            <option value="Art Carton">Art Carton</option>
+                            <option value="PVC">PVC</option>
+                            <option value="Ivory">Ivory</option>
+                            <option value="Laminasi">Bahan dengan Laminasi</option>
+                            <option value="Konsultasi Bahan">Konsultasi Bahan</option>
+                            <option value="Bahan Lainnya">Bahan Lainnya</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kartuQuantity">Jumlah Cetak</label>
+                        <input
+                            type="number"
+                            id="kartuQuantity"
+                            min="1"
+                            placeholder="Contoh: 100"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kartuPrintSide">Sisi Cetak</label>
+                        <select id="kartuPrintSide" required>
+                            <option value="">-- Pilih Sisi Cetak --</option>
+                            <option value="Satu Sisi">Satu Sisi</option>
+                            <option value="Dua Sisi">Dua Sisi</option>
+                            <option value="Konsultasi">Konsultasi Terlebih Dahulu</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kartuFinishing">Finishing</label>
+                        <select id="kartuFinishing" required>
+                            <option value="">-- Pilih Finishing --</option>
+                            <option value="Tanpa Finishing">Tanpa Finishing</option>
+                            <option value="Laminasi Glossy">Laminasi Glossy</option>
+                            <option value="Laminasi Doff">Laminasi Doff</option>
+                            <option value="Potong Sudut">Potong Sudut</option>
+                            <option value="Konsultasi Finishing">Konsultasi Finishing</option>
+                        </select>
+                    </div>
+
+                    <hr>
+
+                    <h3>Informasi Desain</h3>
+
+                    <div class="form-group">
+                        <label for="kartuDesign">Status Desain</label>
+                        <select id="kartuDesign" required>
+                            <option value="">-- Pilih Status Desain --</option>
+                            <option value="Sudah Memiliki Desain">Sudah Memiliki Desain</option>
+                            <option value="Membutuhkan Jasa Desain">Membutuhkan Jasa Desain</option>
+                            <option value="Ingin Konsultasi">Ingin Konsultasi</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kartuNotes">Catatan Tambahan</label>
                         <textarea
-                            id="cetakKartuNotes"
+                            id="kartuNotes"
                             rows="4"
-                            placeholder="Tuliskan permintaan atau informasi tambahan..."
+                            placeholder="Tuliskan detail atau permintaan khusus pesanan Anda"
                         ></textarea>
                     </div>
 
-
-                    <!-- FILE NOTICE -->
-                    <div class="payment-notice">
-                        <strong>📎 Pengiriman File</strong>
-
-                        <p>
-                            Setelah mengirim detail pesanan melalui
-                            WhatsApp, silakan kirimkan foto, dokumen,
-                            atau file kartu melalui percakapan yang sama.
-                            Pastikan data yang diberikan benar dan jelas.
-                        </p>
-                    </div>
-
-
-                    <!-- PAYMENT NOTICE -->
-                    <div class="payment-notice">
-                        <strong>💳 Informasi Pembayaran</strong>
-
-                        <p>
-                            Admin akan memeriksa pesanan dan
-                            mengonfirmasi total harga terlebih dahulu.
-                            Pembayaran dilakukan setelah harga disepakati.
-                            Proses cetak dimulai setelah pembayaran
-                            diterima dan diverifikasi.
-                        </p>
-                    </div>
-
-
-                    <!-- PICKUP NOTICE -->
-                    <div class="payment-notice">
-                        <strong>📍 Pengambilan Pesanan</strong>
-
-                        <p>
-                            Setelah kartu selesai dicetak, pelanggan
-                            dapat mengambil hasilnya langsung di lokasi
-                            TAMA PHOTO. Saat ini belum tersedia layanan
-                            pengantaran.
-                        </p>
-                    </div>
-
-
-                    <!-- SUBMIT BUTTON -->
                     <button
                         type="button"
                         id="sendCetakKartuOrder"
-                        class="order-submit-button"
+                        class="btn-primary"
                     >
-                        💬 Kirim Pesanan via WhatsApp
+                        Pesan Melalui WhatsApp
                     </button>
 
-                    <p class="form-disclaimer">
-                        Pemesanan dapat dilakukan secara online.
-                        Hasil kartu diambil langsung di toko setelah
-                        pesanan selesai.
-                    </p>
-
                 </form>
+            </div>
 
-            </section>
-
-        </div>
+        </section>
 
     </main>
 
-
     <!-- FOOTER -->
     <footer class="footer">
-
-        <div class="container footer-content">
-
-            <div>
-                <h3>TAMA PHOTO</h3>
-                <p>Digital Printing & Services</p>
-            </div>
-
-            <p>
-                © 2026 TAMA PHOTO. All Rights Reserved.
-            </p>
-
+        <div class="container">
+            <p>&copy; 2026 TAMA PHOTO. All Rights Reserved.</p>
         </div>
-
     </footer>
 
-
-    <!-- JAVASCRIPT -->
     <script src="../script.js"></script>
 
 </body>

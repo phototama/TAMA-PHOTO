@@ -4,400 +4,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Layanan pembayaran kredit motor TAMA PHOTO. Bantu pembayaran angsuran motor dengan mudah.">
-    <title>Bayar Kredit Motor | TAMA PHOTO</title>
-
+    <title>Pembayaran Kredit - TAMA PHOTO</title>
     <link rel="stylesheet" href="../style.css">
 </head>
-
 <body>
 
     <!-- HEADER -->
     <header class="header">
-        <div class="container header-container">
-
-            <a href="../index.html" class="logo">
-                <span class="logo-icon">📸</span>
-                <span>TAMA PHOTO</span>
+        <div class="container header-content">
+            <a href="../index.html" class="brand">
+                <div class="brand-logo">TP</div>
+                <div class="brand-text">
+                    <h1>TAMA PHOTO</h1>
+                    <p>Digital Printing & Services</p>
+                </div>
             </a>
 
-            <nav class="nav-menu">
+            <nav class="navigation">
                 <a href="../index.html">Beranda</a>
-                <a href="../index.html#layanan">Produk</a>
+                <a href="../produk.html">Produk</a>
                 <a href="../tentang.html">Tentang Kami</a>
                 <a href="../kontak.html">Kontak</a>
             </nav>
-
         </div>
     </header>
 
-
     <!-- KONTEN UTAMA -->
-    <main class="detail-page">
+    <main class="container">
 
-        <div class="container">
+        <section class="page-hero">
+            <span class="section-tag">LAYANAN PEMBAYARAN</span>
+            <h2>Pembayaran Cicilan Kredit</h2>
+            <p>
+                Bantu proses pembayaran cicilan kredit Anda
+                dengan lebih praktis melalui TAMA PHOTO.
+            </p>
+        </section>
 
-            <!-- BREADCRUMB -->
-            <div class="detail-breadcrumb">
-                <a href="../index.html">Beranda</a>
-                <span> / </span>
-                <span>Bayar Kredit Motor</span>
+        <section class="service-layout">
+
+            <!-- INFORMASI LAYANAN -->
+            <div class="service-info">
+                <h2>Tentang Layanan</h2>
+
+                <p>
+                    TAMA PHOTO menyediakan layanan bantuan pembayaran
+                    tagihan cicilan kredit sesuai penyedia layanan
+                    yang tersedia.
+                </p>
+
+                <h3>Informasi yang Perlu Disiapkan</h3>
+
+                <ul>
+                    <li>Nama perusahaan pembiayaan</li>
+                    <li>Nomor kontrak atau nomor pelanggan</li>
+                    <li>Nama pemilik tagihan</li>
+                    <li>Periode cicilan</li>
+                    <li>Nominal pembayaran jika sudah diketahui</li>
+                </ul>
+
+                <h3>Jenis Pembiayaan</h3>
+
+                <ul>
+                    <li>Kredit kendaraan bermotor</li>
+                    <li>Pembiayaan elektronik</li>
+                    <li>Cicilan barang atau kebutuhan lainnya</li>
+                    <li>Pembiayaan multiguna</li>
+                </ul>
+
+                <h3>Informasi Penting</h3>
+
+                <p>
+                    Ketersediaan perusahaan pembiayaan dan nominal
+                    pembayaran akan dikonfirmasi terlebih dahulu
+                    oleh petugas TAMA PHOTO.
+                </p>
+
+                <p>
+                    Pastikan nomor kontrak dan data pelanggan
+                    yang dimasukkan sudah benar sebelum mengirimkan
+                    permintaan pembayaran.
+                </p>
             </div>
 
-
-            <!-- INTRO -->
-            <section class="detail-intro">
-
-                <div class="detail-intro-icon">
-                    🏍️
-                </div>
-
-                <div>
-                    <span class="section-label">LAYANAN TRANSAKSI</span>
-
-                    <h1>Bayar Kredit Motor</h1>
-
-                    <p>
-                        Layanan bantuan pembayaran angsuran
-                        kredit motor dengan proses pemesanan
-                        yang mudah melalui WhatsApp.
-                    </p>
-                </div>
-
-            </section>
-
-
-            <!-- KEUNGGULAN -->
-            <section class="scan-benefits">
-
-                <div class="scan-benefit-item">
-                    <div class="detail-intro-icon">📋</div>
-
-                    <h3>Data Terstruktur</h3>
-
-                    <p>
-                        Kirim informasi kontrak dan data
-                        angsuran untuk diperiksa admin.
-                    </p>
-                </div>
-
-
-                <div class="scan-benefit-item">
-                    <div class="detail-intro-icon">💬</div>
-
-                    <h3>Konfirmasi WhatsApp</h3>
-
-                    <p>
-                        Nominal pembayaran dan biaya admin
-                        dikonfirmasi sebelum transaksi.
-                    </p>
-                </div>
-
-
-                <div class="scan-benefit-item">
-                    <div class="detail-intro-icon">✅</div>
-
-                    <h3>Konfirmasi Transaksi</h3>
-
-                    <p>
-                        Admin memberikan informasi setelah
-                        pembayaran angsuran berhasil dilakukan.
-                    </p>
-                </div>
-
-            </section>
-
-
             <!-- FORM PEMESANAN -->
-            <section class="banner-order-section">
+            <div class="order-form">
 
-                <div class="order-heading">
+                <h2>Formulir Pembayaran Kredit</h2>
+                <p>Lengkapi informasi berikut untuk pengecekan tagihan.</p>
 
-                    <span class="section-label">FORM PEMESANAN</span>
+                <form id="pembayaranKreditOrderForm">
 
-                    <h2>Form Pembayaran Kredit Motor</h2>
-
-                    <p>
-                        Isi data angsuran dengan benar agar
-                        admin dapat melakukan pengecekan
-                        sebelum pembayaran diproses.
-                    </p>
-
-                </div>
-
-
-                <form id="kreditMotorOrderForm">
-
-                    <!-- DATA PEMESAN -->
-                    <h3 class="form-section-title">
-                        👤 Informasi Pemesan
-                    </h3>
-
-                    <div class="form-row">
-
-                        <div class="form-group">
-
-                            <label for="kreditMotorCustomerName">
-                                Nama Pemesan *
-                            </label>
-
-                            <input
-                                type="text"
-                                id="kreditMotorCustomerName"
-                                placeholder="Masukkan nama Anda"
-                                required
-                            >
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="kreditMotorCustomerPhone">
-                                Nomor WhatsApp *
-                            </label>
-
-                            <input
-                                type="tel"
-                                id="kreditMotorCustomerPhone"
-                                placeholder="Contoh: 081234567890"
-                                required
-                            >
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- DATA ANGSURAN -->
-                    <h3 class="form-section-title">
-                        🏍️ Informasi Kredit Motor
-                    </h3>
-
+                    <h3>Data Pemesan</h3>
 
                     <div class="form-group">
+                        <label for="kreditCustomerName">Nama Pemesan</label>
+                        <input
+                            type="text"
+                            id="kreditCustomerName"
+                            placeholder="Masukkan nama lengkap"
+                            required
+                        >
+                    </div>
 
-                        <label for="kreditMotorLeasing">
-                            Perusahaan Leasing *
-                        </label>
+                    <div class="form-group">
+                        <label for="kreditCustomerPhone">Nomor WhatsApp</label>
+                        <input
+                            type="tel"
+                            id="kreditCustomerPhone"
+                            placeholder="Contoh: 081234567890"
+                            required
+                        >
+                    </div>
 
-                        <select id="kreditMotorLeasing" required>
-
-                            <option value="">
-                                Pilih perusahaan leasing
-                            </option>
-
-                            <option value="Adira Finance">
-                                Adira Finance
-                            </option>
-
-                            <option value="FIFGROUP">
-                                FIFGROUP
-                            </option>
-
-                            <option value="BAF">
-                                BAF
-                            </option>
-
-                            <option value="OTO">
-                                OTO
-                            </option>
-
-                            <option value="WOM Finance">
-                                WOM Finance
-                            </option>
-
-                            <option value="Mandiri Utama Finance">
-                                Mandiri Utama Finance
-                            </option>
-
-                            <option value="Perusahaan lainnya">
-                                Perusahaan lainnya
-                            </option>
-
+                    <div class="form-group">
+                        <label for="orderBranch">Pilih Cabang TAMA PHOTO</label>
+                        <select id="orderBranch" required>
+                            <option value="">-- Pilih Cabang --</option>
+                            <option value="Sengkuang">Sengkuang</option>
+                            <option value="Melcem">Melcem</option>
+                            <option value="Bengkong">Bengkong</option>
                         </select>
-
                     </div>
 
+                    <hr>
 
-                    <div class="form-row">
-
-                        <div class="form-group">
-
-                            <label for="kreditMotorContract">
-                                Nomor Kontrak / Pelanggan *
-                            </label>
-
-                            <input
-                                type="text"
-                                id="kreditMotorContract"
-                                placeholder="Masukkan nomor kontrak"
-                                required
-                            >
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="kreditMotorOwner">
-                                Nama Pemilik Angsuran *
-                            </label>
-
-                            <input
-                                type="text"
-                                id="kreditMotorOwner"
-                                placeholder="Nama sesuai data leasing"
-                                required
-                            >
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="form-row">
-
-                        <div class="form-group">
-
-                            <label for="kreditMotorAmount">
-                                Perkiraan Nominal Angsuran *
-                            </label>
-
-                            <input
-                                type="number"
-                                id="kreditMotorAmount"
-                                min="1"
-                                step="1000"
-                                placeholder="Contoh: 850000"
-                                required
-                            >
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="kreditMotorDueDate">
-                                Tanggal Jatuh Tempo
-                            </label>
-
-                            <input
-                                type="date"
-                                id="kreditMotorDueDate"
-                            >
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- CATATAN -->
-                    <h3 class="form-section-title">
-                        📝 Informasi Tambahan
-                    </h3>
-
+                    <h3>Informasi Tagihan Kredit</h3>
 
                     <div class="form-group">
+                        <label for="kreditProvider">Perusahaan Pembiayaan</label>
+                        <input
+                            type="text"
+                            id="kreditProvider"
+                            placeholder="Contoh: FIF, Adira, WOM, BAF"
+                            required
+                        >
+                    </div>
 
-                        <label for="kreditMotorNotes">
-                            Catatan Tambahan
-                        </label>
+                    <div class="form-group">
+                        <label for="kreditType">Jenis Kredit</label>
+                        <select id="kreditType" required>
+                            <option value="">-- Pilih Jenis Kredit --</option>
+                            <option value="Kredit Motor">Kredit Motor</option>
+                            <option value="Kredit Mobil">Kredit Mobil</option>
+                            <option value="Kredit Elektronik">Kredit Elektronik</option>
+                            <option value="Pembiayaan Multiguna">Pembiayaan Multiguna</option>
+                            <option value="Lainnya">Lainnya</option>
+                        </select>
+                    </div>
 
+                    <div class="form-group">
+                        <label for="kreditCustomerId">Nomor Kontrak / Pelanggan</label>
+                        <input
+                            type="text"
+                            id="kreditCustomerId"
+                            placeholder="Masukkan nomor kontrak atau pelanggan"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kreditAccountName">Nama Pemilik Tagihan</label>
+                        <input
+                            type="text"
+                            id="kreditAccountName"
+                            placeholder="Nama sesuai data perusahaan pembiayaan"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kreditPeriod">Periode Cicilan</label>
+                        <input
+                            type="text"
+                            id="kreditPeriod"
+                            placeholder="Contoh: November 2026"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kreditInstallment">Angsuran Ke-</label>
+                        <input
+                            type="number"
+                            id="kreditInstallment"
+                            min="1"
+                            placeholder="Contoh: 12"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kreditAmount">Perkiraan Nominal Pembayaran</label>
+                        <input
+                            type="number"
+                            id="kreditAmount"
+                            min="0"
+                            placeholder="Masukkan nominal jika diketahui"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kreditNotes">Catatan Tambahan</label>
                         <textarea
-                            id="kreditMotorNotes"
+                            id="kreditNotes"
                             rows="4"
-                            placeholder="Tuliskan informasi tambahan jika ada..."
+                            placeholder="Tuliskan informasi tambahan jika diperlukan"
                         ></textarea>
-
                     </div>
 
-
-                    <!-- INFORMASI PEMBAYARAN -->
-                    <div class="payment-notice">
-
-                        <strong>
-                            💳 Informasi Pembayaran
-                        </strong>
-
-                        <ul>
-
-                            <li>
-                                Admin akan memeriksa data kontrak
-                                dan nominal angsuran terlebih dahulu.
-                            </li>
-
-                            <li>
-                                Total pembayaran beserta biaya admin
-                                akan dikonfirmasi sebelum transaksi.
-                            </li>
-
-                            <li>
-                                Pelanggan wajib membayar penuh
-                                sesuai nominal yang telah disepakati
-                                sebelum transaksi dilakukan.
-                            </li>
-
-                            <li>
-                                Transaksi hanya diproses setelah
-                                dana diterima dan diverifikasi admin.
-                            </li>
-
-                            <li>
-                                Bukti atau konfirmasi transaksi
-                                akan diberikan setelah pembayaran
-                                angsuran berhasil dilakukan.
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-
-                    <!-- TOMBOL WHATSAPP -->
                     <button
                         type="button"
-                        id="sendKreditMotorOrder"
-                        class="order-submit-button"
+                        id="sendPembayaranKreditOrder"
+                        class="btn-primary"
                     >
-                        📲 Kirim Pesanan Melalui WhatsApp
+                        Kirim Permintaan Melalui WhatsApp
                     </button>
 
-
-                    <p class="form-disclaimer">
-                        Pastikan nomor kontrak dan nama pemilik
-                        angsuran sudah benar. Jangan mengirimkan
-                        PIN, password, atau kode OTP kepada siapa pun.
-                    </p>
-
                 </form>
+            </div>
 
-            </section>
-
-        </div>
+        </section>
 
     </main>
 
-
     <!-- FOOTER -->
     <footer class="footer">
-
         <div class="container">
-
-            <p>
-                © 2026 TAMA PHOTO. Semua Hak Dilindungi.
-            </p>
-
-            <p>
-                Layanan Digital Printing dan Kebutuhan Anda.
-            </p>
-
+            <p>&copy; 2026 TAMA PHOTO. All Rights Reserved.</p>
         </div>
-
     </footer>
 
-
-    <!-- JAVASCRIPT -->
     <script src="../script.js"></script>
 
 </body>

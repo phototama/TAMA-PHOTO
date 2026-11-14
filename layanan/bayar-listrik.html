@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="description" content="Layanan pembayaran tagihan listrik PLN pascabayar di TAMA PHOTO.">
+
     <title>Bayar Tagihan Listrik | TAMA PHOTO</title>
 
     <link rel="stylesheet" href="../style.css">
@@ -14,16 +16,20 @@
 
     <!-- HEADER -->
     <header class="header">
-        <div class="container header-container">
+        <div class="container header-content">
 
-            <a href="../index.html" class="logo">
-                <span class="logo-icon">📸</span>
-                <span>TAMA PHOTO</span>
+            <a href="../index.html" class="brand">
+                <div class="brand-logo">TP</div>
+
+                <div class="brand-text">
+                    <h1>TAMA PHOTO</h1>
+                    <p>Digital Printing & Services</p>
+                </div>
             </a>
 
-            <nav class="nav-menu">
+            <nav class="navigation">
                 <a href="../index.html">Beranda</a>
-                <a href="../index.html#layanan">Produk</a>
+                <a href="../produk.html">Produk</a>
                 <a href="../tentang.html">Tentang Kami</a>
                 <a href="../kontak.html">Kontak</a>
             </nav>
@@ -40,7 +46,7 @@
             <!-- BREADCRUMB -->
             <div class="detail-breadcrumb">
                 <a href="../index.html">Beranda</a>
-                <span> / </span>
+                <span>›</span>
                 <span>Bayar Tagihan Listrik</span>
             </div>
 
@@ -53,7 +59,7 @@
                 <div>
                     <span class="section-label">LAYANAN TRANSAKSI</span>
 
-                    <h1>Bayar Tagihan Listrik</h1>
+                    <h2>Bayar Tagihan Listrik</h2>
 
                     <p>
                         Layanan bantuan pembayaran tagihan listrik
@@ -167,6 +173,40 @@
                     </div>
 
 
+                    <!-- PILIH CABANG -->
+                    <h3 class="form-section-title">
+                        📍 Pilih Cabang Pemesanan
+                    </h3>
+
+                    <div class="form-group">
+
+                        <label for="orderBranch">
+                            Cabang TAMA PHOTO *
+                        </label>
+
+                        <select id="orderBranch" required>
+
+                            <option value="">
+                                Pilih cabang terdekat
+                            </option>
+
+                            <option value="Sengkuang">
+                                TAMA PHOTO Sengkuang
+                            </option>
+
+                            <option value="Melcem">
+                                TAMA PHOTO Melcem
+                            </option>
+
+                            <option value="Bengkong">
+                                TAMA PHOTO Bengkong
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
                     <!-- DETAIL TAGIHAN -->
                     <h3 class="form-section-title">
                         🔌 Detail Tagihan Listrik
@@ -214,7 +254,7 @@
                         <input
                             type="text"
                             id="bayarListrikPeriod"
-                            placeholder="Contoh: Oktober 2026"
+                            placeholder="Contoh: November 2026"
                             required
                         >
 
@@ -245,9 +285,7 @@
                     <!-- INFORMASI PEMBAYARAN -->
                     <div class="payment-notice">
 
-                        <strong>
-                            💳 Informasi Pemesanan dan Pembayaran
-                        </strong>
+                        <h3>💳 Informasi Pemesanan dan Pembayaran</h3>
 
                         <ul>
 
@@ -309,14 +347,15 @@
     <!-- FOOTER -->
     <footer class="footer">
 
-        <div class="container">
+        <div class="container footer-content">
+
+            <div>
+                <h3>TAMA PHOTO</h3>
+                <p>Digital Printing & Services</p>
+            </div>
 
             <p>
-                © 2026 TAMA PHOTO. Semua Hak Dilindungi.
-            </p>
-
-            <p>
-                Layanan Digital Printing dan Kebutuhan Anda.
+                © 2026 TAMA PHOTO. All Rights Reserved.
             </p>
 
         </div>
@@ -324,6 +363,7 @@
     </footer>
 
 
+    <!-- JAVASCRIPT -->
     <script src="../script.js"></script>
 
 </body>

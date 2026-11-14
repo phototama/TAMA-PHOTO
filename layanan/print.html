@@ -1,30 +1,19 @@
 
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta
-        name="description"
-        content="Layanan print dokumen hitam putih dan warna TAMA PHOTO."
-    >
-
-    <title>Print Dokumen | TAMA PHOTO</title>
-
+    <title>Print Dokumen - TAMA PHOTO</title>
     <link rel="stylesheet" href="../style.css">
 </head>
-
 <body>
 
     <!-- HEADER -->
     <header class="header">
         <div class="container header-content">
-
             <a href="../index.html" class="brand">
                 <div class="brand-logo">TP</div>
-
                 <div class="brand-text">
                     <h1>TAMA PHOTO</h1>
                     <p>Digital Printing & Services</p>
@@ -37,320 +26,236 @@
                 <a href="../tentang.html">Tentang Kami</a>
                 <a href="../kontak.html">Kontak</a>
             </nav>
-
         </div>
     </header>
 
+    <!-- KONTEN UTAMA -->
+    <main class="container">
 
-    <!-- MAIN CONTENT -->
-    <main class="detail-page">
+        <section class="page-hero">
+            <span class="section-tag">LAYANAN DIGITAL PRINTING</span>
+            <h2>Print Dokumen</h2>
+            <p>
+                Cetak dokumen, tugas, laporan, dan berbagai kebutuhan
+                administrasi dengan mudah melalui TAMA PHOTO.
+            </p>
+        </section>
 
-        <div class="container">
+        <section class="service-layout">
 
-            <!-- BREADCRUMB -->
-            <div class="detail-breadcrumb">
-                <a href="../index.html">Beranda</a>
-                <span> / </span>
-                <span>Print Dokumen</span>
+            <!-- INFORMASI LAYANAN -->
+            <div class="service-info">
+                <h2>Tentang Layanan</h2>
+
+                <p>
+                    TAMA PHOTO melayani pencetakan berbagai jenis dokumen
+                    digital untuk kebutuhan sekolah, kuliah, pekerjaan,
+                    maupun administrasi pribadi.
+                </p>
+
+                <h3>Jenis Dokumen</h3>
+
+                <ul>
+                    <li>Dokumen PDF</li>
+                    <li>File Microsoft Word</li>
+                    <li>Materi pelajaran dan tugas sekolah</li>
+                    <li>Laporan dan makalah</li>
+                    <li>Dokumen administrasi</li>
+                    <li>File gambar dan dokumen lainnya</li>
+                </ul>
+
+                <h3>Pilihan Cetak</h3>
+
+                <ul>
+                    <li>Cetak hitam putih</li>
+                    <li>Cetak berwarna</li>
+                    <li>Cetak satu sisi</li>
+                    <li>Cetak bolak-balik</li>
+                    <li>Ukuran kertas A4, F4, dan A3</li>
+                </ul>
+
+                <h3>Informasi Pemesanan</h3>
+
+                <p>
+                    Siapkan file yang ingin dicetak dan tentukan
+                    ukuran kertas, warna cetak, jumlah halaman,
+                    serta jumlah salinan.
+                </p>
+
+                <p>
+                    File dapat dikirim melalui WhatsApp setelah
+                    formulir pemesanan dibuka.
+                </p>
             </div>
 
+            <!-- FORM PEMESANAN -->
+            <div class="order-form">
 
-            <!-- SERVICE INTRO -->
-            <section class="detail-intro">
-
-                <div class="detail-intro-icon">
-                    🖨️
-                </div>
-
-                <div>
-                    <span class="section-label">LAYANAN PRINTING</span>
-
-                    <h2>Print Dokumen</h2>
-
-                    <p>
-                        Layanan cetak dokumen hitam putih maupun warna
-                        untuk kebutuhan sekolah, kuliah, pekerjaan,
-                        administrasi, dan berbagai keperluan lainnya.
-                    </p>
-                </div>
-
-            </section>
-
-
-            <!-- ORDER FORM -->
-            <section class="banner-order-section">
-
-                <div class="order-heading">
-                    <span class="section-label">PEMESANAN</span>
-
-                    <h2>Formulir Pesanan Print Dokumen</h2>
-
-                    <p>
-                        Lengkapi informasi berikut agar kami dapat
-                        memproses kebutuhan cetak dokumen Anda.
-                    </p>
-                </div>
-
+                <h2>Formulir Pemesanan Print</h2>
+                <p>Lengkapi detail pencetakan dokumen Anda.</p>
 
                 <form id="printOrderForm">
 
-                    <!-- DATA PEMESAN -->
-                    <h3>Informasi Pemesan</h3>
-
-                    <div class="form-row">
-
-                        <div class="form-group">
-                            <label for="printCustomerName">
-                                Nama Pemesan
-                            </label>
-
-                            <input
-                                type="text"
-                                id="printCustomerName"
-                                placeholder="Masukkan nama Anda"
-                                required
-                            >
-                        </div>
-
-                        <div class="form-group">
-                            <label for="printCustomerPhone">
-                                Nomor WhatsApp
-                            </label>
-
-                            <input
-                                type="tel"
-                                id="printCustomerPhone"
-                                placeholder="Contoh: 081234567890"
-                                required
-                            >
-                        </div>
-
-                    </div>
-
-
-                    <!-- JENIS CETAKAN -->
-                    <h3>Spesifikasi Cetak</h3>
+                    <h3>Data Pemesan</h3>
 
                     <div class="form-group">
-                        <label for="printType">
-                            Jenis Cetakan
-                        </label>
+                        <label for="printCustomerName">Nama Pemesan</label>
+                        <input
+                            type="text"
+                            id="printCustomerName"
+                            placeholder="Masukkan nama lengkap"
+                            required
+                        >
+                    </div>
 
-                        <select id="printType" required>
-                            <option value="">Pilih jenis cetakan</option>
-                            <option value="Hitam Putih">Hitam Putih</option>
-                            <option value="Warna">Warna</option>
+                    <div class="form-group">
+                        <label for="printCustomerPhone">Nomor WhatsApp</label>
+                        <input
+                            type="tel"
+                            id="printCustomerPhone"
+                            placeholder="Contoh: 081234567890"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="orderBranch">Pilih Cabang TAMA PHOTO</label>
+                        <select id="orderBranch" required>
+                            <option value="">-- Pilih Cabang --</option>
+                            <option value="Sengkuang">Sengkuang</option>
+                            <option value="Melcem">Melcem</option>
+                            <option value="Bengkong">Bengkong</option>
                         </select>
                     </div>
 
+                    <hr>
 
-                    <div class="form-row">
+                    <h3>Detail Pencetakan</h3>
 
-                        <div class="form-group">
-                            <label for="printPaperSize">
-                                Ukuran Kertas
-                            </label>
-
-                            <select id="printPaperSize" required>
-                                <option value="">Pilih ukuran</option>
-                                <option value="A4">A4</option>
-                                <option value="F4 / Folio">F4 / Folio</option>
-                                <option value="A3">A3</option>
-                                <option value="Ukuran lainnya">
-                                    Ukuran lainnya
-                                </option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="printPaperType">
-                                Jenis Kertas
-                            </label>
-
-                            <select id="printPaperType" required>
-                                <option value="">Pilih jenis kertas</option>
-                                <option value="HVS 70 gsm">HVS 70 gsm</option>
-                                <option value="HVS 80 gsm">HVS 80 gsm</option>
-                                <option value="Belum tahu, minta rekomendasi">
-                                    Belum tahu, minta rekomendasi
-                                </option>
-                            </select>
-                        </div>
-
-                    </div>
-
-
-                    <!-- JUMLAH HALAMAN -->
-                    <div class="form-row">
-
-                        <div class="form-group">
-                            <label for="printPages">
-                                Jumlah Halaman
-                            </label>
-
-                            <input
-                                type="number"
-                                id="printPages"
-                                min="1"
-                                placeholder="Contoh: 20"
-                                required
-                            >
-                        </div>
-
-                        <div class="form-group">
-                            <label for="printCopies">
-                                Jumlah Rangkap
-                            </label>
-
-                            <input
-                                type="number"
-                                id="printCopies"
-                                min="1"
-                                value="1"
-                                required
-                            >
-                        </div>
-
-                    </div>
-
-
-                    <!-- SISI CETAK -->
                     <div class="form-group">
-                        <label for="printSide">
-                            Sisi Cetak
-                        </label>
-
-                        <select id="printSide" required>
-                            <option value="">Pilih sisi cetak</option>
-                            <option value="Satu sisi">
-                                Satu sisi
-                            </option>
-                            <option value="Bolak-balik">
-                                Bolak-balik
-                            </option>
-                        </select>
+                        <label for="printDocumentName">Nama Dokumen</label>
+                        <input
+                            type="text"
+                            id="printDocumentName"
+                            placeholder="Contoh: Tugas Kuliah atau Laporan"
+                            required
+                        >
                     </div>
 
-
-                    <!-- FORMAT DOKUMEN -->
                     <div class="form-group">
-                        <label for="printFileType">
-                            Format File Dokumen
-                        </label>
-
+                        <label for="printFileType">Format File</label>
                         <select id="printFileType" required>
-                            <option value="">Pilih format dokumen</option>
+                            <option value="">-- Pilih Format File --</option>
                             <option value="PDF">PDF</option>
-                            <option value="Word">Word</option>
-                            <option value="Gambar / Foto">
-                                Gambar / Foto
-                            </option>
-                            <option value="Dokumen fisik">
-                                Dokumen fisik
-                            </option>
+                            <option value="Word">Microsoft Word</option>
+                            <option value="JPG / JPEG">JPG / JPEG</option>
+                            <option value="PNG">PNG</option>
+                            <option value="Format Lainnya">Format Lainnya</option>
                         </select>
                     </div>
 
-
-                    <!-- CATATAN -->
                     <div class="form-group">
-                        <label for="printNotes">
-                            Catatan Tambahan
-                        </label>
+                        <label for="printPaperSize">Ukuran Kertas</label>
+                        <select id="printPaperSize" required>
+                            <option value="">-- Pilih Ukuran Kertas --</option>
+                            <option value="A4">A4</option>
+                            <option value="F4 / Folio">F4 / Folio</option>
+                            <option value="A3">A3</option>
+                            <option value="Ukuran Khusus">Ukuran Khusus</option>
+                        </select>
+                    </div>
 
+                    <div class="form-group">
+                        <label for="printColor">Jenis Cetak</label>
+                        <select id="printColor" required>
+                            <option value="">-- Pilih Jenis Cetak --</option>
+                            <option value="Hitam Putih">Hitam Putih</option>
+                            <option value="Berwarna">Berwarna</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="printSide">Sisi Cetak</label>
+                        <select id="printSide" required>
+                            <option value="">-- Pilih Sisi Cetak --</option>
+                            <option value="Satu Sisi">Satu Sisi</option>
+                            <option value="Bolak-Balik">Bolak-Balik</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="printPages">Jumlah Halaman File</label>
+                        <input
+                            type="number"
+                            id="printPages"
+                            min="1"
+                            placeholder="Contoh: 25"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="printPageRange">Halaman yang Dicetak</label>
+                        <input
+                            type="text"
+                            id="printPageRange"
+                            placeholder="Contoh: Semua halaman atau 1-10"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="printQuantity">Jumlah Salinan</label>
+                        <input
+                            type="number"
+                            id="printQuantity"
+                            min="1"
+                            placeholder="Contoh: 2"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="printFinishing">Finishing</label>
+                        <select id="printFinishing">
+                            <option value="Tanpa Finishing">Tanpa Finishing</option>
+                            <option value="Jilid">Jilid</option>
+                            <option value="Staples">Staples</option>
+                            <option value="Laminasi">Laminasi</option>
+                            <option value="Konsultasi Finishing">Konsultasi Finishing</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="printNotes">Catatan Tambahan</label>
                         <textarea
                             id="printNotes"
                             rows="4"
-                            placeholder="Contoh: halaman tertentu saja, jilid, atau permintaan lainnya..."
+                            placeholder="Tuliskan instruksi atau permintaan khusus"
                         ></textarea>
                     </div>
 
-
-                    <!-- INFORMASI PENGIRIMAN FILE -->
-                    <div class="payment-notice">
-                        <strong>📎 Pengiriman File Dokumen</strong>
-
-                        <p>
-                            Setelah mengirim detail pesanan melalui WhatsApp,
-                            Anda dapat mengirimkan file dokumen kepada admin
-                melalui percakapan WhatsApp yang sama.
-                            Pastikan file yang dikirim sudah benar dan siap
-                            untuk dicetak.
-                        </p>
-                    </div>
-
-
-                    <!-- INFORMASI PEMBAYARAN -->
-                    <div class="payment-notice">
-                        <strong>💳 Informasi Pembayaran</strong>
-
-                        <p>
-                            Admin akan memeriksa detail pesanan dan
-                            mengonfirmasi total harga terlebih dahulu.
-                            Setelah harga disepakati, pelanggan melakukan
-                            pembayaran. Pesanan mulai diproses setelah
-                            pembayaran diterima dan diverifikasi.
-                        </p>
-                    </div>
-
-
-                    <!-- INFORMASI PENGAMBILAN -->
-                    <div class="payment-notice">
-                        <strong>📍 Pengambilan Hasil Cetakan</strong>
-
-                        <p>
-                            Setelah proses pencetakan selesai, pelanggan
-                            dapat mengambil hasil cetakan langsung di
-                            lokasi TAMA PHOTO. Saat ini kami belum
-                            menyediakan layanan pengantaran atau delivery.
-                        </p>
-                    </div>
-
-
-                    <!-- TOMBOL WHATSAPP -->
                     <button
                         type="button"
                         id="sendPrintOrder"
-                        class="order-submit-button"
+                        class="btn-primary"
                     >
-                        💬 Kirim Pesanan via WhatsApp
+                        Pesan Melalui WhatsApp
                     </button>
 
-                    <p class="form-disclaimer">
-                        Pemesanan dapat dilakukan secara online.
-                        Hasil cetakan diambil langsung di toko setelah
-                        pesanan selesai.
-                    </p>
-
                 </form>
+            </div>
 
-            </section>
-
-        </div>
+        </section>
 
     </main>
 
-
     <!-- FOOTER -->
     <footer class="footer">
-
-        <div class="container footer-content">
-
-            <div>
-                <h3>TAMA PHOTO</h3>
-                <p>Digital Printing & Services</p>
-            </div>
-
-            <p>
-                © 2026 TAMA PHOTO. All Rights Reserved.
-            </p>
-
+        <div class="container">
+            <p>&copy; 2026 TAMA PHOTO. All Rights Reserved.</p>
         </div>
-
     </footer>
 
-
-    <!-- JAVASCRIPT -->
     <script src="../script.js"></script>
 
 </body>

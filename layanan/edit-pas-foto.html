@@ -4,455 +4,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="Layanan edit pas foto TAMA PHOTO. Penyesuaian ukuran, warna latar, dan hasil cetak pas foto.">
-
-    <title>Edit Pas Foto | TAMA PHOTO</title>
-
-    <!-- CSS UTAMA -->
+    <title>Edit Pas Foto - TAMA PHOTO</title>
     <link rel="stylesheet" href="../style.css">
 </head>
-
 <body>
 
     <!-- HEADER -->
     <header class="header">
-        <div class="container header-container">
-
-            <a href="../index.html" class="logo">
-                <span class="logo-icon">📸</span>
-                <span>TAMA PHOTO</span>
+        <div class="container header-content">
+            <a href="../index.html" class="brand">
+                <div class="brand-logo">TP</div>
+                <div class="brand-text">
+                    <h1>TAMA PHOTO</h1>
+                    <p>Digital Printing & Services</p>
+                </div>
             </a>
 
-            <nav class="nav-menu">
+            <nav class="navigation">
                 <a href="../index.html">Beranda</a>
-                <a href="../index.html#layanan">Produk</a>
+                <a href="../produk.html">Produk</a>
                 <a href="../tentang.html">Tentang Kami</a>
                 <a href="../kontak.html">Kontak</a>
             </nav>
-
         </div>
     </header>
 
-
     <!-- KONTEN UTAMA -->
-    <main class="detail-page">
+    <main class="container">
 
-        <div class="container">
+        <section class="page-hero">
+            <span class="section-tag">LAYANAN EDITING FOTO</span>
+            <h2>Jasa Edit Pas Foto</h2>
+            <p>
+                Edit pas foto dengan tampilan rapi dan profesional
+                untuk berbagai kebutuhan dokumen dan administrasi.
+            </p>
+        </section>
 
-            <!-- BREADCRUMB -->
-            <div class="detail-breadcrumb">
-                <a href="../index.html">Beranda</a>
-                <span> / </span>
-                <span>Edit Pas Foto</span>
+        <section class="service-layout">
+
+            <!-- INFORMASI LAYANAN -->
+            <div class="service-info">
+                <h2>Tentang Layanan</h2>
+
+                <p>
+                    TAMA PHOTO menyediakan layanan editing pas foto
+                    untuk kebutuhan administrasi, sekolah, pekerjaan,
+                    pendaftaran, dan keperluan lainnya.
+                </p>
+
+                <h3>Layanan yang Tersedia</h3>
+
+                <ul>
+                    <li>Penggantian warna background</li>
+                    <li>Penyesuaian ukuran pas foto</li>
+                    <li>Perapian dan pemotongan foto</li>
+                    <li>Perbaikan pencahayaan dan warna</li>
+                    <li>Perapian tampilan foto</li>
+                    <li>Persiapan file untuk kebutuhan cetak</li>
+                </ul>
+
+                <h3>Ukuran Pas Foto</h3>
+
+                <ul>
+                    <li>2 x 3 cm</li>
+                    <li>3 x 4 cm</li>
+                    <li>4 x 6 cm</li>
+                    <li>Ukuran khusus sesuai permintaan</li>
+                </ul>
+
+                <h3>Warna Background</h3>
+
+                <ul>
+                    <li>Merah</li>
+                    <li>Biru</li>
+                    <li>Putih</li>
+                    <li>Warna lainnya sesuai kebutuhan</li>
+                </ul>
+
+                <p>
+                    Untuk hasil terbaik, gunakan foto asli dengan
+                    wajah terlihat jelas dan pencahayaan yang cukup.
+                </p>
             </div>
 
-
-            <!-- INTRO -->
-            <section class="detail-intro">
-
-                <div class="detail-intro-icon">
-                    📸
-                </div>
-
-                <div>
-                    <span class="section-label">LAYANAN DESAIN</span>
-
-                    <h1>Edit Pas Foto</h1>
-
-                    <p>
-                        Layanan edit dan penyesuaian pas foto
-                        untuk berbagai kebutuhan administrasi,
-                        pekerjaan, pendidikan, dan keperluan lainnya.
-                    </p>
-                </div>
-
-            </section>
-
-
-            <!-- KEUNGGULAN -->
-            <section class="scan-benefits">
-
-                <div class="scan-benefit-item">
-                    <div class="detail-intro-icon">📐</div>
-
-                    <h3>Berbagai Ukuran</h3>
-
-                    <p>
-                        Penyesuaian ukuran pas foto 2×3,
-                        3×4, 4×6, dan ukuran lainnya.
-                    </p>
-                </div>
-
-
-                <div class="scan-benefit-item">
-                    <div class="detail-intro-icon">🎨</div>
-
-                    <h3>Ganti Warna Latar</h3>
-
-                    <p>
-                        Pilihan warna latar merah, biru,
-                        putih, atau sesuai permintaan.
-                    </p>
-                </div>
-
-
-                <div class="scan-benefit-item">
-                    <div class="detail-intro-icon">🖨️</div>
-
-                    <h3>Digital dan Cetak</h3>
-
-                    <p>
-                        Hasil edit tersedia dalam bentuk
-                        file digital maupun cetakan foto.
-                    </p>
-                </div>
-
-            </section>
-
-
             <!-- FORM PEMESANAN -->
-            <section class="banner-order-section">
+            <div class="order-form">
 
-                <div class="order-heading">
-
-                    <span class="section-label">FORM PEMESANAN</span>
-
-                    <h2>Pesan Edit Pas Foto</h2>
-
-                    <p>
-                        Lengkapi detail kebutuhan pas foto Anda.
-                        Admin akan menghubungi untuk mengonfirmasi
-                        pesanan dan harga.
-                    </p>
-
-                </div>
-
+                <h2>Formulir Pemesanan Edit Pas Foto</h2>
+                <p>Lengkapi detail kebutuhan editing foto Anda.</p>
 
                 <form id="editPasFotoOrderForm">
 
-                    <!-- INFORMASI PEMESAN -->
-                    <h3 class="form-section-title">
-                        👤 Informasi Pemesan
-                    </h3>
-
-                    <div class="form-row">
-
-                        <div class="form-group">
-
-                            <label for="editPasFotoCustomerName">
-                                Nama Pemesan *
-                            </label>
-
-                            <input
-                                type="text"
-                                id="editPasFotoCustomerName"
-                                placeholder="Masukkan nama Anda"
-                                required
-                            >
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="editPasFotoCustomerPhone">
-                                Nomor WhatsApp *
-                            </label>
-
-                            <input
-                                type="tel"
-                                id="editPasFotoCustomerPhone"
-                                placeholder="Contoh: 081234567890"
-                                required
-                            >
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- DETAIL FOTO -->
-                    <h3 class="form-section-title">
-                        📷 Detail Pas Foto
-                    </h3>
-
+                    <h3>Data Pemesan</h3>
 
                     <div class="form-group">
+                        <label for="pasFotoCustomerName">Nama Pemesan</label>
+                        <input
+                            type="text"
+                            id="pasFotoCustomerName"
+                            placeholder="Masukkan nama lengkap"
+                            required
+                        >
+                    </div>
 
-                        <label for="editPasFotoSize">
-                            Ukuran Pas Foto *
-                        </label>
+                    <div class="form-group">
+                        <label for="pasFotoCustomerPhone">Nomor WhatsApp</label>
+                        <input
+                            type="tel"
+                            id="pasFotoCustomerPhone"
+                            placeholder="Contoh: 081234567890"
+                            required
+                        >
+                    </div>
 
-                        <select id="editPasFotoSize" required>
-
-                            <option value="">
-                                Pilih ukuran pas foto
-                            </option>
-
-                            <option value="2 x 3 cm">
-                                2 × 3 cm
-                            </option>
-
-                            <option value="3 x 4 cm">
-                                3 × 4 cm
-                            </option>
-
-                            <option value="4 x 6 cm">
-                                4 × 6 cm
-                            </option>
-
-                            <option value="Ukuran lainnya">
-                                Ukuran lainnya
-                            </option>
-
-                            <option value="Minta rekomendasi admin">
-                                Belum tahu, minta rekomendasi
-                            </option>
-
+                    <div class="form-group">
+                        <label for="orderBranch">Pilih Cabang TAMA PHOTO</label>
+                        <select id="orderBranch" required>
+                            <option value="">-- Pilih Cabang --</option>
+                            <option value="Sengkuang">Sengkuang</option>
+                            <option value="Melcem">Melcem</option>
+                            <option value="Bengkong">Bengkong</option>
                         </select>
-
                     </div>
 
+                    <hr>
+
+                    <h3>Detail Editing Foto</h3>
 
                     <div class="form-group">
-
-                        <label for="editPasFotoBackground">
-                            Warna Latar Foto *
-                        </label>
-
-                        <select id="editPasFotoBackground" required>
-
-                            <option value="">
-                                Pilih warna latar
-                            </option>
-
-                            <option value="Merah">
-                                Merah
-                            </option>
-
-                            <option value="Biru">
-                                Biru
-                            </option>
-
-                            <option value="Putih">
-                                Putih
-                            </option>
-
-                            <option value="Warna lainnya">
-                                Warna lainnya
-                            </option>
-
+                        <label for="pasFotoSize">Ukuran Pas Foto</label>
+                        <select id="pasFotoSize" required>
+                            <option value="">-- Pilih Ukuran --</option>
+                            <option value="2 x 3 cm">2 x 3 cm</option>
+                            <option value="3 x 4 cm">3 x 4 cm</option>
+                            <option value="4 x 6 cm">4 x 6 cm</option>
+                            <option value="Ukuran Khusus">Ukuran Khusus</option>
+                            <option value="Konsultasi Ukuran">Konsultasi Terlebih Dahulu</option>
                         </select>
-
                     </div>
 
-
-                    <!-- HASIL PESANAN -->
-                    <h3 class="form-section-title">
-                        🖨️ Pilihan Hasil
-                    </h3>
-
+                    <div class="form-group">
+                        <label for="pasFotoCustomSize">Ukuran Khusus (Jika Ada)</label>
+                        <input
+                            type="text"
+                            id="pasFotoCustomSize"
+                            placeholder="Contoh: 3,5 x 4,5 cm"
+                        >
+                    </div>
 
                     <div class="form-group">
-
-                        <label for="editPasFotoOutput">
-                            Jenis Hasil yang Diinginkan *
-                        </label>
-
-                        <select id="editPasFotoOutput" required>
-
-                            <option value="">
-                                Pilih jenis hasil
-                            </option>
-
-                            <option value="File digital">
-                                File digital saja
-                            </option>
-
-                            <option value="Cetak pas foto">
-                                Cetak pas foto
-                            </option>
-
-                            <option value="File digital dan cetak">
-                                File digital dan cetak
-                            </option>
-
+                        <label for="pasFotoBackground">Warna Background</label>
+                        <select id="pasFotoBackground" required>
+                            <option value="">-- Pilih Background --</option>
+                            <option value="Merah">Merah</option>
+                            <option value="Biru">Biru</option>
+                            <option value="Putih">Putih</option>
+                            <option value="Background Asli">Tetap Menggunakan Background Asli</option>
+                            <option value="Warna Lainnya">Warna Lainnya</option>
                         </select>
-
                     </div>
-
-
-                    <div class="form-row">
-
-                        <div class="form-group">
-
-                            <label for="editPasFotoQuantity">
-                                Jumlah Cetakan
-                            </label>
-
-                            <select id="editPasFotoQuantity">
-
-                                <option value="Tidak perlu cetak">
-                                    Tidak perlu cetak
-                                </option>
-
-                                <option value="1 lembar">
-                                    1 lembar
-                                </option>
-
-                                <option value="2 lembar">
-                                    2 lembar
-                                </option>
-
-                                <option value="3 lembar">
-                                    3 lembar
-                                </option>
-
-                                <option value="5 lembar">
-                                    5 lembar
-                                </option>
-
-                                <option value="10 lembar">
-                                    10 lembar
-                                </option>
-
-                                <option value="Jumlah lainnya">
-                                    Jumlah lainnya
-                                </option>
-
-                            </select>
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="editPasFotoDeadline">
-                                Waktu Dibutuhkan
-                            </label>
-
-                            <select id="editPasFotoDeadline">
-
-                                <option value="Tidak terburu-buru">
-                                    Tidak terburu-buru
-                                </option>
-
-                                <option value="Secepatnya">
-                                    Secepatnya
-                                </option>
-
-                                <option value="Sesuai tanggal tertentu">
-                                    Sesuai tanggal tertentu
-                                </option>
-
-                            </select>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- CATATAN -->
-                    <h3 class="form-section-title">
-                        📝 Informasi Tambahan
-                    </h3>
-
 
                     <div class="form-group">
+                        <label for="pasFotoEditing">Jenis Editing</label>
+                        <select id="pasFotoEditing" required>
+                            <option value="">-- Pilih Jenis Editing --</option>
+                            <option value="Ganti Background">Ganti Background</option>
+                            <option value="Ganti Background dan Perapian Foto">Ganti Background dan Perapian Foto</option>
+                            <option value="Perbaikan Pencahayaan dan Warna">Perbaikan Pencahayaan dan Warna</option>
+                            <option value="Penyesuaian Ukuran">Penyesuaian Ukuran</option>
+                            <option value="Editing Lengkap">Editing Lengkap</option>
+                        </select>
+                    </div>
 
-                        <label for="editPasFotoNotes">
-                            Catatan atau Permintaan Khusus
-                        </label>
+                    <div class="form-group">
+                        <label for="pasFotoQuantity">Jumlah Orang / Foto</label>
+                        <input
+                            type="number"
+                            id="pasFotoQuantity"
+                            min="1"
+                            placeholder="Contoh: 2"
+                            required
+                        >
+                    </div>
 
+                    <hr>
+
+                    <h3>Kebutuhan Hasil</h3>
+
+                    <div class="form-group">
+                        <label for="pasFotoOutput">Format Hasil</label>
+                        <select id="pasFotoOutput" required>
+                            <option value="">-- Pilih Format Hasil --</option>
+                            <option value="File Digital">File Digital</option>
+                            <option value="Cetak Pas Foto">Cetak Pas Foto</option>
+                            <option value="File Digital dan Cetak">File Digital dan Cetak</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pasFotoPrintQuantity">Jumlah Cetak (Jika Memilih Cetak)</label>
+                        <input
+                            type="number"
+                            id="pasFotoPrintQuantity"
+                            min="1"
+                            placeholder="Contoh: 4 lembar"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pasFotoNotes">Catatan Tambahan</label>
                         <textarea
-                            id="editPasFotoNotes"
+                            id="pasFotoNotes"
                             rows="4"
-                            placeholder="Contoh: Ukuran khusus, warna latar tertentu, jumlah cetakan, atau permintaan lainnya..."
+                            placeholder="Tuliskan permintaan khusus, warna background lain, atau detail editing lainnya"
                         ></textarea>
-
                     </div>
 
-
-                    <!-- INFORMASI PEMBAYARAN -->
-                    <div class="payment-notice">
-
-                        <strong>
-                            💳 Informasi Pemesanan dan Pembayaran
-                        </strong>
-
-                        <ul>
-
-                            <li>
-                                Harga akan dikonfirmasi admin
-                                berdasarkan ukuran dan kebutuhan pesanan.
-                            </li>
-
-                            <li>
-                                Pembayaran dilakukan setelah
-                                pelanggan menyetujui harga.
-                            </li>
-
-                            <li>
-                                Pengerjaan dimulai setelah pembayaran
-                                diterima dan diverifikasi admin.
-                            </li>
-
-                            <li>
-                                Hasil digital dikirim melalui WhatsApp.
-                                Hasil cetak dapat diambil langsung
-                                di TAMA PHOTO.
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-
-                    <!-- TOMBOL WHATSAPP -->
                     <button
                         type="button"
                         id="sendEditPasFotoOrder"
-                        class="order-submit-button"
+                        class="btn-primary"
                     >
-                        📲 Kirim Pesanan Melalui WhatsApp
+                        Pesan Melalui WhatsApp
                     </button>
 
-
-                    <p class="form-disclaimer">
-                        Kirim foto asli melalui WhatsApp setelah
-                        chat terbuka. Pastikan foto terlihat jelas
-                        agar hasil edit dapat dikerjakan dengan baik.
-                    </p>
-
                 </form>
+            </div>
 
-            </section>
-
-        </div>
+        </section>
 
     </main>
 
-
     <!-- FOOTER -->
     <footer class="footer">
-
         <div class="container">
-
-            <p>
-                © 2026 TAMA PHOTO. Semua Hak Dilindungi.
-            </p>
-
-            <p>
-                Layanan Digital Printing dan Kebutuhan Anda.
-            </p>
-
+            <p>&copy; 2026 TAMA PHOTO. All Rights Reserved.</p>
         </div>
-
     </footer>
 
-
-    <!-- JAVASCRIPT -->
     <script src="../script.js"></script>
 
 </body>

@@ -4,21 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Layanan cetak spanduk TAMA PHOTO untuk promosi, acara, dan berbagai kebutuhan Anda.">
-    <title>Cetak Spanduk | TAMA PHOTO</title>
-
+    <title>Cetak Spanduk - TAMA PHOTO</title>
     <link rel="stylesheet" href="../style.css">
 </head>
-
 <body>
 
     <!-- HEADER -->
     <header class="header">
         <div class="container header-content">
-
             <a href="../index.html" class="brand">
                 <div class="brand-logo">TP</div>
-
                 <div class="brand-text">
                     <h1>TAMA PHOTO</h1>
                     <p>Digital Printing & Services</p>
@@ -31,226 +26,224 @@
                 <a href="../tentang.html">Tentang Kami</a>
                 <a href="../kontak.html">Kontak</a>
             </nav>
-
         </div>
     </header>
 
+    <!-- KONTEN UTAMA -->
+    <main class="container">
 
-    <!-- MAIN CONTENT -->
-    <main class="detail-page">
+        <section class="page-hero">
+            <span class="section-tag">LAYANAN DIGITAL PRINTING</span>
+            <h2>Cetak Spanduk</h2>
+            <p>
+                Cetak spanduk untuk promosi usaha, acara,
+                kegiatan, maupun kebutuhan informasi lainnya.
+            </p>
+        </section>
 
-        <div class="container">
+        <section class="service-layout">
 
-            <!-- BREADCRUMB -->
-            <div class="detail-breadcrumb">
-                <a href="../index.html">Beranda</a>
-                <span> / </span>
-                <span>Cetak Spanduk</span>
+            <!-- INFORMASI LAYANAN -->
+            <div class="service-info">
+                <h2>Tentang Layanan</h2>
+
+                <p>
+                    TAMA PHOTO menyediakan layanan cetak spanduk
+                    dengan berbagai pilihan ukuran dan bahan
+                    sesuai kebutuhan pelanggan.
+                </p>
+
+                <h3>Kebutuhan Cetak Spanduk</h3>
+
+                <ul>
+                    <li>Spanduk promosi usaha</li>
+                    <li>Spanduk acara dan kegiatan</li>
+                    <li>Spanduk ulang tahun</li>
+                    <li>Spanduk peresmian dan pembukaan usaha</li>
+                    <li>Spanduk informasi dan pengumuman</li>
+                    <li>Spanduk kampanye promosi</li>
+                </ul>
+
+                <h3>Pilihan Layanan</h3>
+
+                <ul>
+                    <li>Berbagai ukuran sesuai permintaan</li>
+                    <li>Pilihan bahan spanduk</li>
+                    <li>Desain dari pelanggan</li>
+                    <li>Bantuan pembuatan desain</li>
+                    <li>Finishing sesuai kebutuhan</li>
+                </ul>
+
+                <h3>Informasi Pemesanan</h3>
+
+                <p>
+                    Tentukan ukuran spanduk dalam satuan meter,
+                    jumlah pesanan, jenis bahan, dan kebutuhan finishing.
+                </p>
+
+                <p>
+                    Jika belum memiliki desain, Anda dapat
+                    berkonsultasi dengan tim kami.
+                </p>
             </div>
 
+            <!-- FORM PEMESANAN -->
+            <div class="order-form">
 
-            <!-- SERVICE INTRO -->
-            <section class="detail-intro">
-
-                <div class="detail-intro-icon">
-                    🎏
-                </div>
-
-                <div>
-                    <span class="section-label">LAYANAN PRINTING</span>
-
-                    <h2>Cetak Spanduk</h2>
-
-                    <p>
-                        Cetak spanduk berkualitas untuk kebutuhan promosi,
-                        acara, usaha, kampanye, dan berbagai keperluan lainnya.
-                    </p>
-                </div>
-
-            </section>
-
-
-            <!-- ORDER FORM -->
-            <section class="banner-order-section">
-
-                <div class="order-heading">
-                    <span class="section-label">PEMESANAN</span>
-                    <h2>Formulir Pesanan Spanduk</h2>
-                    <p>Lengkapi detail pesanan Anda agar admin dapat memberikan penawaran harga.</p>
-                </div>
-
+                <h2>Formulir Pemesanan Spanduk</h2>
+                <p>Lengkapi detail pesanan Anda.</p>
 
                 <form id="spandukOrderForm">
 
-                    <div class="form-row">
+                    <h3>Data Pemesan</h3>
 
-                        <div class="form-group">
-                            <label for="spandukCustomerName">Nama Pemesan</label>
-                            <input
-                                type="text"
-                                id="spandukCustomerName"
-                                placeholder="Masukkan nama Anda"
-                                required
-                            >
-                        </div>
-
-                        <div class="form-group">
-                            <label for="spandukCustomerPhone">Nomor WhatsApp</label>
-                            <input
-                                type="tel"
-                                id="spandukCustomerPhone"
-                                placeholder="Contoh: 081234567890"
-                                required
-                            >
-                        </div>
-
+                    <div class="form-group">
+                        <label for="spandukCustomerName">Nama Pemesan</label>
+                        <input
+                            type="text"
+                            id="spandukCustomerName"
+                            placeholder="Masukkan nama lengkap"
+                            required
+                        >
                     </div>
 
-
-                    <!-- UKURAN -->
-                    <h3>Ukuran Spanduk</h3>
-
-                    <div class="form-row">
-
-                        <div class="form-group">
-                            <label for="spandukWidth">Lebar (cm)</label>
-                            <input
-                                type="number"
-                                id="spandukWidth"
-                                min="1"
-                                placeholder="Contoh: 300"
-                                required
-                            >
-                        </div>
-
-                        <div class="form-group">
-                            <label for="spandukHeight">Tinggi (cm)</label>
-                            <input
-                                type="number"
-                                id="spandukHeight"
-                                min="1"
-                                placeholder="Contoh: 100"
-                                required
-                            >
-                        </div>
-
+                    <div class="form-group">
+                        <label for="spandukCustomerPhone">Nomor WhatsApp</label>
+                        <input
+                            type="tel"
+                            id="spandukCustomerPhone"
+                            placeholder="Contoh: 081234567890"
+                            required
+                        >
                     </div>
 
+                    <div class="form-group">
+                        <label for="orderBranch">Pilih Cabang TAMA PHOTO</label>
+                        <select id="orderBranch" required>
+                            <option value="">-- Pilih Cabang --</option>
+                            <option value="Sengkuang">Sengkuang</option>
+                            <option value="Melcem">Melcem</option>
+                            <option value="Bengkong">Bengkong</option>
+                        </select>
+                    </div>
 
-                    <!-- JUMLAH -->
+                    <hr>
+
+                    <h3>Spesifikasi Spanduk</h3>
+
+                    <div class="form-group">
+                        <label for="spandukWidth">Lebar Spanduk (meter)</label>
+                        <input
+                            type="number"
+                            id="spandukWidth"
+                            min="0.1"
+                            step="0.01"
+                            placeholder="Contoh: 3"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="spandukHeight">Tinggi Spanduk (meter)</label>
+                        <input
+                            type="number"
+                            id="spandukHeight"
+                            min="0.1"
+                            step="0.01"
+                            placeholder="Contoh: 1"
+                            required
+                        >
+                    </div>
+
                     <div class="form-group">
                         <label for="spandukQuantity">Jumlah Spanduk</label>
                         <input
                             type="number"
                             id="spandukQuantity"
                             min="1"
-                            value="1"
+                            placeholder="Contoh: 2"
                             required
                         >
                     </div>
 
-
-                    <!-- BAHAN -->
                     <div class="form-group">
                         <label for="spandukMaterial">Jenis Bahan</label>
-
                         <select id="spandukMaterial" required>
-                            <option value="">Pilih bahan spanduk</option>
-                            <option value="Flexi Frontlite">Flexi Frontlite</option>
-                            <option value="Flexi Backlite">Flexi Backlite</option>
-                            <option value="Belum tahu, minta rekomendasi">Belum tahu, minta rekomendasi</option>
+                            <option value="">-- Pilih Bahan --</option>
+                            <option value="Flexi China">Flexi China</option>
+                            <option value="Flexi Korea">Flexi Korea</option>
+                            <option value="Flexi Jerman">Flexi Jerman</option>
+                            <option value="Bahan Lainnya">Bahan Lainnya</option>
+                            <option value="Konsultasi Bahan">Konsultasi Bahan</option>
                         </select>
                     </div>
 
-
-                    <!-- FINISHING -->
                     <div class="form-group">
                         <label for="spandukFinishing">Finishing</label>
-
                         <select id="spandukFinishing" required>
-                            <option value="">Pilih finishing</option>
-                            <option value="Tanpa finishing">Tanpa finishing</option>
-                            <option value="Mata ayam">Mata ayam</option>
-                            <option value="Lipat atau selongsong">Lipat atau selongsong</option>
-                            <option value="Belum tahu, minta rekomendasi">Belum tahu, minta rekomendasi</option>
+                            <option value="">-- Pilih Finishing --</option>
+                            <option value="Tanpa Finishing">Tanpa Finishing</option>
+                            <option value="Mata Ayam">Mata Ayam</option>
+                            <option value="Selongsong">Selongsong</option>
+                            <option value="Jahit Tepi">Jahit Tepi</option>
+                            <option value="Mata Ayam dan Jahit Tepi">Mata Ayam dan Jahit Tepi</option>
+                            <option value="Konsultasi Finishing">Konsultasi Finishing</option>
                         </select>
                     </div>
 
+                    <hr>
 
-                    <!-- DESAIN -->
+                    <h3>Informasi Desain</h3>
+
                     <div class="form-group">
-                        <label for="spandukDesign">File Desain</label>
-
+                        <label for="spandukDesign">Status Desain</label>
                         <select id="spandukDesign" required>
-                            <option value="">Pilih kondisi desain</option>
-                            <option value="Desain sudah tersedia">Desain sudah tersedia</option>
-                            <option value="Membutuhkan jasa desain">Membutuhkan jasa desain</option>
+                            <option value="">-- Pilih Status Desain --</option>
+                            <option value="Sudah Memiliki Desain">Sudah Memiliki Desain</option>
+                            <option value="Membutuhkan Jasa Desain">Membutuhkan Jasa Desain</option>
+                            <option value="Ingin Konsultasi">Ingin Konsultasi</option>
                         </select>
                     </div>
 
+                    <div class="form-group">
+                        <label for="spandukDeadline">Target Penyelesaian</label>
+                        <input
+                            type="text"
+                            id="spandukDeadline"
+                            placeholder="Contoh: 20 November 2026"
+                        >
+                    </div>
 
-                    <!-- CATATAN -->
                     <div class="form-group">
                         <label for="spandukNotes">Catatan Tambahan</label>
-
                         <textarea
                             id="spandukNotes"
                             rows="4"
-                            placeholder="Tuliskan permintaan khusus jika ada..."
+                            placeholder="Tuliskan konsep desain, warna, tulisan, atau permintaan khusus"
                         ></textarea>
                     </div>
 
-
-                    <!-- PAYMENT NOTICE -->
-                    <div class="payment-notice">
-                        <strong>Informasi Pembayaran</strong>
-
-                        <p>
-                            Harga akan dikonfirmasi oleh admin berdasarkan
-                            ukuran, bahan, jumlah, dan finishing yang dipilih.
-                            Pembayaran dilakukan setelah harga disepakati.
-                            Pesanan mulai diproses setelah pembayaran diterima
-                            dan diverifikasi.
-                        </p>
-                    </div>
-
-
-                    <!-- SUBMIT -->
                     <button
                         type="button"
                         id="sendSpandukOrder"
-                        class="order-submit-button"
+                        class="btn-primary"
                     >
-                        💬 Kirim Pesanan via WhatsApp
+                        Pesan Melalui WhatsApp
                     </button>
 
-                    <p class="form-disclaimer">
-                        Pastikan detail pesanan sudah benar sebelum dikirim.
-                    </p>
-
                 </form>
+            </div>
 
-            </section>
-
-        </div>
+        </section>
 
     </main>
 
-
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container footer-content">
-
-            <div>
-                <h3>TAMA PHOTO</h3>
-                <p>Digital Printing & Services</p>
-            </div>
-
-            <p>© 2026 TAMA PHOTO. All Rights Reserved.</p>
-
+        <div class="container">
+            <p>&copy; 2026 TAMA PHOTO. All Rights Reserved.</p>
         </div>
     </footer>
-
 
     <script src="../script.js"></script>
 

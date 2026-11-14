@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Layanan cetak banner TAMA PHOTO.">
+    <meta name="description" content="Layanan cetak banner TAMA PHOTO Batam. Pesan banner berkualitas dengan pilihan cabang terdekat.">
 
     <title>Cetak Banner | TAMA PHOTO</title>
 
@@ -38,7 +38,7 @@
     </header>
 
 
-    <!-- DETAIL BANNER -->
+    <!-- HALAMAN DETAIL LAYANAN -->
     <main class="detail-page">
 
         <div class="container">
@@ -51,7 +51,7 @@
             </div>
 
 
-            <!-- SERVICE INTRO -->
+            <!-- INFORMASI LAYANAN -->
             <section class="detail-intro">
 
                 <div class="detail-intro-icon">
@@ -59,28 +59,31 @@
                 </div>
 
                 <div>
-                    <span class="section-label">LAYANAN PRINTING</span>
+                    <span class="section-label">
+                        LAYANAN PRINTING
+                    </span>
 
                     <h2>Cetak Banner</h2>
 
                     <p>
                         Cetak banner berkualitas untuk kebutuhan promosi,
                         usaha, acara, dan berbagai keperluan lainnya.
+                        Tersedia berbagai pilihan ukuran dan finishing.
                     </p>
                 </div>
 
             </section>
 
 
-            <!-- ORDER FORM -->
+            <!-- FORMULIR PEMESANAN -->
             <section class="banner-order-section">
 
                 <div class="order-heading">
                     <h2>Formulir Pemesanan</h2>
 
                     <p>
-                        Isi detail pesanan Anda agar kami dapat
-                        memberikan informasi harga yang sesuai.
+                        Lengkapi informasi berikut agar admin kami
+                        dapat membantu menghitung harga pesanan Anda.
                     </p>
                 </div>
 
@@ -89,6 +92,7 @@
 
                     <!-- DATA PELANGGAN -->
                     <div class="form-group">
+
                         <label for="customerName">
                             Nama Pemesan
                         </label>
@@ -96,13 +100,15 @@
                         <input
                             type="text"
                             id="customerName"
-                            placeholder="Masukkan nama Anda"
+                            placeholder="Masukkan nama lengkap Anda"
                             required
                         >
+
                     </div>
 
 
                     <div class="form-group">
+
                         <label for="customerPhone">
                             Nomor WhatsApp
                         </label>
@@ -113,6 +119,37 @@
                             placeholder="Contoh: 081234567890"
                             required
                         >
+
+                    </div>
+
+
+                    <!-- PILIH CABANG -->
+                    <div class="form-group">
+
+                        <label for="orderBranch">
+                            Pilih Cabang TAMA PHOTO
+                        </label>
+
+                        <select id="orderBranch" required>
+
+                            <option value="">
+                                Pilih cabang terdekat
+                            </option>
+
+                            <option value="Sengkuang">
+                                TAMA PHOTO Sengkuang
+                            </option>
+
+                            <option value="Melcem">
+                                TAMA PHOTO Melcem
+                            </option>
+
+                            <option value="Bengkong">
+                                TAMA PHOTO Bengkong
+                            </option>
+
+                        </select>
+
                     </div>
 
 
@@ -120,8 +157,9 @@
                     <div class="form-row">
 
                         <div class="form-group">
+
                             <label for="bannerWidth">
-                                Lebar (cm)
+                                Lebar Banner (cm)
                             </label>
 
                             <input
@@ -131,11 +169,14 @@
                                 placeholder="Contoh: 300"
                                 required
                             >
+
                         </div>
 
+
                         <div class="form-group">
+
                             <label for="bannerHeight">
-                                Tinggi (cm)
+                                Tinggi Banner (cm)
                             </label>
 
                             <input
@@ -145,13 +186,15 @@
                                 placeholder="Contoh: 100"
                                 required
                             >
+
                         </div>
 
                     </div>
 
 
-                    <!-- JUMLAH -->
+                    <!-- JUMLAH PESANAN -->
                     <div class="form-group">
+
                         <label for="bannerQuantity">
                             Jumlah Banner
                         </label>
@@ -163,11 +206,13 @@
                             value="1"
                             required
                         >
+
                     </div>
 
 
-                    <!-- BAHAN -->
+                    <!-- JENIS BAHAN -->
                     <div class="form-group">
+
                         <label for="bannerMaterial">
                             Jenis Bahan
                         </label>
@@ -177,53 +222,73 @@
                             id="bannerMaterial"
                             placeholder="Isi jika sudah tahu, atau tanyakan rekomendasi"
                         >
+
                     </div>
 
 
                     <!-- FINISHING -->
                     <div class="form-group">
+
                         <label for="bannerFinishing">
                             Finishing
                         </label>
 
                         <select id="bannerFinishing" required>
-                            <option value="">Pilih finishing</option>
+
+                            <option value="">
+                                Pilih finishing
+                            </option>
+
                             <option value="Tanpa finishing">
                                 Tanpa finishing
                             </option>
+
                             <option value="Mata ayam">
                                 Mata ayam
                             </option>
+
                             <option value="Lipat atau selongsong">
                                 Lipat atau selongsong
                             </option>
+
                             <option value="Belum tahu, minta rekomendasi">
                                 Belum tahu, minta rekomendasi
                             </option>
+
                         </select>
+
                     </div>
 
 
-                    <!-- FILE DESAIN -->
+                    <!-- STATUS DESAIN -->
                     <div class="form-group">
+
                         <label for="bannerDesign">
                             Apakah desain sudah tersedia?
                         </label>
 
                         <select id="bannerDesign" required>
-                            <option value="">Pilih jawaban</option>
+
+                            <option value="">
+                                Pilih jawaban
+                            </option>
+
                             <option value="Desain sudah tersedia">
                                 Sudah ada desain
                             </option>
+
                             <option value="Membutuhkan jasa desain">
                                 Membutuhkan jasa desain
                             </option>
+
                         </select>
+
                     </div>
 
 
-                    <!-- CATATAN -->
+                    <!-- CATATAN TAMBAHAN -->
                     <div class="form-group">
+
                         <label for="bannerNotes">
                             Catatan Tambahan
                         </label>
@@ -233,30 +298,35 @@
                             rows="4"
                             placeholder="Tuliskan permintaan khusus jika ada..."
                         ></textarea>
+
                     </div>
 
 
-                    <!-- PAYMENT NOTICE -->
+                    <!-- KETENTUAN PEMESANAN -->
                     <div class="payment-notice">
 
                         <h3>🛡️ Ketentuan Pemesanan</h3>
 
                         <p>
-                            Harga akan dikonfirmasi oleh admin
-                            berdasarkan ukuran, bahan, jumlah,
-                            dan finishing yang dipilih.
+                            Harga akan dikonfirmasi oleh admin berdasarkan
+                            ukuran, bahan, jumlah, dan finishing yang dipilih.
                         </p>
 
                         <p>
-                            Pembayaran dilakukan setelah harga
-                            disepakati. Pesanan mulai diproses
-                            setelah pembayaran diterima dan diverifikasi.
+                            Pembayaran dilakukan setelah harga disepakati.
+                            Pesanan mulai diproses setelah pembayaran
+                            diterima dan diverifikasi.
+                        </p>
+
+                        <p>
+                            Jika desain sudah tersedia, silakan kirim
+                            file desain langsung melalui percakapan WhatsApp.
                         </p>
 
                     </div>
 
 
-                    <!-- SUBMIT -->
+                    <!-- TOMBOL KIRIM -->
                     <button
                         type="button"
                         id="sendBannerOrder"
@@ -265,9 +335,10 @@
                         💬 Kirim Pesanan via WhatsApp
                     </button>
 
+
                     <p class="form-disclaimer">
-                        Dengan mengirim pesanan, Anda akan diarahkan
-                        ke WhatsApp TAMA PHOTO untuk konfirmasi.
+                        Setelah menekan tombol, Anda akan diarahkan
+                        ke WhatsApp cabang yang telah dipilih.
                     </p>
 
                 </form>
@@ -281,6 +352,7 @@
 
     <!-- FOOTER -->
     <footer class="footer">
+
         <div class="container footer-content">
 
             <div>
@@ -288,12 +360,16 @@
                 <p>Digital Printing & Services</p>
             </div>
 
-            <p>© 2026 TAMA PHOTO. All Rights Reserved.</p>
+            <p>
+                © 2026 TAMA PHOTO. All Rights Reserved.
+            </p>
 
         </div>
+
     </footer>
 
 
+    <!-- JAVASCRIPT -->
     <script src="../script.js"></script>
 
 </body>
