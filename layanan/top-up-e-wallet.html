@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Layanan top up saldo e-wallet dan aplikasi di TAMA PHOTO.">
+    <title>Top Up E-Wallet - TAMA PHOTO</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">📸</span>
+                <span>TAMA PHOTO</span>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="../index.html">Beranda</a>
+                <a href="../index.html#layanan">Produk</a>
+                <a href="../tentang.html">Tentang Kami</a>
+                <a href="../kontak.html">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- KONTEN UTAMA -->
+    <main class="detail-page">
+        <div class="container">
+
+            <!-- BREADCRUMB -->
+            <div class="detail-breadcrumb">
+                <a href="../index.html">Beranda</a>
+                <span> / </span>
+                <span>Top Up E-Wallet</span>
+            </div>
+
+
+            <!-- INTRO -->
+            <section class="detail-intro">
+                <div class="detail-intro-icon">💳</div>
+
+                <span class="section-label">LAYANAN TRANSAKSI</span>
+
+                <h1>Top Up E-Wallet</h1>
+
+                <p>
+                    Isi saldo berbagai dompet digital dan aplikasi
+                    dengan mudah melalui layanan TAMA PHOTO.
+                    Pilih platform dan masukkan nominal yang Anda inginkan.
+                </p>
+            </section>
+
+
+            <!-- KEUNGGULAN LAYANAN -->
+            <section class="scan-benefits">
+
+                <div class="scan-benefit-item">
+                    <div class="service-icon icon-purple">📱</div>
+                    <h3>Berbagai Platform</h3>
+                    <p>Tersedia pilihan berbagai dompet digital dan aplikasi.</p>
+                </div>
+
+                <div class="scan-benefit-item">
+                    <div class="service-icon icon-green">💰</div>
+                    <h3>Nominal Fleksibel</h3>
+                    <p>Masukkan nominal saldo sesuai kebutuhan Anda.</p>
+                </div>
+
+                <div class="scan-benefit-item">
+                    <div class="service-icon icon-blue">⚡</div>
+                    <h3>Proses Setelah Pembayaran</h3>
+                    <p>Transaksi diproses setelah pembayaran diterima dan diverifikasi.</p>
+                </div>
+
+            </section>
+
+
+            <!-- FORM PEMESANAN -->
+            <section class="banner-order-section">
+
+                <div class="order-heading">
+                    <span class="section-label">FORMULIR TOP UP</span>
+                    <h2>Isi Detail Top Up Anda</h2>
+                    <p>
+                        Lengkapi informasi berikut agar admin dapat
+                        memeriksa dan memproses permintaan top up Anda.
+                    </p>
+                </div>
+
+
+                <form id="topUpEwalletForm">
+
+                    <h3 class="form-section-title">
+                        📝 Informasi Pelanggan
+                    </h3>
+
+                    <div class="form-group">
+                        <label for="ewalletCustomerName">Nama Anda *</label>
+                        <input
+                            type="text"
+                            id="ewalletCustomerName"
+                            placeholder="Masukkan nama Anda"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ewalletCustomerPhone">Nomor WhatsApp Anda *</label>
+                        <input
+                            type="tel"
+                            id="ewalletCustomerPhone"
+                            placeholder="Contoh: 081234567890"
+                            required
+                        >
+                    </div>
+
+
+                    <h3 class="form-section-title">
+                        💳 Detail Top Up
+                    </h3>
+
+                    <div class="form-group">
+                        <label for="ewalletPlatform">Pilih Platform *</label>
+                        <select id="ewalletPlatform" required>
+                            <option value="">Pilih e-wallet atau aplikasi</option>
+                            <option value="ShopeePay">ShopeePay</option>
+                            <option value="DANA">DANA</option>
+                            <option value="GoPay">GoPay</option>
+                            <option value="OVO">OVO</option>
+                            <option value="Maxim">Maxim</option>
+                            <option value="Gojek">Gojek</option>
+                            <option value="Grab">Grab</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ewalletAccountNumber">
+                            Nomor HP / ID Akun Tujuan *
+                        </label>
+                        <input
+                            type="text"
+                            id="ewalletAccountNumber"
+                            placeholder="Masukkan nomor HP atau ID akun tujuan"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ewalletAccountName">
+                            Nama Pemilik Akun
+                        </label>
+                        <input
+                            type="text"
+                            id="ewalletAccountName"
+                            placeholder="Opsional, jika diketahui"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ewalletAmount">Nominal Top Up (Rp) *</label>
+                        <input
+                            type="number"
+                            id="ewalletAmount"
+                            min="1"
+                            step="1"
+                            placeholder="Contoh: 50000"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ewalletNotes">Catatan Tambahan</label>
+                        <textarea
+                            id="ewalletNotes"
+                            rows="3"
+                            placeholder="Tuliskan catatan jika ada..."
+                        ></textarea>
+                    </div>
+
+
+                    <!-- INFORMASI PEMBAYARAN -->
+                    <div class="payment-notice">
+                        <strong>💰 Ketentuan Pembayaran</strong>
+
+                        <ul>
+                            <li>Admin akan memeriksa detail akun, nominal top up, dan ketersediaan layanan.</li>
+                            <li>Admin akan menginformasikan total pembayaran termasuk biaya admin sebelum transaksi dilanjutkan.</li>
+                            <li>Pelanggan wajib membayar terlebih dahulu setelah menyetujui total pembayaran.</li>
+                            <li>Top up hanya diproses setelah pembayaran diterima dan diverifikasi oleh admin.</li>
+                            <li>Informasi hasil transaksi akan disampaikan setelah proses selesai.</li>
+                        </ul>
+                    </div>
+
+
+                    <!-- TOMBOL WHATSAPP -->
+                    <button
+                        type="submit"
+                        class="order-submit-button"
+                    >
+                        💬 Lanjutkan ke WhatsApp
+                    </button>
+
+                    <p class="form-disclaimer">
+                        Pastikan nomor atau ID akun tujuan dan nominal
+                        sudah benar sebelum mengirimkan permintaan.
+                    </p>
+
+                </form>
+
+            </section>
+
+        </div>
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 TAMA PHOTO. Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+
+
+    <!-- WHATSAPP SCRIPT -->
+    <script>
+        const topUpEwalletForm = document.getElementById("topUpEwalletForm");
+
+        topUpEwalletForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            if (!topUpEwalletForm.reportValidity()) {
+                return;
+            }
+
+            const nama = document.getElementById("ewalletCustomerName").value.trim();
+            const nomorPelanggan = document.getElementById("ewalletCustomerPhone").value.trim();
+            const platform = document.getElementById("ewalletPlatform").value;
+            const nomorTujuan = document.getElementById("ewalletAccountNumber").value.trim();
+            const namaAkun = document.getElementById("ewalletAccountName").value.trim();
+            const nominal = document.getElementById("ewalletAmount").value;
+            const catatan = document.getElementById("ewalletNotes").value.trim();
+
+            const formatRupiah = new Intl.NumberFormat("id-ID", {
+                style: "currency",
+                currency: "IDR",
+                maximumFractionDigits: 0
+            }).format(Number(nominal));
+
+            const pesan =
+`Halo TAMA PHOTO, saya ingin melakukan top up e-wallet.
+
+INFORMASI PELANGGAN
+Nama: ${nama}
+Nomor WhatsApp: ${nomorPelanggan}
+
+DETAIL TOP UP
+Platform: ${platform}
+Nomor HP / ID Akun Tujuan: ${nomorTujuan}
+Nama Pemilik Akun: ${namaAkun || "-"}
+Nominal Top Up: ${formatRupiah}
+
+Catatan: ${catatan || "-"}
+
+Mohon periksa ketersediaan layanan dan informasikan total pembayaran termasuk biaya admin.
+
+Saya akan melakukan pembayaran setelah menyetujui total pembayaran yang diinformasikan.
+
+Terima kasih.`;
+
+            const nomorAdmin = "6281372855888";
+
+            const linkWhatsApp =
+                "https://wa.me/" + nomorAdmin +
+                "?text=" + encodeURIComponent(pesan);
+
+            window.open(linkWhatsApp, "_blank");
+        });
+    </script>
+
+</body>
+</html>

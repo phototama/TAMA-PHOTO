@@ -1,0 +1,390 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Layanan edit dan perapian dokumen umum TAMA PHOTO."
+    >
+
+    <title>Edit Dokumen | TAMA PHOTO</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-content">
+
+            <a href="../index.html" class="brand">
+                <div class="brand-logo">TP</div>
+
+                <div class="brand-text">
+                    <h1>TAMA PHOTO</h1>
+                    <p>Digital Printing & Services</p>
+                </div>
+            </a>
+
+            <nav class="navigation">
+                <a href="../index.html">Beranda</a>
+                <a href="../produk.html">Produk</a>
+                <a href="../tentang.html">Tentang Kami</a>
+                <a href="../kontak.html">Kontak</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="detail-page">
+
+        <div class="container">
+
+            <!-- BREADCRUMB -->
+            <div class="detail-breadcrumb">
+                <a href="../index.html">Beranda</a>
+                <span> / </span>
+                <span>Edit Dokumen</span>
+            </div>
+
+
+            <!-- SERVICE INTRO -->
+            <section class="detail-intro">
+
+                <div class="detail-intro-icon">
+                    📝
+                </div>
+
+                <div>
+                    <span class="section-label">LAYANAN DOKUMEN</span>
+
+                    <h2>Edit Dokumen</h2>
+
+                    <p>
+                        Layanan perbaikan dan perapian dokumen
+                        untuk kebutuhan pribadi, sekolah, kuliah,
+                        pekerjaan, dan keperluan umum lainnya.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- ORDER FORM -->
+            <section class="banner-order-section">
+
+                <div class="order-heading">
+                    <span class="section-label">PEMESANAN ONLINE</span>
+
+                    <h2>Formulir Pesanan Edit Dokumen</h2>
+
+                    <p>
+                        Jelaskan dokumen yang ingin diedit dan
+                        bagian apa saja yang perlu diperbaiki.
+                    </p>
+                </div>
+
+
+                <form id="editDokumenOrderForm">
+
+                    <!-- CUSTOMER INFORMATION -->
+                    <h3>Informasi Pemesan</h3>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="editDokumenCustomerName">
+                                Nama Pemesan
+                            </label>
+
+                            <input
+                                type="text"
+                                id="editDokumenCustomerName"
+                                placeholder="Masukkan nama Anda"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="editDokumenCustomerPhone">
+                                Nomor WhatsApp
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="editDokumenCustomerPhone"
+                                placeholder="Contoh: 081234567890"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <!-- DOCUMENT INFORMATION -->
+                    <h3>Informasi Dokumen</h3>
+
+                    <div class="form-group">
+                        <label for="editDokumenType">
+                            Jenis Dokumen
+                        </label>
+
+                        <select id="editDokumenType" required>
+                            <option value="">Pilih jenis dokumen</option>
+                            <option value="Dokumen Word">
+                                Dokumen Word
+                            </option>
+                            <option value="Dokumen PDF">
+                                Dokumen PDF
+                            </option>
+                            <option value="Dokumen Excel">
+                                Dokumen Excel
+                            </option>
+                            <option value="Dokumen PowerPoint">
+                                Dokumen PowerPoint
+                            </option>
+                            <option value="Dokumen lainnya">
+                                Dokumen lainnya
+                            </option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="editDokumenPages">
+                                Perkiraan Jumlah Halaman
+                            </label>
+
+                            <input
+                                type="number"
+                                id="editDokumenPages"
+                                min="1"
+                                placeholder="Contoh: 10"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="editDokumenSource">
+                                File Dokumen Saat Ini
+                            </label>
+
+                            <select id="editDokumenSource" required>
+                                <option value="">Pilih kondisi file</option>
+                                <option value="File masih bisa diedit">
+                                    File masih bisa diedit
+                                </option>
+                                <option value="File PDF">
+                                    File PDF
+                                </option>
+                                <option value="Foto atau gambar dokumen">
+                                    Foto atau gambar dokumen
+                                </option>
+                                <option value="File rusak atau format berubah">
+                                    File rusak atau format berubah
+                                </option>
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <!-- EDIT TYPE -->
+                    <h3>Jenis Perbaikan</h3>
+
+                    <div class="form-group">
+                        <label for="editDokumenTask">
+                            Bagian yang Ingin Diedit
+                        </label>
+
+                        <select id="editDokumenTask" required>
+                            <option value="">Pilih jenis pengeditan</option>
+                            <option value="Perbaikan typo dan ejaan">
+                                Perbaikan typo dan ejaan
+                            </option>
+                            <option value="Perapian format tulisan dan paragraf">
+                                Perapian tulisan dan paragraf
+                            </option>
+                            <option value="Pengaturan margin, font, dan spasi">
+                                Pengaturan margin, font, dan spasi
+                            </option>
+                            <option value="Perbaikan tabel dan penomoran">
+                                Perbaikan tabel dan penomoran
+                            </option>
+                            <option value="Perbaikan tata letak dokumen">
+                                Perbaikan tata letak dokumen
+                            </option>
+                            <option value="Beberapa jenis perbaikan">
+                                Beberapa jenis perbaikan
+                            </option>
+                            <option value="Pengeditan lainnya">
+                                Pengeditan lainnya
+                            </option>
+                        </select>
+                    </div>
+
+
+                    <!-- OUTPUT FORMAT -->
+                    <div class="form-group">
+                        <label for="editDokumenOutput">
+                            Format Hasil yang Diinginkan
+                        </label>
+
+                        <select id="editDokumenOutput" required>
+                            <option value="">Pilih format hasil</option>
+                            <option value="Microsoft Word">
+                                Microsoft Word
+                            </option>
+                            <option value="PDF">
+                                PDF
+                            </option>
+                            <option value="Word dan PDF">
+                                Word dan PDF
+                            </option>
+                            <option value="Sesuai format asli">
+                                Sesuai format asli
+                            </option>
+                        </select>
+                    </div>
+
+
+                    <!-- DEADLINE -->
+                    <div class="form-group">
+                        <label for="editDokumenDeadline">
+                            Target Penyelesaian
+                        </label>
+
+                        <select id="editDokumenDeadline" required>
+                            <option value="">Pilih target waktu</option>
+                            <option value="Secepatnya">
+                                Secepatnya
+                            </option>
+                            <option value="1-2 hari">
+                                1–2 hari
+                            </option>
+                            <option value="3-5 hari">
+                                3–5 hari
+                            </option>
+                            <option value="Menyesuaikan">
+                                Menyesuaikan
+                            </option>
+                        </select>
+                    </div>
+
+
+                    <!-- NOTES -->
+                    <div class="form-group">
+                        <label for="editDokumenNotes">
+                            Detail Perubahan dan Catatan
+                        </label>
+
+                        <textarea
+                            id="editDokumenNotes"
+                            rows="5"
+                            placeholder="Jelaskan bagian yang ingin diperbaiki. Contoh: margin kiri 4 cm, font Times New Roman ukuran 12, atau perbaikan kesalahan penulisan..."
+                        ></textarea>
+                    </div>
+
+
+                    <!-- FILE NOTICE -->
+                    <div class="payment-notice">
+
+                        <strong>📎 Pengiriman Dokumen</strong>
+
+                        <p>
+                            Setelah mengirim detail pesanan melalui
+                            WhatsApp, silakan kirimkan file dokumen
+                            asli melalui percakapan yang sama.
+                            Sertakan juga keterangan bagian yang ingin
+                            diperbaiki agar admin dapat memeriksanya.
+                        </p>
+
+                    </div>
+
+
+                    <!-- PAYMENT NOTICE -->
+                    <div class="payment-notice">
+
+                        <strong>💳 Informasi Pembayaran</strong>
+
+                        <p>
+                            Admin akan memeriksa dokumen dan tingkat
+                            kesulitan pengeditan sebelum memberikan
+                            total harga. Pembayaran dilakukan setelah
+                            harga disepakati. Pengerjaan dimulai setelah
+                            pembayaran diterima dan diverifikasi.
+                        </p>
+
+                    </div>
+
+
+                    <!-- RESULT NOTICE -->
+                    <div class="payment-notice">
+
+                        <strong>📄 Penyerahan Hasil</strong>
+
+                        <p>
+                            Dokumen yang telah selesai diedit akan
+                            dikirimkan dalam format file yang telah
+                            disepakati bersama admin TAMA PHOTO.
+                        </p>
+
+                    </div>
+
+
+                    <!-- SUBMIT BUTTON -->
+                    <button
+                        type="button"
+                        id="sendEditDokumenOrder"
+                        class="order-submit-button"
+                    >
+                        💬 Kirim Pesanan via WhatsApp
+                    </button>
+
+                    <p class="form-disclaimer">
+                        Harga dan waktu pengerjaan dikonfirmasi
+                        oleh admin sebelum pekerjaan dimulai.
+                    </p>
+
+                </form>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div>
+                <h3>TAMA PHOTO</h3>
+                <p>Digital Printing & Services</p>
+            </div>
+
+            <p>
+                © 2026 TAMA PHOTO. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="../script.js"></script>
+
+</body>
+</html>

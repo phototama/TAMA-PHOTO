@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Layanan pembayaran tagihan air PDAM di TAMA PHOTO.">
+    <title>Bayar Air / PDAM | TAMA PHOTO</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-container">
+
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">📸</span>
+                <span>TAMA PHOTO</span>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="../index.html">Beranda</a>
+                <a href="../index.html#layanan">Produk</a>
+                <a href="../tentang.html">Tentang Kami</a>
+                <a href="../kontak.html">Kontak</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- KONTEN UTAMA -->
+    <main class="detail-page">
+
+        <div class="container">
+
+            <!-- BREADCRUMB -->
+            <div class="detail-breadcrumb">
+                <a href="../index.html">Beranda</a>
+                <span> / </span>
+                <span>Bayar Air / PDAM</span>
+            </div>
+
+
+            <!-- INTRO -->
+            <section class="detail-intro">
+
+                <div class="detail-intro-icon">💧</div>
+
+                <div>
+                    <span class="section-label">LAYANAN TRANSAKSI</span>
+
+                    <h1>Bayar Air / PDAM</h1>
+
+                    <p>
+                        Layanan bantuan pembayaran tagihan air bulanan
+                        untuk pelanggan PDAM atau penyedia layanan air
+                        yang tersedia. Kirim data pelanggan kepada admin
+                        untuk pengecekan tagihan dan konfirmasi biaya.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- KEUNGGULAN -->
+            <section class="scan-benefits">
+
+                <div class="scan-benefit-item">
+                    <div class="detail-intro-icon">💧</div>
+
+                    <h3>Pembayaran Tagihan</h3>
+
+                    <p>
+                        Bantuan pembayaran tagihan air
+                        bulanan pelanggan.
+                    </p>
+                </div>
+
+
+                <div class="scan-benefit-item">
+                    <div class="detail-intro-icon">🔎</div>
+
+                    <h3>Cek Tagihan</h3>
+
+                    <p>
+                        Admin memeriksa tagihan berdasarkan
+                        nomor pelanggan Anda.
+                    </p>
+                </div>
+
+
+                <div class="scan-benefit-item">
+                    <div class="detail-intro-icon">✅</div>
+
+                    <h3>Bukti Pembayaran</h3>
+
+                    <p>
+                        Bukti transaksi diberikan setelah
+                        pembayaran berhasil.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- FORM PEMESANAN -->
+            <section class="banner-order-section">
+
+                <div class="order-heading">
+
+                    <span class="section-label">FORM PEMESANAN</span>
+
+                    <h2>Form Pembayaran Air / PDAM</h2>
+
+                    <p>
+                        Isi data pelanggan berikut agar admin
+                        dapat melakukan pengecekan tagihan.
+                    </p>
+
+                </div>
+
+
+                <form id="bayarAirOrderForm">
+
+                    <!-- DATA PEMESAN -->
+                    <h3 class="form-section-title">
+                        👤 Informasi Pemesan
+                    </h3>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="bayarAirCustomerName">
+                                Nama Pemesan *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="bayarAirCustomerName"
+                                placeholder="Masukkan nama Anda"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="bayarAirCustomerPhone">
+                                Nomor WhatsApp *
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="bayarAirCustomerPhone"
+                                placeholder="Contoh: 081234567890"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DETAIL TAGIHAN -->
+                    <h3 class="form-section-title">
+                        💧 Detail Tagihan Air
+                    </h3>
+
+
+                    <div class="form-group">
+
+                        <label for="bayarAirProvider">
+                            Penyedia Layanan Air *
+                        </label>
+
+                        <select id="bayarAirProvider" required>
+
+                            <option value="">
+                                Pilih penyedia layanan
+                            </option>
+
+                            <option value="PDAM">
+                                PDAM
+                            </option>
+
+                            <option value="Perumda Air Minum">
+                                Perumda Air Minum
+                            </option>
+
+                            <option value="Penyedia lainnya">
+                                Penyedia lainnya
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="bayarAirCustomerId">
+                            Nomor Pelanggan *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="bayarAirCustomerId"
+                            placeholder="Masukkan nomor pelanggan air"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="bayarAirAccountName">
+                            Nama Pelanggan Air *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="bayarAirAccountName"
+                            placeholder="Nama sesuai data pelanggan"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="bayarAirPeriod">
+                            Periode Tagihan *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="bayarAirPeriod"
+                            placeholder="Contoh: Oktober 2026"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- CATATAN -->
+                    <h3 class="form-section-title">
+                        📝 Informasi Tambahan
+                    </h3>
+
+
+                    <div class="form-group">
+
+                        <label for="bayarAirNotes">
+                            Catatan Tambahan
+                        </label>
+
+                        <textarea
+                            id="bayarAirNotes"
+                            rows="4"
+                            placeholder="Tuliskan informasi tambahan jika diperlukan..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- INFORMASI PEMBAYARAN -->
+                    <div class="payment-notice">
+
+                        <strong>
+                            💳 Informasi Pemesanan dan Pembayaran
+                        </strong>
+
+                        <ul>
+
+                            <li>
+                                Admin akan memeriksa nomor pelanggan
+                                dan jumlah tagihan yang harus dibayar.
+                            </li>
+
+                            <li>
+                                Total tagihan beserta biaya layanan
+                                akan dikonfirmasi sebelum pembayaran.
+                            </li>
+
+                            <li>
+                                Pembayaran dilakukan setelah pelanggan
+                                menyetujui total biaya.
+                            </li>
+
+                            <li>
+                                Tagihan hanya diproses setelah pembayaran
+                                diterima dan diverifikasi admin.
+                            </li>
+
+                            <li>
+                                Bukti pembayaran diberikan setelah
+                                transaksi berhasil dilakukan.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <!-- TOMBOL WHATSAPP -->
+                    <button
+                        type="button"
+                        id="sendBayarAirOrder"
+                        class="order-submit-button"
+                    >
+                        📲 Kirim Pesanan Melalui WhatsApp
+                    </button>
+
+
+                    <p class="form-disclaimer">
+                        Jangan pernah memberikan PIN, password,
+                        atau kode OTP kepada siapa pun.
+                        Ketersediaan layanan pembayaran bergantung
+                        pada kanal transaksi yang didukung.
+                    </p>
+
+                </form>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 TAMA PHOTO. Semua Hak Dilindungi.
+            </p>
+
+            <p>
+                Layanan Digital Printing dan Kebutuhan Anda.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../script.js"></script>
+
+</body>
+</html>

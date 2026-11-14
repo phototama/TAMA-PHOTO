@@ -1,0 +1,501 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Layanan pembuatan CV profesional TAMA PHOTO. Buat CV menarik untuk kebutuhan melamar pekerjaan.">
+    <title>Buat CV Profesional | TAMA PHOTO</title>
+
+    <!-- CSS UTAMA -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-container">
+
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">📸</span>
+                <span>TAMA PHOTO</span>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="../index.html">Beranda</a>
+                <a href="../index.html#layanan">Produk</a>
+                <a href="../tentang.html">Tentang Kami</a>
+                <a href="../kontak.html">Kontak</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- KONTEN UTAMA -->
+    <main class="detail-page">
+
+        <div class="container">
+
+            <!-- BREADCRUMB -->
+            <div class="detail-breadcrumb">
+                <a href="../index.html">Beranda</a>
+                <span> / </span>
+                <span>Buat CV Profesional</span>
+            </div>
+
+
+            <!-- INTRO -->
+            <section class="detail-intro">
+
+                <div class="detail-intro-icon">
+                    📄
+                </div>
+
+                <div>
+                    <span class="section-label">LAYANAN DESAIN</span>
+
+                    <h1>Buat CV Profesional</h1>
+
+                    <p>
+                        Buat CV yang rapi, menarik, dan profesional
+                        untuk membantu Anda memperkenalkan diri
+                        kepada perusahaan saat melamar pekerjaan.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- KEUNGGULAN -->
+            <section class="scan-benefits">
+
+                <div class="scan-benefit-item">
+                    <div class="detail-intro-icon">✨</div>
+                    <h3>Desain Menarik</h3>
+                    <p>
+                        Tampilan CV disusun dengan desain yang
+                        bersih dan profesional.
+                    </p>
+                </div>
+
+                <div class="scan-benefit-item">
+                    <div class="detail-intro-icon">📝</div>
+                    <h3>Informasi Terstruktur</h3>
+                    <p>
+                        Informasi pribadi, pendidikan, pengalaman,
+                        dan keterampilan disusun dengan rapi.
+                    </p>
+                </div>
+
+                <div class="scan-benefit-item">
+                    <div class="detail-intro-icon">📂</div>
+                    <h3>File Digital</h3>
+                    <p>
+                        Hasil CV dapat dikirim dalam format PDF
+                        atau Word sesuai pilihan.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- FORM PEMESANAN -->
+            <section class="banner-order-section">
+
+                <div class="order-heading">
+                    <span class="section-label">FORM PEMESANAN</span>
+
+                    <h2>Pesan CV Anda</h2>
+
+                    <p>
+                        Isi informasi berikut dengan lengkap.
+                        Admin kami akan menghubungi Anda untuk
+                        mengonfirmasi detail dan harga.
+                    </p>
+                </div>
+
+
+                <form id="buatCvOrderForm">
+
+                    <!-- INFORMASI PEMESAN -->
+                    <h3 class="form-section-title">
+                        👤 Informasi Pemesan
+                    </h3>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="buatCvCustomerName">
+                                Nama Pemesan *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="buatCvCustomerName"
+                                name="customerName"
+                                placeholder="Masukkan nama Anda"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="buatCvCustomerPhone">
+                                Nomor WhatsApp *
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="buatCvCustomerPhone"
+                                name="customerPhone"
+                                placeholder="Contoh: 081234567890"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <!-- JENIS CV -->
+                    <h3 class="form-section-title">
+                        📄 Jenis CV
+                    </h3>
+
+                    <div class="form-group">
+
+                        <label for="buatCvType">
+                            Jenis CV yang Dibutuhkan *
+                        </label>
+
+                        <select id="buatCvType" required>
+
+                            <option value="">
+                                Pilih jenis CV
+                            </option>
+
+                            <option value="CV Fresh Graduate">
+                                CV Fresh Graduate
+                            </option>
+
+                            <option value="CV Berpengalaman">
+                                CV Berpengalaman
+                            </option>
+
+                            <option value="CV Profesional">
+                                CV Profesional
+                            </option>
+
+                            <option value="CV Sederhana">
+                                CV Sederhana
+                            </option>
+
+                            <option value="Minta Rekomendasi Admin">
+                                Belum tahu, minta rekomendasi
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- DATA DIRI -->
+                    <h3 class="form-section-title">
+                        🪪 Data Diri untuk CV
+                    </h3>
+
+                    <div class="form-group">
+
+                        <label for="buatCvFullName">
+                            Nama Lengkap *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="buatCvFullName"
+                            placeholder="Nama lengkap sesuai identitas"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="buatCvEmail">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="buatCvEmail"
+                                placeholder="nama@email.com"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="buatCvAddress">
+                                Alamat
+                            </label>
+
+                            <input
+                                type="text"
+                                id="buatCvAddress"
+                                placeholder="Kota atau alamat tempat tinggal"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="buatCvEducation">
+                            Riwayat Pendidikan *
+                        </label>
+
+                        <textarea
+                            id="buatCvEducation"
+                            rows="4"
+                            placeholder="Contoh:&#10;SMK Negeri 1 - Multimedia (2017-2020)&#10;SMP Negeri 1 (2014-2017)"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="buatCvExperience">
+                            Pengalaman Kerja
+                        </label>
+
+                        <textarea
+                            id="buatCvExperience"
+                            rows="4"
+                            placeholder="Tuliskan pengalaman kerja, nama perusahaan, dan periode kerja. Jika belum ada, tuliskan Fresh Graduate."
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="buatCvSkills">
+                            Keahlian / Keterampilan *
+                        </label>
+
+                        <textarea
+                            id="buatCvSkills"
+                            rows="3"
+                            placeholder="Contoh: Microsoft Office, Photoshop, komunikasi, administrasi..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- DESAIN -->
+                    <h3 class="form-section-title">
+                        🎨 Pilihan Desain
+                    </h3>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="buatCvDesign">
+                                Gaya Desain *
+                            </label>
+
+                            <select id="buatCvDesign" required>
+
+                                <option value="">
+                                    Pilih gaya desain
+                                </option>
+
+                                <option value="Minimalis">
+                                    Minimalis
+                                </option>
+
+                                <option value="Modern">
+                                    Modern
+                                </option>
+
+                                <option value="Formal">
+                                    Formal
+                                </option>
+
+                                <option value="Kreatif">
+                                    Kreatif
+                                </option>
+
+                                <option value="Rekomendasi Admin">
+                                    Rekomendasi Admin
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="buatCvPhoto">
+                                Foto pada CV
+                            </label>
+
+                            <select id="buatCvPhoto">
+
+                                <option value="Menggunakan foto">
+                                    Menggunakan foto
+                                </option>
+
+                                <option value="Tanpa foto">
+                                    Tanpa foto
+                                </option>
+
+                                <option value="Minta saran admin">
+                                    Minta saran admin
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="buatCvOutput">
+                            Format File Hasil *
+                        </label>
+
+                        <select id="buatCvOutput" required>
+
+                            <option value="">
+                                Pilih format file
+                            </option>
+
+                            <option value="PDF">
+                                PDF
+                            </option>
+
+                            <option value="Word">
+                                Word
+                            </option>
+
+                            <option value="PDF dan Word">
+                                PDF dan Word
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- CATATAN -->
+                    <div class="form-group">
+
+                        <label for="buatCvNotes">
+                            Catatan Tambahan
+                        </label>
+
+                        <textarea
+                            id="buatCvNotes"
+                            rows="4"
+                            placeholder="Tambahkan informasi atau permintaan khusus lainnya..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- INFORMASI PEMBAYARAN -->
+                    <div class="payment-notice">
+
+                        <strong>
+                            💳 Informasi Pemesanan dan Pembayaran
+                        </strong>
+
+                        <ul>
+                            <li>
+                                Harga akan dikonfirmasi admin
+                                berdasarkan kebutuhan dan desain CV.
+                            </li>
+
+                            <li>
+                                Pembayaran dilakukan setelah
+                                pelanggan menyetujui harga.
+                            </li>
+
+                            <li>
+                                Pengerjaan dimulai setelah pembayaran
+                                diterima dan diverifikasi admin.
+                            </li>
+
+                            <li>
+                                Hasil akhir akan dikirim secara digital
+                                melalui WhatsApp.
+                            </li>
+                        </ul>
+
+                    </div>
+
+
+                    <!-- TOMBOL KIRIM -->
+                    <button
+                        type="button"
+                        id="sendBuatCvOrder"
+                        class="order-submit-button"
+                    >
+                        📲 Kirim Pesanan Melalui WhatsApp
+                    </button>
+
+
+                    <p class="form-disclaimer">
+                        Pastikan informasi yang Anda masukkan
+                        sudah benar sebelum mengirim pesanan.
+                        Foto dan dokumen pendukung dapat dikirim
+                        secara manual melalui WhatsApp setelah chat terbuka.
+                    </p>
+
+                </form>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 TAMA PHOTO. Semua Hak Dilindungi.
+            </p>
+
+            <p>
+                Layanan Digital Printing dan Kebutuhan Anda.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="../script.js"></script>
+
+</body>
+</html>

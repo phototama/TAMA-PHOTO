@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Katalog produk TAMA PHOTO: ATK, materai, perlengkapan lamaran, perlengkapan sekolah, alat listrik, dan bingkai foto.">
+    <title>Katalog Produk - TAMA PHOTO</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">📸</span>
+                <span>TAMA PHOTO</span>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="../index.html">Beranda</a>
+                <a href="../index.html#layanan">Produk</a>
+                <a href="../tentang.html">Tentang Kami</a>
+                <a href="../kontak.html">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- KONTEN UTAMA -->
+    <main class="detail-page">
+        <div class="container">
+
+            <!-- BREADCRUMB -->
+            <div class="detail-breadcrumb">
+                <a href="../index.html">Beranda</a>
+                <span> / </span>
+                <span>Katalog Produk</span>
+            </div>
+
+
+            <!-- INTRO -->
+            <section class="detail-intro">
+                <div class="detail-intro-icon">🛍️</div>
+
+                <span class="section-label">KATALOG PRODUK</span>
+
+                <h1>Katalog Produk TAMA PHOTO</h1>
+
+                <p>
+                    Temukan berbagai kebutuhan Anda mulai dari alat tulis,
+                    materai, perlengkapan lamaran, perlengkapan sekolah,
+                    alat listrik, hingga bingkai foto.
+                </p>
+            </section>
+
+
+            <!-- KATEGORI PRODUK -->
+            <section class="scan-benefits">
+
+                <div class="scan-benefit-item">
+                    <div class="service-icon icon-orange">✏️</div>
+                    <h3>Alat Tulis Kantor</h3>
+                    <p>Berbagai perlengkapan ATK untuk kebutuhan sekolah, kantor, dan sehari-hari.</p>
+                </div>
+
+                <div class="scan-benefit-item">
+                    <div class="service-icon icon-purple">📑</div>
+                    <h3>Materai</h3>
+                    <p>Penyediaan materai untuk berbagai kebutuhan dokumen.</p>
+                </div>
+
+                <div class="scan-benefit-item">
+                    <div class="service-icon icon-pink">📁</div>
+                    <h3>Perlengkapan Lamaran</h3>
+                    <p>Map dan perlengkapan untuk kebutuhan melamar pekerjaan.</p>
+                </div>
+
+                <div class="scan-benefit-item">
+                    <div class="service-icon icon-blue">🎒</div>
+                    <h3>Perlengkapan Sekolah</h3>
+                    <p>Berbagai kebutuhan perlengkapan sekolah untuk pelajar.</p>
+                </div>
+
+                <div class="scan-benefit-item">
+                    <div class="service-icon icon-green">💡</div>
+                    <h3>Alat Listrik</h3>
+                    <p>Berbagai kebutuhan perlengkapan listrik.</p>
+                </div>
+
+                <div class="scan-benefit-item">
+                    <div class="service-icon icon-blue">🖼️</div>
+                    <h3>Bingkai Foto</h3>
+                    <p>Berbagai pilihan bingkai untuk foto dan hiasan.</p>
+                </div>
+
+                <div class="scan-benefit-item">
+                    <div class="service-icon icon-orange">📦</div>
+                    <h3>Lainnya</h3>
+                    <p>Produk dan perlengkapan lainnya yang ingin Anda tanyakan.</p>
+                </div>
+
+            </section>
+
+
+            <!-- FORM PEMESANAN -->
+            <section class="banner-order-section">
+
+                <div class="order-heading">
+                    <span class="section-label">PERMINTAAN PRODUK</span>
+                    <h2>Tanyakan Produk yang Anda Cari</h2>
+                    <p>
+                        Tuliskan nama barang yang Anda butuhkan.
+                        Admin akan membantu memeriksa ketersediaan
+                        dan memberikan informasi harga.
+                    </p>
+                </div>
+
+
+                <form id="katalogProdukForm">
+
+                    <h3 class="form-section-title">
+                        📝 Informasi Produk
+                    </h3>
+
+                    <div class="form-group">
+                        <label for="namaPelanggan">Nama Anda *</label>
+                        <input
+                            type="text"
+                            id="namaPelanggan"
+                            placeholder="Masukkan nama Anda"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kategoriProduk">Kategori Produk *</label>
+                        <select id="kategoriProduk" required>
+                            <option value="">Pilih kategori produk</option>
+                            <option value="Alat Tulis Kantor">Alat Tulis Kantor</option>
+                            <option value="Materai">Materai</option>
+                            <option value="Perlengkapan Lamaran">Perlengkapan Lamaran</option>
+                            <option value="Perlengkapan Sekolah">Perlengkapan Sekolah</option>
+                            <option value="Alat Listrik">Alat Listrik</option>
+                            <option value="Bingkai Foto">Bingkai Foto</option>
+                            <option value="Lainnya">Lainnya</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="namaBarang">Nama Barang yang Dicari *</label>
+                        <input
+                            type="text"
+                            id="namaBarang"
+                            placeholder="Contoh: Pulpen hitam, map lamaran, bingkai 4R"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="spesifikasiBarang">
+                            Merek / Ukuran / Spesifikasi
+                        </label>
+                        <input
+                            type="text"
+                            id="spesifikasiBarang"
+                            placeholder="Opsional, isi jika ada merek atau spesifikasi tertentu"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jumlahBarang">Jumlah Barang *</label>
+                        <input
+                            type="number"
+                            id="jumlahBarang"
+                            min="1"
+                            step="1"
+                            placeholder="Masukkan jumlah barang"
+                            required
+                        >
+                    </div>
+
+
+                    <!-- PILIH CABANG -->
+                    <h3 class="form-section-title">
+                        📍 Pilih Cabang TAMA PHOTO
+                    </h3>
+
+                    <div class="form-group">
+                        <label for="cabangTama">Cabang Tujuan *</label>
+                        <select id="cabangTama" required>
+                            <option value="">Pilih cabang</option>
+                            <option value="melcem">TAMA PHOTO Melcem</option>
+                            <option value="bengkong">TAMA PHOTO Bengkong</option>
+                            <option value="sengkuang">TAMA PHOTO Sengkuang</option>
+                        </select>
+                    </div>
+
+
+                    <!-- INFORMASI PEMESANAN -->
+                    <div class="payment-notice">
+                        <strong>📌 Informasi Pemesanan</strong>
+                        <ul>
+                            <li>Admin akan memeriksa ketersediaan barang dan menginformasikan harganya.</li>
+                            <li>Pembayaran dilakukan setelah harga dan ketersediaan disepakati.</li>
+                            <li>Barang dapat diambil langsung di cabang yang dipilih.</li>
+                            <li>Saat ini belum tersedia layanan pengantaran.</li>
+                        </ul>
+                    </div>
+
+
+                    <!-- TOMBOL WHATSAPP -->
+                    <button
+                        type="submit"
+                        class="order-submit-button"
+                    >
+                        💬 Tanyakan Melalui WhatsApp
+                    </button>
+
+                    <p class="form-disclaimer">
+                        Pastikan informasi barang dan cabang sudah benar
+                        sebelum melanjutkan ke WhatsApp.
+                    </p>
+
+                </form>
+
+            </section>
+
+        </div>
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 TAMA PHOTO. Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+
+
+    <!-- WHATSAPP FORM SCRIPT -->
+    <script>
+        const katalogProdukForm = document.getElementById("katalogProdukForm");
+
+        katalogProdukForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            if (!katalogProdukForm.reportValidity()) {
+                return;
+            }
+
+            const nama = document.getElementById("namaPelanggan").value.trim();
+            const kategori = document.getElementById("kategoriProduk").value;
+            const barang = document.getElementById("namaBarang").value.trim();
+            const spesifikasi = document.getElementById("spesifikasiBarang").value.trim();
+            const jumlah = document.getElementById("jumlahBarang").value;
+            const cabang = document.getElementById("cabangTama").value;
+
+            const daftarCabang = {
+                melcem: {
+                    nama: "TAMA PHOTO Melcem",
+                    nomor: "6281275309280"
+                },
+                bengkong: {
+                    nama: "TAMA PHOTO Bengkong",
+                    nomor: "6282172355465"
+                },
+                sengkuang: {
+                    nama: "TAMA PHOTO Sengkuang",
+                    nomor: "6281275309281"
+                }
+            };
+
+            const tujuan = daftarCabang[cabang];
+
+            if (!tujuan) {
+                alert("Silakan pilih cabang TAMA PHOTO terlebih dahulu.");
+                return;
+            }
+
+            const pesan =
+`Halo ${tujuan.nama}, saya ingin menanyakan ketersediaan produk.
+
+Nama: ${nama}
+Kategori: ${kategori}
+Nama barang: ${barang}
+Merek / Spesifikasi: ${spesifikasi || "-"}
+Jumlah: ${jumlah}
+
+Mohon informasikan ketersediaan barang dan harganya.
+
+Terima kasih.`;
+
+            const linkWhatsApp =
+                "https://wa.me/" + tujuan.nomor +
+                "?text=" + encodeURIComponent(pesan);
+
+            window.open(linkWhatsApp, "_blank");
+        });
+    </script>
+
+</body>
+</html>

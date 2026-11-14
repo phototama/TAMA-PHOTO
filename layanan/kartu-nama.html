@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Layanan cetak kartu nama profesional TAMA PHOTO.">
+    <title>Kartu Nama | TAMA PHOTO</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-content">
+
+            <a href="../index.html" class="brand">
+                <div class="brand-logo">TP</div>
+
+                <div class="brand-text">
+                    <h1>TAMA PHOTO</h1>
+                    <p>Digital Printing & Services</p>
+                </div>
+            </a>
+
+            <nav class="navigation">
+                <a href="../index.html">Beranda</a>
+                <a href="../produk.html">Produk</a>
+                <a href="../tentang.html">Tentang Kami</a>
+                <a href="../kontak.html">Kontak</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="detail-page">
+
+        <div class="container">
+
+            <!-- BREADCRUMB -->
+            <div class="detail-breadcrumb">
+                <a href="../index.html">Beranda</a>
+                <span> / </span>
+                <span>Kartu Nama</span>
+            </div>
+
+
+            <!-- SERVICE INTRO -->
+            <section class="detail-intro">
+
+                <div class="detail-intro-icon">
+                    💳
+                </div>
+
+                <div>
+                    <span class="section-label">LAYANAN PRINTING</span>
+
+                    <h2>Cetak Kartu Nama</h2>
+
+                    <p>
+                        Cetak kartu nama profesional untuk kebutuhan bisnis,
+                        usaha, pekerjaan, dan identitas pribadi Anda.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- ORDER FORM -->
+            <section class="banner-order-section">
+
+                <div class="order-heading">
+                    <span class="section-label">PEMESANAN</span>
+                    <h2>Formulir Pesanan Kartu Nama</h2>
+                    <p>Lengkapi informasi berikut agar admin dapat membantu pesanan Anda.</p>
+                </div>
+
+
+                <form id="kartuNamaOrderForm">
+
+                    <!-- DATA PEMESAN -->
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="kartuNamaCustomerName">Nama Pemesan</label>
+                            <input
+                                type="text"
+                                id="kartuNamaCustomerName"
+                                placeholder="Masukkan nama Anda"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="kartuNamaCustomerPhone">Nomor WhatsApp</label>
+                            <input
+                                type="tel"
+                                id="kartuNamaCustomerPhone"
+                                placeholder="Contoh: 081234567890"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <!-- INFORMASI KARTU -->
+                    <h3>Detail Kartu Nama</h3>
+
+                    <div class="form-group">
+                        <label for="kartuNamaText">Nama yang Dicetak</label>
+                        <input
+                            type="text"
+                            id="kartuNamaText"
+                            placeholder="Nama pada kartu nama"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kartuNamaBusiness">Nama Usaha / Jabatan</label>
+                        <input
+                            type="text"
+                            id="kartuNamaBusiness"
+                            placeholder="Contoh: TAMA PHOTO / Pemilik"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kartuNamaContact">Nomor Kontak pada Kartu</label>
+                        <input
+                            type="text"
+                            id="kartuNamaContact"
+                            placeholder="Nomor telepon yang ingin dicetak"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kartuNamaAddress">Alamat / Informasi Tambahan</label>
+                        <textarea
+                            id="kartuNamaAddress"
+                            rows="3"
+                            placeholder="Alamat, email, media sosial, atau informasi lainnya..."
+                        ></textarea>
+                    </div>
+
+
+                    <!-- SPESIFIKASI -->
+                    <h3>Spesifikasi Cetak</h3>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="kartuNamaQuantity">Jumlah Pesanan</label>
+                            <select id="kartuNamaQuantity" required>
+                                <option value="">Pilih jumlah</option>
+                                <option value="1 box">1 box</option>
+                                <option value="2 box">2 box</option>
+                                <option value="3 box">3 box</option>
+                                <option value="5 box">5 box</option>
+                                <option value="10 box">10 box</option>
+                                <option value="Jumlah lainnya, konfirmasi ke admin">Jumlah lainnya</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="kartuNamaMaterial">Jenis Kertas</label>
+                            <select id="kartuNamaMaterial" required>
+                                <option value="">Pilih jenis kertas</option>
+                                <option value="Art Carton">Art Carton</option>
+                                <option value="Belum tahu, minta rekomendasi">Belum tahu, minta rekomendasi</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="kartuNamaFinishing">Finishing</label>
+
+                        <select id="kartuNamaFinishing" required>
+                            <option value="">Pilih finishing</option>
+                            <option value="Tanpa finishing">Tanpa finishing</option>
+                            <option value="Laminasi glossy">Laminasi glossy</option>
+                            <option value="Laminasi doff">Laminasi doff</option>
+                            <option value="Belum tahu, minta rekomendasi">Belum tahu, minta rekomendasi</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="kartuNamaDesign">File Desain</label>
+
+                        <select id="kartuNamaDesign" required>
+                            <option value="">Pilih kondisi desain</option>
+                            <option value="Desain sudah tersedia">Desain sudah tersedia</option>
+                            <option value="Membutuhkan jasa desain">Membutuhkan jasa desain</option>
+                        </select>
+                    </div>
+
+
+                    <!-- CATATAN -->
+                    <div class="form-group">
+                        <label for="kartuNamaNotes">Catatan Tambahan</label>
+
+                        <textarea
+                            id="kartuNamaNotes"
+                            rows="4"
+                            placeholder="Tuliskan permintaan khusus jika ada..."
+                        ></textarea>
+                    </div>
+
+
+                    <!-- PAYMENT NOTICE -->
+                    <div class="payment-notice">
+                        <strong>Informasi Pembayaran</strong>
+
+                        <p>
+                            Harga akan dikonfirmasi oleh admin berdasarkan
+                            jumlah, jenis kertas, finishing, dan kebutuhan desain.
+                            Pembayaran dilakukan setelah harga disepakati.
+                            Pesanan mulai diproses setelah pembayaran diterima
+                            dan diverifikasi.
+                        </p>
+                    </div>
+
+
+                    <!-- SUBMIT -->
+                    <button
+                        type="button"
+                        id="sendKartuNamaOrder"
+                        class="order-submit-button"
+                    >
+                        💬 Kirim Pesanan via WhatsApp
+                    </button>
+
+                    <p class="form-disclaimer">
+                        Pastikan informasi kartu nama sudah benar sebelum dikirim.
+                    </p>
+
+                </form>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+
+            <div>
+                <h3>TAMA PHOTO</h3>
+                <p>Digital Printing & Services</p>
+            </div>
+
+            <p>© 2026 TAMA PHOTO. All Rights Reserved.</p>
+
+        </div>
+    </footer>
+
+
+    <script src="../script.js"></script>
+
+</body>
+</html>

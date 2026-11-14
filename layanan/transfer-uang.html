@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Layanan transfer uang TAMA PHOTO. Bantuan transaksi transfer dengan konfirmasi melalui WhatsApp.">
+    <title>Transfer Uang | TAMA PHOTO</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">📸</span>
+                <span>TAMA PHOTO</span>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="../index.html">Beranda</a>
+                <a href="../index.html#layanan">Produk</a>
+                <a href="../tentang.html">Tentang Kami</a>
+                <a href="../kontak.html">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- KONTEN UTAMA -->
+    <main class="detail-page">
+        <div class="container">
+
+            <!-- BREADCRUMB -->
+            <div class="detail-breadcrumb">
+                <a href="../index.html">Beranda</a>
+                <span> / </span>
+                <span>Transfer Uang</span>
+            </div>
+
+
+            <!-- INTRO -->
+            <section class="detail-intro">
+                <div class="detail-intro-icon">💸</div>
+
+                <div>
+                    <span class="section-label">LAYANAN TRANSAKSI</span>
+                    <h1>Transfer Uang</h1>
+
+                    <p>
+                        Layanan bantuan transfer uang untuk
+                        berbagai kebutuhan transaksi. Kirim
+                        detail tujuan transfer melalui WhatsApp
+                        dan admin akan membantu memeriksa transaksi.
+                    </p>
+                </div>
+            </section>
+
+
+            <!-- KEUNGGULAN -->
+            <section class="scan-benefits">
+
+                <div class="scan-benefit-item">
+                    <div class="detail-intro-icon">🏦</div>
+                    <h3>Berbagai Tujuan</h3>
+                    <p>
+                        Transfer ke rekening bank atau tujuan
+                        lain yang didukung oleh layanan toko.
+                    </p>
+                </div>
+
+                <div class="scan-benefit-item">
+                    <div class="detail-intro-icon">💬</div>
+                    <h3>Konfirmasi Admin</h3>
+                    <p>
+                        Nominal dan biaya transfer diperiksa
+                        terlebih dahulu sebelum transaksi.
+                    </p>
+                </div>
+
+                <div class="scan-benefit-item">
+                    <div class="detail-intro-icon">✅</div>
+                    <h3>Bukti Transaksi</h3>
+                    <p>
+                        Konfirmasi diberikan setelah transfer
+                        berhasil dilakukan.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- FORM PEMESANAN -->
+            <section class="banner-order-section">
+
+                <div class="order-heading">
+                    <span class="section-label">FORM PEMESANAN</span>
+                    <h2>Form Transfer Uang</h2>
+
+                    <p>
+                        Lengkapi informasi pengirim dan penerima
+                        agar admin dapat memeriksa detail transaksi.
+                    </p>
+                </div>
+
+
+                <form id="transferUangOrderForm">
+
+                    <!-- INFORMASI PENGIRIM -->
+                    <h3 class="form-section-title">
+                        👤 Informasi Pengirim
+                    </h3>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="transferCustomerName">
+                                Nama Pengirim *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="transferCustomerName"
+                                placeholder="Masukkan nama Anda"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="transferCustomerPhone">
+                                Nomor WhatsApp *
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="transferCustomerPhone"
+                                placeholder="Contoh: 081234567890"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <!-- DETAIL PENERIMA -->
+                    <h3 class="form-section-title">
+                        🏦 Informasi Penerima
+                    </h3>
+
+                    <div class="form-group">
+                        <label for="transferDestination">
+                            Tujuan Transfer *
+                        </label>
+
+                        <select id="transferDestination" required>
+                            <option value="">Pilih tujuan transfer</option>
+                            <option value="Bank BRI">Bank BRI</option>
+                            <option value="Bank BCA">Bank BCA</option>
+                            <option value="Bank BNI">Bank BNI</option>
+                            <option value="Bank Mandiri">Bank Mandiri</option>
+                            <option value="Bank BTN">Bank BTN</option>
+                            <option value="Bank BSI">Bank BSI</option>
+                            <option value="Bank CIMB Niaga">Bank CIMB Niaga</option>
+                            <option value="Bank Danamon">Bank Danamon</option>
+                            <option value="Bank lainnya">Bank lainnya</option>
+                            <option value="E-Wallet">E-Wallet</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="transferRecipientName">
+                            Nama Penerima *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="transferRecipientName"
+                            placeholder="Nama sesuai rekening penerima"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="transferRecipientAccount">
+                            Nomor Rekening / Nomor Tujuan *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="transferRecipientAccount"
+                            placeholder="Masukkan nomor rekening atau nomor tujuan"
+                            required
+                        >
+                    </div>
+
+
+                    <!-- NOMINAL -->
+                    <h3 class="form-section-title">
+                        💰 Detail Transaksi
+                    </h3>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="transferAmount">
+                                Nominal Transfer *
+                            </label>
+
+                            <input
+                                type="number"
+                                id="transferAmount"
+                                min="1"
+                                step="1000"
+                                placeholder="Contoh: 500000"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="transferMethod">
+                                Metode Transfer
+                            </label>
+
+                            <select id="transferMethod">
+                                <option value="Transfer bank">
+                                    Transfer bank
+                                </option>
+                                <option value="Transfer sesama bank">
+                                    Transfer sesama bank
+                                </option>
+                                <option value="Transfer antarbank">
+                                    Transfer antarbank
+                                </option>
+                                <option value="Transfer ke E-Wallet">
+                                    Transfer ke E-Wallet
+                                </option>
+                                <option value="Belum tahu">
+                                    Belum tahu
+                                </option>
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <!-- CATATAN -->
+                    <h3 class="form-section-title">
+                        📝 Informasi Tambahan
+                    </h3>
+
+                    <div class="form-group">
+                        <label for="transferNotes">
+                            Catatan Tambahan
+                        </label>
+
+                        <textarea
+                            id="transferNotes"
+                            rows="4"
+                            placeholder="Tuliskan informasi tambahan jika diperlukan..."
+                        ></textarea>
+                    </div>
+
+
+                    <!-- INFORMASI PEMBAYARAN -->
+                    <div class="payment-notice">
+                        <strong>
+                            💳 Informasi Pembayaran dan Transaksi
+                        </strong>
+
+                        <ul>
+                            <li>
+                                Admin akan memeriksa tujuan,
+                                nama penerima, nomor rekening,
+                                dan nominal transfer.
+                            </li>
+
+                            <li>
+                                Biaya transfer atau biaya admin
+                                akan dikonfirmasi sebelum transaksi.
+                            </li>
+
+                            <li>
+                                Pelanggan wajib membayar nominal
+                                transfer beserta biaya admin
+                                setelah menyetujui total pembayaran.
+                            </li>
+
+                            <li>
+                                Transfer hanya dilakukan setelah
+                                dana diterima dan diverifikasi admin.
+                            </li>
+
+                            <li>
+                                Bukti transaksi diberikan setelah
+                                transfer berhasil dilakukan.
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <!-- TOMBOL WHATSAPP -->
+                    <button
+                        type="button"
+                        id="sendTransferUangOrder"
+                        class="order-submit-button"
+                    >
+                        📲 Kirim Pesanan Melalui WhatsApp
+                    </button>
+
+                    <p class="form-disclaimer">
+                        Pastikan nomor rekening dan nama penerima
+                        sudah benar. Jangan pernah memberikan PIN,
+                        password, atau kode OTP kepada siapa pun.
+                    </p>
+
+                </form>
+
+            </section>
+
+        </div>
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 TAMA PHOTO. Semua Hak Dilindungi.</p>
+            <p>Layanan Digital Printing dan Kebutuhan Anda.</p>
+        </div>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="../script.js"></script>
+
+</body>
+</html>

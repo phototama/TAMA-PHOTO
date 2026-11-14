@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Layanan tarik uang TAMA PHOTO. Informasi dan pemesanan penarikan uang melalui WhatsApp.">
+    <title>Tarik Uang | TAMA PHOTO</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-container">
+
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">📸</span>
+                <span>TAMA PHOTO</span>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="../index.html">Beranda</a>
+                <a href="../index.html#layanan">Produk</a>
+                <a href="../tentang.html">Tentang Kami</a>
+                <a href="../kontak.html">Kontak</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- KONTEN UTAMA -->
+    <main class="detail-page">
+
+        <div class="container">
+
+            <!-- BREADCRUMB -->
+            <div class="detail-breadcrumb">
+                <a href="../index.html">Beranda</a>
+                <span> / </span>
+                <span>Tarik Uang</span>
+            </div>
+
+
+            <!-- INTRO -->
+            <section class="detail-intro">
+
+                <div class="detail-intro-icon">🏧</div>
+
+                <div>
+                    <span class="section-label">LAYANAN TRANSAKSI</span>
+
+                    <h1>Tarik Uang</h1>
+
+                    <p>
+                        Layanan bantuan penarikan uang tunai
+                        untuk memudahkan kebutuhan transaksi Anda.
+                        Hubungi admin terlebih dahulu untuk
+                        memastikan ketersediaan uang dan biaya layanan.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- KEUNGGULAN -->
+            <section class="scan-benefits">
+
+                <div class="scan-benefit-item">
+                    <div class="detail-intro-icon">💵</div>
+
+                    <h3>Penarikan Tunai</h3>
+
+                    <p>
+                        Layanan penarikan uang tunai sesuai
+                        ketersediaan dana di toko.
+                    </p>
+                </div>
+
+
+                <div class="scan-benefit-item">
+                    <div class="detail-intro-icon">💬</div>
+
+                    <h3>Konfirmasi Admin</h3>
+
+                    <p>
+                        Ketersediaan uang dan biaya layanan
+                        dikonfirmasi sebelum transaksi.
+                    </p>
+                </div>
+
+
+                <div class="scan-benefit-item">
+                    <div class="detail-intro-icon">✅</div>
+
+                    <h3>Transaksi Terverifikasi</h3>
+
+                    <p>
+                        Penarikan dilakukan setelah dana
+                        berhasil diterima dan diverifikasi.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- FORM PEMESANAN -->
+            <section class="banner-order-section">
+
+                <div class="order-heading">
+
+                    <span class="section-label">FORM PEMESANAN</span>
+
+                    <h2>Form Penarikan Uang</h2>
+
+                    <p>
+                        Isi informasi berikut agar admin dapat
+                        memeriksa ketersediaan dana dan biaya layanan.
+                    </p>
+
+                </div>
+
+
+                <form id="tarikUangOrderForm">
+
+                    <!-- DATA PEMESAN -->
+                    <h3 class="form-section-title">
+                        👤 Informasi Pemesan
+                    </h3>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="tarikUangCustomerName">
+                                Nama Pemesan *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="tarikUangCustomerName"
+                                placeholder="Masukkan nama Anda"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="tarikUangCustomerPhone">
+                                Nomor WhatsApp *
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="tarikUangCustomerPhone"
+                                placeholder="Contoh: 081234567890"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DETAIL PENARIKAN -->
+                    <h3 class="form-section-title">
+                        💳 Detail Penarikan
+                    </h3>
+
+
+                    <div class="form-group">
+
+                        <label for="tarikUangSource">
+                            Sumber Dana *
+                        </label>
+
+                        <select id="tarikUangSource" required>
+
+                            <option value="">
+                                Pilih sumber dana
+                            </option>
+
+                            <option value="Rekening bank">
+                                Rekening bank
+                            </option>
+
+                            <option value="E-Wallet">
+                                E-Wallet
+                            </option>
+
+                            <option value="Sumber lainnya">
+                                Sumber lainnya
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="tarikUangAmount">
+                            Nominal Penarikan *
+                        </label>
+
+                        <input
+                            type="number"
+                            id="tarikUangAmount"
+                            min="1"
+                            step="1000"
+                            placeholder="Contoh: 500000"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="tarikUangMethod">
+                            Metode Penarikan *
+                        </label>
+
+                        <select id="tarikUangMethod" required>
+
+                            <option value="">
+                                Pilih metode penarikan
+                            </option>
+
+                            <option value="Tarik melalui rekening bank">
+                                Rekening bank
+                            </option>
+
+                            <option value="Tarik melalui E-Wallet">
+                                E-Wallet
+                            </option>
+
+                            <option value="Metode lainnya">
+                                Metode lainnya
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- CATATAN -->
+                    <h3 class="form-section-title">
+                        📝 Informasi Tambahan
+                    </h3>
+
+
+                    <div class="form-group">
+
+                        <label for="tarikUangNotes">
+                            Catatan Tambahan
+                        </label>
+
+                        <textarea
+                            id="tarikUangNotes"
+                            rows="4"
+                            placeholder="Tuliskan informasi tambahan jika diperlukan..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- INFORMASI PEMBAYARAN -->
+                    <div class="payment-notice">
+
+                        <strong>
+                            💵 Informasi Penarikan dan Pembayaran
+                        </strong>
+
+                        <ul>
+
+                            <li>
+                                Admin akan memeriksa sumber dana,
+                                nominal penarikan, dan ketersediaan uang tunai.
+                            </li>
+
+                            <li>
+                                Biaya layanan akan dikonfirmasi
+                                sebelum transaksi dilakukan.
+                            </li>
+
+                            <li>
+                                Penarikan hanya dapat dilakukan
+                                setelah ketersediaan uang dan biaya
+                                layanan disepakati.
+                            </li>
+
+                            <li>
+                                Dana harus berhasil diterima dan
+                                diverifikasi admin sebelum uang tunai
+                                diserahkan kepada pelanggan.
+                            </li>
+
+                            <li>
+                                Pelanggan dapat mengambil uang tunai
+                                langsung di lokasi TAMA PHOTO.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <!-- TOMBOL WHATSAPP -->
+                    <button
+                        type="button"
+                        id="sendTarikUangOrder"
+                        class="order-submit-button"
+                    >
+                        📲 Kirim Pesanan Melalui WhatsApp
+                    </button>
+
+
+                    <p class="form-disclaimer">
+                        Jangan pernah memberikan PIN, password,
+                        atau kode OTP kepada siapa pun.
+                        Informasi rekening lengkap hanya diberikan
+                        melalui kanal transaksi yang aman.
+                    </p>
+
+                </form>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 TAMA PHOTO. Semua Hak Dilindungi.
+            </p>
+
+            <p>
+                Layanan Digital Printing dan Kebutuhan Anda.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="../script.js"></script>
+
+</body>
+</html>
