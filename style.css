@@ -72,18 +72,26 @@ input {
     gap: 12px;
 }
 
+
 .brand-logo {
-    width: 48px;
-    height: 48px;
-    display: grid;
-    place-items: center;
-    border-radius: 14px;
-    color: var(--white);
-    font-size: 17px;
-    font-weight: 800;
-    background: linear-gradient(145deg, #3994f5, #1052ac);
-    box-shadow: 0 5px 12px rgba(23, 105, 210, 0.25);
+    width: 200px;
+    height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
 }
+
+.brand-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
 
 .brand-text h1 {
     font-size: 20px;
